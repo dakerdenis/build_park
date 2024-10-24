@@ -11,4 +11,8 @@
         <li><a href="{{ route('home', 'ru') }}">Русский</a></li>
         <li><a href="{{ route('home', 'az') }}">Azərbaycan</a></li>
     </ul>
+
+
+    <!----header----->
+        <!----Hero block----->
 @endsection
