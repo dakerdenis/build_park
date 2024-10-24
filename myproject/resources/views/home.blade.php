@@ -2,7 +2,13 @@
 
 @section('content')
     <div class="container">
-        <h1>{{ __('Welcome to Our Website') }}</h1>
-        <p>{{ __('This is the home page of the website.') }}</p>
+        <h1>{{ __('messages.welcome') }}</h1>
+        <p>{{ __('messages.home_message') }}</p>
     </div>
+
+    <ul>
+        <li><a href="{{ route('home', 'en') }}">English</a></li>
+        <li><a href="{{ route('home', 'ru') }}">Русский</a></li>
+        <li><a href="{{ route('home', 'az') }}">Azərbaycan</a></li>
+    </ul>
 @endsection

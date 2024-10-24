@@ -4,19 +4,19 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Session;
 
 class LanguageMiddleware
 {
     public function handle($request, Closure $next)
     {
-        $locale = $request->lang;
+        // Get the language from the URL
+        $locale = $request->segment(1);
 
+        // Check if the locale is valid, otherwise use 'en' as the default
         if (in_array($locale, ['en', 'ru', 'az'])) {
             App::setLocale($locale);
-            Session::put('locale', $locale);
         } else {
-            App::setLocale('en'); // default to English if language not in URL
+            App::setLocale('en'); // Default to English if locale is invalid
         }
 
         return $next($request);

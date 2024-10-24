@@ -1,9 +1,14 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Middleware\LanguageMiddleware;
 
-Route::group(['prefix' => '{lang}', 'middleware' => 'language'], function () {
+Route::get('/', function () {
+    return redirect('/en');  // Redirect root to the default language
+});
+    
+// Apply the LanguageMiddleware to all routes with a language prefix
+Route::group(['prefix' => '{lang}', 'middleware' => LanguageMiddleware::class], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
-})->where('lang', 'en|ru|az');
+})->where('lang', 'en|ru|az');  // Define supported languages
