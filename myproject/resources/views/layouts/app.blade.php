@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Build Park') }}</title>
     <!-- Add any CSS files here -->
-    @vite(['resources/css/style.css', 'resources/css/header.css'])
+    @vite(['resources/css/style.css', 'resources/css/header.css' , 'resources/js/app.js'])
 
     <!-- Add this to allow additional page-specific styles -->
     @stack('styles')

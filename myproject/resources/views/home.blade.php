@@ -76,7 +76,11 @@
             </div>
         </section>
 
-        <section class="hero"></section>
+        <section class="clients"></section>
+
+        <section class="services" id="services">
+            
+        </section>
 
 
         <!-- Optional footer -->

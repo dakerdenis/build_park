@@ -20,7 +20,7 @@
 .hero__name__big {
     font-size: 60px;
     font-weight: 500;
-    line-height: 90px;
+    line-height: 82px;
     letter-spacing: -0.03em;
     text-align: left;
     color: var(--white);
@@ -158,4 +158,67 @@ text-align: left;
     height: 662px;
     right: 0px;
     bottom: 140px;
+}
+
+
+
+/*****Clinets*******/
+.clients{
+    width: 100%;
+    height: 229px;
+    background-color: #fff;
+}
+
+
+
+
+@media only screen and (max-width: 1610px) {
+    .hero__name {
+        top: 165px;
+    }
+    .hero__name__big{
+        font-size: 47px;
+        line-height: 69px;
+    }
+    .hero__name__small {
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 44px;
+        text-align: left;
+        max-width: 523px;
+        margin-top: 11px;
+    }
+    .hero__button button {
+        margin-top: 35px;
+    }
+    .hero__backgroud {
+        bottom: 52px;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+    .hero__statistics {
+        bottom: 25px;
+        height: 83px;
+    }
+    .hero__statistics__element-number {
+        font-size: 30px;
+    line-height: 30px;    }
+    .hero__statistics__element span {
+        font-size: 26px;
+        margin-left: 2px;
+        line-height: 26px;
+    }
+    .hero__statstics__element_desc {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .header__logo{
+        width: 80px;
+        height: 80px;
+        top: 18px;
+    }
+}
+@media only screen and (max-width: 1380px) {
+
 }
