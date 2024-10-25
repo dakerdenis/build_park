@@ -30,7 +30,7 @@
                 <div class="hero__statistics">
                     <div class="hero__statistics__element">
                         <div class="hero__statistics__element-number">
-                            300+
+                            300<span>+</span>
                         </div>
                         <div class="hero__statstics__element_desc">
                             <p>Amazing people</p>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="hero__statistics__element">
                         <div class="hero__statistics__element-number">
-                            300+
+                            900<span>+</span>
                         </div>
                         <div class="hero__statstics__element_desc">
                             <p>Amazing people</p>
@@ -46,12 +46,17 @@
                     </div>
                     <div class="hero__statistics__element">
                         <div class="hero__statistics__element-number">
-                            300+
+                            20<span>+</span>
                         </div>
                         <div class="hero__statstics__element_desc">
                             <p>Amazing people</p>
                         </div>
                     </div>
+                </div>
+
+                <!------->
+                <div class="hero__backgroud">
+                    <img src="{{ Vite::asset('resources/images/hero_back.png') }}" alt="Build park example of future !">
                 </div>
 
 
@@ -70,6 +75,8 @@
                 </div>
             </div>
         </section>
+
+        <section class="hero"></section>
 
 
         <!-- Optional footer -->
