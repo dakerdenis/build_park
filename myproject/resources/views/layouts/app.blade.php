@@ -8,7 +8,8 @@
     <!-- Add any CSS files here -->
     @vite(['resources/css/style.css', 'resources/css/header.css'])
 
-
+    <!-- Add this to allow additional page-specific styles -->
+    @stack('styles')
 </head>
 
 <body>
