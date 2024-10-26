@@ -1,11 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header__wrapper');
-    
+    const languageButton = document.querySelector('.header__language');
+    const dropdown = document.querySelector('.language-dropdown');
+    const arrowImage = document.querySelector('.active_language img');
+    const themeButton = document.querySelector('.header__theme');
+    const navButtons = document.querySelectorAll('.header__navigation__element button'); // Select all nav buttons
+
+    // Header background transition on scroll
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {  // Adjust this value as needed
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Language dropdown visibility and arrow rotation
+    const showDropdown = () => {
+        languageButton.classList.add('hovered'); // Arrow rotates
+        dropdown.classList.add('visible'); // Dropdown shows with fade-in
+    };
+
+    const hideDropdown = () => {
+        languageButton.classList.remove('hovered'); // Arrow rotates back
+        dropdown.classList.remove('visible'); // Dropdown hides with fade-out
+    };
+
+    // Show dropdown on hover and hide on mouse leave
+    languageButton.addEventListener('mouseenter', showDropdown);
+    languageButton.addEventListener('mouseleave', hideDropdown);
+
+    // Toggle theme changer animation and update nav button colors on click
+    themeButton.addEventListener('click', () => {
+        themeButton.classList.toggle('active');
+
+        // Toggle dark theme for nav buttons
+        navButtons.forEach(button => {
+            button.classList.toggle('dark-theme-button'); // Toggle theme-specific class
+        });
     });
 });

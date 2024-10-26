@@ -60,15 +60,32 @@
 
         <!--- header language change---->
         <div class="header__language">
-            <button>
-                EN
+            <button class="active_language">
+                <p>EN</p>
+                <img src="{{ Vite::asset('resources/images/lang_arrow.svg') }}" alt="Language arrow">
             </button>
+
+            <div class="language-dropdown">
+                <button>
+                    AZ
+                </button>
+                <button>
+                    RU
+                </button>
+            </div>
+
         </div>
 
 
         <!----header theme changer--->
-        <div class="header__theme">
-            
+        <div class="header__theme ">
+            <div class="theme_surface">
+                <img src="{{ Vite::asset('resources/images/theme_changer/sun.svg') }}" alt="Sun theme changer">
+                <img src="{{ Vite::asset('resources/images/theme_changer/mun.svg') }}" alt="Moon theme changer">
+            </div>
+            <div class="circle__changer ">
+
+            </div>
         </div>
 
     </div>
