@@ -144,7 +144,6 @@
             </div>
         </section>
 
-
         <!----what makes us different--->
         <section class="different" id="different">
             <!----absolute left image-->
@@ -178,8 +177,11 @@
                             <div class="different__element__image">
                                 <div class="different__image__container">
                                     <img class="different_placeholder"
-                                        src="{{ Vite::asset('resources\images\different\different_placeholder.svg') }}"
+                                        src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
+                                        data-dark-src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
+                                        data-light-src="{{ Vite::asset('resources/images/different/different_placeholder_white.svg') }}"
                                         alt="Different placeholder image">
+
                                     <img class="different_placeholder-img"
                                         src="{{ Vite::asset('resources\images\different\different1.svg') }}"
                                         alt="We are experienced">
@@ -203,8 +205,11 @@
                             <div class="different__element__image">
                                 <div class="different__image__container">
                                     <img class="different_placeholder"
-                                        src="{{ Vite::asset('resources\images\different\different_placeholder.svg') }}"
+                                        src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
+                                        data-dark-src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
+                                        data-light-src="{{ Vite::asset('resources/images/different/different_placeholder_white.svg') }}"
                                         alt="Different placeholder image">
+
                                     <img class="different_placeholder-img"
                                         src="{{ Vite::asset('resources\images\different\different2.svg') }}"
                                         alt="We are experienced">
@@ -228,8 +233,11 @@
                             <div class="different__element__image">
                                 <div class="different__image__container">
                                     <img class="different_placeholder"
-                                        src="{{ Vite::asset('resources\images\different\different_placeholder.svg') }}"
+                                        src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
+                                        data-dark-src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
+                                        data-light-src="{{ Vite::asset('resources/images/different/different_placeholder_white.svg') }}"
                                         alt="Different placeholder image">
+
                                     <img class="different_placeholder-img"
                                         src="{{ Vite::asset('resources\images\different\different3.svg') }}"
                                         alt="We are experienced">
@@ -253,8 +261,11 @@
                             <div class="different__element__image">
                                 <div class="different__image__container">
                                     <img class="different_placeholder"
-                                        src="{{ Vite::asset('resources\images\different\different_placeholder.svg') }}"
+                                        src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
+                                        data-dark-src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
+                                        data-light-src="{{ Vite::asset('resources/images/different/different_placeholder_white.svg') }}"
                                         alt="Different placeholder image">
+
                                     <img class="different_placeholder-img"
                                         src="{{ Vite::asset('resources\images\different\different4.svg') }}"
                                         alt="We are experienced">
@@ -276,17 +287,12 @@
             </div>
         </section>
 
-
-
         <!----OUR team------>
         <section class="our__team" id="our__team">
             <div class="our__team__container">
 
             </div>
         </section>
-
-
-
 
         <!---OUR Story   634px---->
         <section class="story" id="story">
@@ -313,18 +319,46 @@
                 </div>
                 <!-----STORY IMAGE------>
                 <div class="story__image">
-                    <img class=""
-                    src="{{ Vite::asset('resources\images\story\back.jpg') }}" alt="Story Our main photo">
+                    <img class="" src="{{ Vite::asset('resources\images\story\back.jpg') }}"
+                        alt="Story Our main photo">
                 </div>
             </div>
             <!----absolute left image-->
-            <img class="story__absolute__image"
-                src="{{ Vite::asset('resources\images\story\placeholder_bottom.svg') }}" alt="Story bottom svg">
+            <img class="story__absolute__image" src="{{ Vite::asset('resources\images\story\placeholder_bottom.svg') }}"
+                alt="Story bottom svg">
 
         </section>
 
+        <!---Our projects --->
+        <section class="projects" id="projects">
+            <div class="projects__container">
+                <!---Projects slider----->
+                <div class="projects__slider">
+                    <!---slider navigation--->
+                    <div class="projects__slider__navigation">
+                        <div class="projects__slider__name">
+                            <p>Projects</p>
+                        </div>
+                        <div class="projects__slider__navigation__elements">
+                            
+                        </div>
+                    </div>
 
 
+                    <!----slider content--->
+                    <div class="project__slider__content">
+
+                    </div>
+                </div>
+
+                <!----projects map--->
+                <div class="projects__map">
+                    <div class="projects__map__container">
+
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Optional footer -->
         @include('layouts.partials.footer')

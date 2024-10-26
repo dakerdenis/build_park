@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroSection = document.querySelector('.hero'); // Hero section
     const servicesSection = document.querySelector('.services'); // Services section
     const differentSection = document.querySelector('.different'); // Different section
+    const storySection = document.querySelector('.story'); // Story section
 
     // Header background transition on scroll
     window.addEventListener('scroll', () => {
@@ -50,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Toggle light theme class on different section
         if (differentSection) {
             differentSection.classList.toggle('light-theme'); // Add or remove light theme on different
+        }
+
+        // Toggle light theme class on story section
+        if (storySection) {
+            storySection.classList.toggle('light-theme'); // Add or remove light theme on story
         }
     });
 });
