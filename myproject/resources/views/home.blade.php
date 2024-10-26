@@ -78,8 +78,62 @@
 
         <section class="clients"></section>
 
+
+
+
+        <!--! SERVICESs----------->
         <section class="services" id="services">
-            
+            <!--SERVIVRS NAME--->
+            <div class="services__name__desc">
+                <div class="services__name">
+                    <p>Our Excellent
+                        Services</p>
+                </div>
+                <div class="services__desc">
+                    <p>Check out our best service you can possibly orders in building
+                        your company and don't forget to ask via our email or our
+                        customer service if you are interested in using our services</p>
+                </div>
+            </div>
+            <!---SERVICES--->
+            <div class="services__wrapper">
+                <div class="services__element">
+                    <div class="services__image"></div>
+                    <div class="services__name">
+                        <p>Project Management</p>
+                    </div>
+                    <div class="servies__desc">
+                        <p>Residential development is the
+                            beginning that has shaped us to this
+                            day. Our development includes
+                            Houses & Apartments</p>
+                    </div>
+                </div>
+                <div class="services__element">
+                    <div class="services__image"></div>
+                    <div class="services__name">
+                        <p>Project Management</p>
+                    </div>
+                    <div class="servies__desc">
+                        <p>Residential development is the
+                            beginning that has shaped us to this
+                            day. Our development includes
+                            Houses & Apartments</p>
+                    </div>
+                </div>
+                <div class="services__element">
+                    <div class="services__image"></div>
+                    <div class="services__name">
+                        <p>Project Management</p>
+                    </div>
+                    <div class="servies__desc">
+                        <p>Residential development is the
+                            beginning that has shaped us to this
+                            day. Our development includes
+                            Houses & Apartments</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
 

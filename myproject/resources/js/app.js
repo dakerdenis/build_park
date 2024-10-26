@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header__wrapper');
     const languageButton = document.querySelector('.header__language');
     const dropdown = document.querySelector('.language-dropdown');
-    const arrowImage = document.querySelector('.active_language img');
     const themeButton = document.querySelector('.header__theme');
-    const navButtons = document.querySelectorAll('.header__navigation__element button'); // Select all nav buttons
+    const navButtons = document.querySelectorAll('.header__navigation__element button');
+    const heroSection = document.querySelector('.hero'); // Select the hero section
 
     // Header background transition on scroll
     window.addEventListener('scroll', () => {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     languageButton.addEventListener('mouseenter', showDropdown);
     languageButton.addEventListener('mouseleave', hideDropdown);
 
-    // Toggle theme changer animation and update nav button colors on click
+    // Toggle theme changer animation and update styles on click
     themeButton.addEventListener('click', () => {
         themeButton.classList.toggle('active');
 
@@ -34,5 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
         navButtons.forEach(button => {
             button.classList.toggle('dark-theme-button'); // Toggle theme-specific class
         });
+
+        // Toggle light theme class on hero section
+        if (heroSection) {
+            heroSection.classList.toggle('light-theme'); // Add or remove light theme on hero
+        }
     });
 });
