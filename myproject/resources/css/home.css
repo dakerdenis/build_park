@@ -1,15 +1,19 @@
 .hero {
     width: 100%;
     height: 100vh;
-    min-height: 700px;
+    min-height: 800px;
     background: var(--background-gradient-dark);
-    transition: background 0.5s ease; /* Smooth transition */
+    transition: background 0.5s ease;
+    /* Smooth transition */
 
 }
+
 /* Light theme for the hero section */
 .hero.light-theme {
-    background: #F8F8F8; /* Light theme background */
+    background: #F8F8F8;
+    /* Light theme background */
 }
+
 .hero__wrapper {
     width: 100%;
     height: 100%;
@@ -29,13 +33,16 @@
     letter-spacing: -0.03em;
     text-align: left;
     color: var(--white);
-    transition: color 0.5s ease; /* Smooth transition */
+    transition: color 0.5s ease;
+    /* Smooth transition */
 
 }
+
 /* Light theme color for .hero__name__big */
 .hero.light-theme .hero__name__big {
     color: #3F3F3F;
 }
+
 .hero__name__small {
     color: var(--text-dark);
     font-size: 36px;
@@ -46,13 +53,15 @@
     margin-top: 38px;
     transition: color 0.5s ease;
 }
+
 /* Light theme color for .hero__name__small */
 .hero.light-theme .hero__name__small {
     color: #3F3F3F;
 }
+
 .hero__button {}
 
-.hero__button  button{
+.hero__button button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,10 +71,10 @@
     height: 64px;
     margin-top: 52px;
     border-radius: var(--button-radius);
-font-size: 16px;
-font-weight: 600;
-line-height: 24px;
-text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
 
 }
 
@@ -77,7 +86,7 @@ text-align: center;
     width: 391px;
     height: 110px;
     left: 68px;
-    
+
 
     display: flex;
     justify-content: space-between;
@@ -88,22 +97,25 @@ text-align: center;
     width: 110px;
     height: 100%;
 }
-.hero__statistics__element span{
-    color: var( --basic-red);
+
+.hero__statistics__element span {
+    color: var(--basic-red);
     font-size: 36px;
-font-weight: 700;
-line-height: 54px;
-text-align: left;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: left;
 }
+
 .hero__statistics__element-number {
 
-font-size: 36px;
-font-weight: 700;
-line-height: 54px;
-text-align: left;
-color: var(--white);
-transition: color 0.5s ease;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: left;
+    color: var(--white);
+    transition: color 0.5s ease;
 }
+
 .hero.light-theme .hero__statistics__element-number {
     color: #3F3F3F;
 }
@@ -111,17 +123,18 @@ transition: color 0.5s ease;
 
 .hero__statstics__element_desc {
     color: var(--text-dark);
-font-size: 18px;
-font-weight: 600;
-line-height: 27px;
-text-align: left;
-transition: color 0.5s ease;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: left;
+    transition: color 0.5s ease;
 }
 
 /* Light theme color for .hero__statstics__element_desc */
 .hero.light-theme .hero__statstics__element_desc {
     color: #3F3F3F;
 }
+
 .hero__logo {
     position: absolute;
     z-index: 300;
@@ -173,7 +186,7 @@ transition: color 0.5s ease;
 
 }
 
-.hero__backgroud{
+.hero__backgroud {
     position: absolute;
     z-index: 200;
     width: 662px;
@@ -188,7 +201,7 @@ transition: color 0.5s ease;
 
 
 /*****Clinets*******/
-.clients{
+.clients {
     width: 100%;
     height: 229px;
     background-color: #fff;
@@ -198,23 +211,119 @@ transition: color 0.5s ease;
 
 
 /*****Services*******/
-.services{
+.services {
     width: 100%;
     min-height: 926px;
     background: var(--background-gradient-dark);
 }
 
 
+.services__container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 75px;
+}
+
+.services__name__desc {
+    height: 138px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services__main-name {
+    width: 305px;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 69px;
+    text-align: left;
+    color: #fff;
+
+}
+
+.services__desc {
+    width: 561px;
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: left;
+
+}
+
+.services__wrapper {
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.services__element {
+    width: 368px;
+    height: 515px;
+
+}
+
+
+
+.services__image {
+    width: 100%;
+    height: 283px;
+    border: 10px solid #fff;
+    border-radius: var(--button-radius);
+}
+.services__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services__name {
+    margin-top: 38px;
+    color: #fff;
+font-size: 28px;
+font-weight: 600;
+line-height: 42px;
+text-align: left;
+
+}
+.servies__desc {
+color: var(--text-dark);
+font-size: 18px;
+font-weight: 500;
+line-height: 37px;
+text-align: left;
+margin-top: 37px;
+}
+/* Light theme for services section */
+.services.light-theme {
+    background: linear-gradient(219.84deg, #FFFFFF 4.14%, #CBCBCB 82.76%);
+}
+.services.light-theme .services__desc,
+.services.light-theme .servies__desc {
+    color: #000; /* Dark text for description in light theme */
+}
+
+.services.light-theme .services__main-name,
+.services.light-theme .services__name {
+    color: #3F3F3F; /* Dark gray color for main name and service name */
+}
+
+     
 
 
 @media only screen and (max-width: 1610px) {
     .hero__name {
         top: 165px;
     }
-    .hero__name__big{
+
+    .hero__name__big {
         font-size: 47px;
         line-height: 69px;
     }
+
     .hero__name__small {
         font-size: 26px;
         font-weight: 500;
@@ -223,9 +332,11 @@ transition: color 0.5s ease;
         max-width: 523px;
         margin-top: 11px;
     }
+
     .hero__button button {
         margin-top: 35px;
     }
+
     .hero__backgroud {
         bottom: 52px;
     }
@@ -236,24 +347,28 @@ transition: color 0.5s ease;
         bottom: 25px;
         height: 83px;
     }
+
     .hero__statistics__element-number {
         font-size: 30px;
-    line-height: 30px;    }
+        line-height: 30px;
+    }
+
     .hero__statistics__element span {
         font-size: 26px;
         margin-left: 2px;
         line-height: 26px;
     }
+
     .hero__statstics__element_desc {
         font-size: 16px;
         line-height: 21px;
     }
-    .header__logo{
+
+    .header__logo {
         width: 80px;
         height: 80px;
         top: 18px;
     }
 }
-@media only screen and (max-width: 1380px) {
 
-}
+@media only screen and (max-width: 1380px) {}
