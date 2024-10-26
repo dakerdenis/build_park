@@ -257,7 +257,7 @@
     margin-top: 80px;
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .services__element {
@@ -274,6 +274,7 @@
     border: 10px solid #fff;
     border-radius: var(--button-radius);
 }
+
 .services__image img {
     width: 100%;
     height: 100%;
@@ -283,35 +284,298 @@
 .services__name {
     margin-top: 38px;
     color: #fff;
-font-size: 28px;
-font-weight: 600;
-line-height: 42px;
-text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 42px;
+    text-align: left;
 
 }
+
 .servies__desc {
-color: var(--text-dark);
-font-size: 18px;
-font-weight: 500;
-line-height: 37px;
-text-align: left;
-margin-top: 37px;
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 37px;
+    text-align: left;
+    margin-top: 37px;
 }
+
 /* Light theme for services section */
 .services.light-theme {
     background: linear-gradient(219.84deg, #FFFFFF 4.14%, #CBCBCB 82.76%);
 }
+
 .services.light-theme .services__desc,
 .services.light-theme .servies__desc {
-    color: #000; /* Dark text for description in light theme */
+    color: #000;
+    /* Dark text for description in light theme */
 }
 
 .services.light-theme .services__main-name,
 .services.light-theme .services__name {
-    color: #3F3F3F; /* Dark gray color for main name and service name */
+    color: #3F3F3F;
+    /* Dark gray color for main name and service name */
 }
 
-     
+
+
+
+
+
+
+
+
+/**********what makes us different***********/
+.different {
+    width: 100%;
+    min-height: 770px;
+    background-color: var(--basic-background-grey);
+    position: relative;
+    overflow: hidden;
+}
+
+.different__absolute__image {
+    position: absolute;
+    left: 0;
+    top: -140px;
+}
+
+.different__container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 166px;
+}
+
+.different__name__desc {
+    height: 138px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.different__name {
+    position: relative;
+    width: 335px;
+
+}
+
+.different__line {
+    position: absolute;
+    top: -20px;
+    width: 105px;
+    height: 9px;
+    background: var(--background-gradient-red-line);
+}
+
+.different__name__text {
+    color: var(--white);
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 69px;
+    text-align: left;
+
+
+}
+
+.different__desc {
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: left;
+    width: 561px;
+}
+
+.different__wrapper {
+    margin-top: 34px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.different__element {
+    width: 263px;
+    height: 409px;
+
+}
+
+.different__element__wrapper {
+    width: 100%;
+    height: 100%;
+
+}
+
+.different__element__image {
+    width: 100%;
+    height: 155px;
+
+}
+
+.different__image__container {
+    width: 155px;
+    height: 156px;
+    position: relative;
+
+
+}
+
+.different_placeholder {
+    position: absolute;
+    left: -42px;
+    z-index: 200;
+}
+
+.different_placeholder-img {
+    position: absolute;
+    z-index: 300;
+    left: 16.5px;
+    top: 56px;
+    width: 38px;
+    height: 38px;
+}
+
+.different__element:nth-child(2) .different_placeholder-img {
+    left: 13.5px;
+    top: 60px;
+}
+
+.different__element:nth-child(3) .different_placeholder-img {
+    left: 17px;
+    top: 59px;
+}
+
+.different_placeholder {}
+
+.different__element__name {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+
+}
+
+.different__element__desc {
+    margin-top: 24px;
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: left;
+
+
+}
+
+/* Light theme for different section */
+.different.light-theme {
+    background-color: #fff;
+}
+
+.different.light-theme .different__name__text {
+    color: #3F3F3F;
+}
+
+.different.light-theme .different__desc,
+.different.light-theme .different__element__desc {
+    color: #000;
+}
+
+.different.light-theme .different__element__name {
+    color: #3F3F3F;
+}
+
+
+
+/*********STORY WHO WE ARE**************/
+.story {
+    width: 100%;
+    height: 640px;
+    background-color: var(--basic-background-grey);
+    position: relative;
+    overflow: hidden;
+}
+
+.story__container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.story__desc {
+    width: 551px;
+}
+
+.story__desc__name {
+    color: #fff;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 69px;
+    text-align: left;
+    margin-bottom: 24px;
+    max-width: 275px;
+
+
+}
+
+.story__desc__text {
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 33px;
+    text-align: left;
+
+}
+
+.story__desc__button {
+    margin-top: 49px;
+
+    
+}
+.story__desc__button button{
+    width: 181px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: var(--background-gradient-red-button);
+
+font-size: 16px;
+font-weight: 600;
+line-height: 24px;
+text-align: center;
+
+
+}
+
+
+.story__image {
+    width: 575px;
+    height: 470px;
+    border: 10px solid #fff;
+    border-radius: 50px;
+    box-shadow: 0px 10px 15px 0px #9797971F;
+
+}
+
+.story__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+
+
+.story__absolute__image {
+    position: absolute;
+    left: calc(472px);
+    bottom: -140px;
+}
 
 
 @media only screen and (max-width: 1610px) {
