@@ -340,14 +340,25 @@
                             <p>Projects</p>
                         </div>
                         <div class="projects__slider__navigation__elements">
-                            
+                            <button>All</button>
+                            <button>Commercial</button>
+                            <button>Residential</button>
+                            <button>Commercial</button>
+                            <button>Residential</button>
+                            <button>Other</button>
+                        </div>
+                        <div class="projects__slider__arrows">
+                            <button class="next" id="next_slide"></button>
+                            <button class="next" id="prev_slide"></button>
                         </div>
                     </div>
 
 
                     <!----slider content--->
                     <div class="project__slider__content">
+                        <div class="project__slider__wrapper">
 
+                        </div>
                     </div>
                 </div>
 
@@ -355,6 +366,61 @@
                 <div class="projects__map">
                     <div class="projects__map__container">
 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!---Our best offer--->
+        <section class="offers" id="offers">
+            <div class="offers__container">
+
+            </div>
+        </section>
+
+
+        <!---COntact with us --->
+        <section class="contact" id="contact">
+            <div class="contact__container">
+                <!-----contact form------>
+                <div class="contact__form">
+                    <form action="" method="POST" @csrf>
+                        <div class="contact__form__name">
+                            What can we do for you?
+                        </div>
+                        <div class="contact__form__desc">
+                            We are ready to work on a project of any complexity, whether it’s commercial or residential.
+                        </div>
+                        <div class="contact__form__wrapper">
+                            <!----name and email----->
+                            <div class="contact__form__inputs"></div>
+                            <!----method and phone----->
+                            <div class="contact__form__inputs"></div>
+
+                            <div class="contact__form__message">
+                                <textarea name="message" id="message" ></textarea>
+                            </div>
+                            <div class="contact__form__indicates">
+
+                            </div>
+
+                            <div class="contact__form__submit">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+                <!----contact information & navigation---->
+                <div class="contact__information">
+                    <div class="contact__information__wrapper">
+                        <!----contact information------>
+                        <div class="contact__information__data"></div>
+                        <!-----contact  navigation------>
+                        <div class="contact__navigation">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
