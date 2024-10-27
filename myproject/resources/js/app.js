@@ -4,25 +4,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdown = document.querySelector('.language-dropdown');
     const themeButton = document.querySelector('.header__theme');
     const navButtons = document.querySelectorAll('.header__navigation__element button');
-    const heroSection = document.querySelector('.hero'); // Hero section
-    const servicesSection = document.querySelector('.services'); // Services section
-    const differentSection = document.querySelector('.different'); // Different section
-    const storySection = document.querySelector('.story'); // Story section
+    const heroSection = document.querySelector('.hero');
+    const servicesSection = document.querySelector('.services');
+    const differentSection = document.querySelector('.different');
+    const storySection = document.querySelector('.story');
+    let isLightTheme = false;
 
-    // Header background transition on scroll
-    window.addEventListener('scroll', () => {
-        header.classList.toggle('scrolled', window.scrollY > 50);
-    });
+    // Function to update the header background on scroll based on the theme
+    const updateHeaderBackgroundOnScroll = () => {
+        if (window.scrollY > 50) {
+            header.style.backgroundColor = isLightTheme ? '#fff' : 'rgba(72, 72, 72, 1)'; // Light or dark background
+        } else {
+            header.style.backgroundColor = 'rgba(255, 255, 255, 0)'; // Transparent when at the top
+        }
+    };
+
+    // Listen for scroll events and update the header background
+    window.addEventListener('scroll', updateHeaderBackgroundOnScroll);
 
     // Language dropdown visibility and arrow rotation
     const showDropdown = () => {
-        languageButton.classList.add('hovered'); // Arrow rotates
-        dropdown.classList.add('visible'); // Dropdown shows with fade-in
+        languageButton.classList.add('hovered');
+        dropdown.classList.add('visible');
     };
 
     const hideDropdown = () => {
-        languageButton.classList.remove('hovered'); // Arrow rotates back
-        dropdown.classList.remove('visible'); // Dropdown hides with fade-out
+        languageButton.classList.remove('hovered');
+        dropdown.classList.remove('visible');
     };
 
     // Show dropdown on hover and hide on mouse leave
@@ -32,30 +40,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Toggle theme changer animation and update styles on click
     themeButton.addEventListener('click', () => {
         themeButton.classList.toggle('active');
+        isLightTheme = !isLightTheme; // Toggle light theme state
 
-        // Toggle dark theme for nav buttons
+        // Update nav button colors based on theme
         navButtons.forEach(button => {
-            button.classList.toggle('dark-theme-button'); // Toggle theme-specific class
+            button.classList.toggle('dark-theme-button');
         });
 
-        // Toggle light theme class on hero section
-        if (heroSection) {
-            heroSection.classList.toggle('light-theme'); // Add or remove light theme on hero
-        }
+        // Toggle light theme class on each section
+        heroSection?.classList.toggle('light-theme');
+        servicesSection?.classList.toggle('light-theme');
+        differentSection?.classList.toggle('light-theme');
+        storySection?.classList.toggle('light-theme');
 
-        // Toggle light theme class on services section
-        if (servicesSection) {
-            servicesSection.classList.toggle('light-theme'); // Add or remove light theme on services
-        }
-
-        // Toggle light theme class on different section
-        if (differentSection) {
-            differentSection.classList.toggle('light-theme'); // Add or remove light theme on different
-        }
-
-        // Toggle light theme class on story section
-        if (storySection) {
-            storySection.classList.toggle('light-theme'); // Add or remove light theme on story
-        }
+        // Update header background immediately when toggling theme
+        updateHeaderBackgroundOnScroll();
     });
 });
