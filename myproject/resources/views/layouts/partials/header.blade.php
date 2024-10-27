@@ -1,95 +1,57 @@
 <header>
-
     <div class="header__wrapper">
-        <!---Header__logo--->
+        <!-- Header Logo -->
         <div class="header__logo">
             <button>
                 <img src="{{ Vite::asset('resources/images/logo.png') }}" alt="Build Park Company Logo">
             </button>
         </div>
 
-        <!---here will be header navigation--->
+        <!-- Header Navigation -->
         <nav class="haeder__navigation">
-            <!---Home---->
             <div class="header__navigation__element">
-                <button>
-                    Home
-                </button>
+                <button data-section="hero">Home</button>
+            </div>
+            <div class="header__navigation__element">
+                <button data-section="services">Services</button>
+            </div>
+            <div class="header__navigation__element">
+                <button data-section="different">About Us</button>
+            </div>
+            <div class="header__navigation__element">
+                <button data-section="our__team">Find a Team</button>
+            </div>
+            <div class="header__navigation__element">
+                <button data-section="projects">Portfolio</button>
             </div>
 
-            <!---Services---->
             <div class="header__navigation__element">
-                <button>
-                    Services
-                </button>
+                <button data-section="offers">Offers</button>
             </div>
-            <!---About Us---->
             <div class="header__navigation__element">
-                <button>
-                    About Us
-                </button>
-            </div>
-
-
-            <!---Portofolio---->
-            <div class="header__navigation__element">
-                <button>
-                    Portofolio
-                </button>
-            </div>
-            <!---Find a Team---->
-            <div class="header__navigation__element">
-                <button>
-                    Find a Team
-                </button>
-            </div>
-            <!---Offers---->
-            <div class="header__navigation__element">
-                <button>
-                    Offers
-                </button>
-            </div>
-
-            <!---Contact us---->
-            <div class="header__navigation__element">
-                <button>
-                    Contact us
-                </button>
+                <button data-section="contact">Contact us</button>
             </div>
         </nav>
 
-        <!--- header language change---->
+        <!-- Language Change -->
         <div class="header__language">
             <button class="active_language">
                 <p>EN</p>
                 <img src="{{ Vite::asset('resources/images/lang_arrow.svg') }}" alt="Language arrow">
             </button>
-
             <div class="language-dropdown">
-                <button>
-                    AZ
-                </button>
-                <button>
-                    RU
-                </button>
+                <button>AZ</button>
+                <button>RU</button>
             </div>
-
         </div>
 
-
-        <!----header theme changer--->
-        <div class="header__theme ">
+        <!-- Theme Changer -->
+        <div class="header__theme">
             <div class="theme_surface">
                 <img src="{{ Vite::asset('resources/images/theme_changer/sun.svg') }}" alt="Sun theme changer">
                 <img src="{{ Vite::asset('resources/images/theme_changer/mun.svg') }}" alt="Moon theme changer">
             </div>
-            <div class="circle__changer ">
-
-            </div>
+            <div class="circle__changer"></div>
         </div>
-
     </div>
-
-
-
 </header>

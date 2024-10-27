@@ -10,16 +10,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const storySection = document.querySelector('.story');
     let isLightTheme = false;
 
-    // Function to update the header background on scroll based on the theme
-    const updateHeaderBackgroundOnScroll = () => {
-        if (window.scrollY > 50) {
-            header.style.backgroundColor = isLightTheme ? '#fff' : 'rgba(72, 72, 72, 1)'; // Light or dark background
-        } else {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0)'; // Transparent when at the top
+    // Smooth scrolling function
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     };
 
-    // Listen for scroll events and update the header background
+    // Add click event listener to each navigation button
+    navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const sectionId = button.getAttribute('data-section');
+            scrollToSection(sectionId);
+        });
+    });
+
+    // Header background transition on scroll
+    const updateHeaderBackgroundOnScroll = () => {
+        if (window.scrollY > 50) {
+            header.style.backgroundColor = isLightTheme ? '#fff' : 'rgba(72, 72, 72, 1)';
+        } else {
+            header.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+        }
+    };
+
     window.addEventListener('scroll', updateHeaderBackgroundOnScroll);
 
     // Language dropdown visibility and arrow rotation
@@ -40,15 +55,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Toggle theme changer animation and update styles on click
     themeButton.addEventListener('click', () => {
         themeButton.classList.toggle('active');
-        isLightTheme = !isLightTheme; // Toggle light theme state
+        isLightTheme = !isLightTheme;
 
-        // Update nav button colors based on theme
+        // Toggle dark theme for nav buttons
         navButtons.forEach(button => {
             button.classList.toggle('dark-theme-button');
         });
 
-        // Toggle light theme class on each section
-        heroSection?.classList.toggle('light-theme');
+        // Toggle light theme class on hero section
+        if (heroSection) {
+            heroSection.classList.toggle('light-theme');
+        }
+
+        // Toggle light theme class on other sections
         servicesSection?.classList.toggle('light-theme');
         differentSection?.classList.toggle('light-theme');
         storySection?.classList.toggle('light-theme');
