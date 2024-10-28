@@ -624,8 +624,7 @@
 .contact {
     min-height: 673px;
     background-color: #3F3F3F;
-    border-top: 2px solid red;
-    border-bottom: 2px solid red;
+
 }
 
 .contact__container {
@@ -956,8 +955,38 @@ font-size: 20px;
 
 .fa-twitter {}
 
-.contact__navigation {}
-
+.contact__navigation {
+    display: flex;
+    align-items: center;
+    margin-right: 75px;
+}
+.contact_navigation-icon {
+   display: flex;
+   align-items: center;
+}
+.contact_navigation-icon-line{
+    width: 3px;
+    height: 255px;
+    background: var(--background-gradient-red-line);
+}
+.contact__navigation-values {
+    display: flex;
+    flex-direction: column;
+}
+.contact__navigation-values  button {
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Poppins;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+text-align: left;
+margin-left: 48px;
+margin-bottom: 7px;
+color: #000;
+}
+.contact__navigation-values  button:hover {
+     color: var(--basic-red);
+}
 /***********Footer styles***************/
 .footer {
     width: 100%;

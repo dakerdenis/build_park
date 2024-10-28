@@ -493,7 +493,11 @@
                         <!-----contact  navigation------>
                         <div class="contact__navigation">
                             <div class="contact_navigation-icon">
-
+                                <img class="" src="{{ Vite::asset('resources\images\contact\contact_icon.png') }}"
+                                alt="Contact icon logo">
+                                <div class="contact_navigation-icon-line">
+                                    
+                                </div>
                             </div>
 
                             <div class="contact__navigation-values">
