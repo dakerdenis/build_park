@@ -533,9 +533,10 @@
 .story__desc__button {
     margin-top: 49px;
 
-    
+
 }
-.story__desc__button button{
+
+.story__desc__button button {
     width: 181px;
     height: 64px;
     display: flex;
@@ -544,10 +545,10 @@
     color: #fff;
     background: var(--background-gradient-red-button);
     border-radius: var(--button-radius);
-font-size: 16px;
-font-weight: 600;
-line-height: 24px;
-text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
 
 
 }
@@ -576,28 +577,33 @@ text-align: center;
     left: calc(472px);
     bottom: -140px;
 }
+
 /********* Light Theme for Story Section **************/
 .story.light-theme {
-    background-color: #fff; /* New background color */
+    background-color: #fff;
+    /* New background color */
 }
 
 .story.light-theme .story__desc__name {
-    color: #3F3F3F; /* Updated text color */
+    color: #3F3F3F;
+    /* Updated text color */
 }
 
 .story.light-theme .story__desc__text {
-    color: #000; /* Updated text color */
+    color: #000;
+    /* Updated text color */
 }
 
 .story.light-theme .story__image {
-    border-color: #3F3F3F; /* Updated border color */
+    border-color: #3F3F3F;
+    /* Updated border color */
 }
 
 
 
 
 /********Our projects **********/
-.projects{
+.projects {
     min-height: 660px;
     background-color: #3F3F3F;
 }
@@ -606,7 +612,7 @@ text-align: center;
 
 /********Our offers **********/
 
-.offers{
+.offers {
     min-height: 1270px;
     background-color: #3F3F3F;
     border-top: 2px solid red;
@@ -615,7 +621,7 @@ text-align: center;
 
 
 /******contact with us*********/
-.contact{
+.contact {
     min-height: 673px;
     background-color: #3F3F3F;
     border-top: 2px solid red;
@@ -628,6 +634,7 @@ text-align: center;
     background-color: #fff;
     position: relative;
 }
+
 .contact__form {
     width: 1064px;
     height: 566px;
@@ -637,6 +644,7 @@ text-align: center;
     left: calc(50% - 532px);
     top: -217px;
 }
+
 .contact__form form {
     width: 100%;
     height: 100%;
@@ -649,24 +657,28 @@ text-align: center;
     text-align: center;
     margin: 0 auto;
 }
+
 .contact__form__name {
     color: #fff;
     font-size: 36px;
     font-weight: 700;
     line-height: 54px;
-    
-}
-.contact__form__desc {
-    color: #fff;
-font-size: 20px;
-font-weight: 400;
-line-height: 30px;
-text-align: center;
 
 }
+
+.contact__form__desc {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+
+}
+
 .contact__form__wrapper {
     width: 100%;
 }
+
 .contact__form__inputs {
     display: flex;
     justify-content: space-between;
@@ -675,42 +687,72 @@ text-align: center;
     background-color: red;
     margin-bottom: 14px;
 }
+
 .contact__form__message {
     width: 100%;
     height: 135px;
-    background-color: red;
+
 }
+.contact__form__message textarea{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--button-radius);
+    padding: 10px 8px;
+
+    color: #3F3F3F;
+font-size: 18px;
+font-weight: 400;
+line-height: 27px;
+text-align: left;
+resize: none;
+}
+
+.contact__form__message textarea::placeholder {
+    color: #A3AAC2;
+    opacity: 1; /* Firefox */
+
+font-size: 18px;
+font-weight: 400;
+line-height: 27px;
+text-align: left;
+
+  }
+
 .contact__form__indicates {
     height: 24px;
     margin-top: 8px;
     margin-bottom: 23px;
     text-align: left;
     font-family: Poppins;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-text-align: left;
-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #fff;
 }
+
 .contact__form__indicates span {
     color: var(--basic-red);
 }
+
 .contact__form__submit {
     height: 53px;
     text-align: center;
 }
+
 .contact__form__submit button {
     width: 271px;
     height: 53px;
     border-radius: var(--button-radius);
     background: var(--background-gradient-red-button);
-font-size: 18px;
-font-weight: 600;
-line-height: 21.11px;
-text-align: center;
-color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.11px;
+    text-align: center;
+    color: #fff;
 
 }
+
 .contact__information {
     width: 1064px;
     height: 320px;
@@ -719,6 +761,7 @@ color: #fff;
     bottom: 0;
     left: calc(50% - 542px);
 }
+
 .contact__information__wrapper {
     height: 100%;
     width: 100%;
@@ -728,10 +771,10 @@ color: #fff;
     align-items: center;
 
 }
-.contact__information__data {
-}
-.contact__navigation {
-}
+
+.contact__information__data {}
+
+.contact__navigation {}
 
 /***********Footer styles***************/
 .footer {
@@ -740,6 +783,7 @@ color: #fff;
 
 
 }
+
 .footer__container {
     width: 100%;
     height: 100%;
@@ -749,22 +793,26 @@ color: #fff;
     align-items: center;
     background-color: #3F3F3F;
 }
+
 .footer__created__by {
-    height: 48px;width: 164px;
+    height: 48px;
+    width: 164px;
 
 }
-.footer__created__by img{
+
+.footer__created__by img {
     width: 100%;
     object-fit: cover;
 
 }
+
 .footer__copyright {
 
-font-size: 14px;
-font-weight: 800;
-line-height: 21px;
-text-align: left;
-color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+    text-align: left;
+    color: #ffffff;
 
 }
 

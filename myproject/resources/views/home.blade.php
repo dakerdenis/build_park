@@ -399,7 +399,7 @@
                             <div class="contact__form__inputs"></div>
 
                             <div class="contact__form__message">
-                                <textarea name="message" id="message" ></textarea>
+                                <textarea placeholder="Your message" name="message" id="message" ></textarea>
                             </div>
                             <div class="contact__form__indicates">
                                 <span>*</span> indicates a required field
