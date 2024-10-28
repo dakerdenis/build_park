@@ -29,6 +29,10 @@
     <!-- Favicon with Vite -->
     <link rel="icon" href="{{ Vite::asset('resources/images/logo.png') }}" type="image/png">
 
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Add CSS files -->
     @vite(['resources/css/style.css', 'resources/css/header.css', 'resources/js/app.js'])
 

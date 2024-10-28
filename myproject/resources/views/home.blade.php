@@ -384,7 +384,7 @@
             <div class="contact__container">
                 <!-----contact form------>
                 <div class="contact__form">
-                    <form action=""  method="POST">
+                    <form action="" method="POST">
                         @csrf
                         <div class="contact__form__name">
                             What can we do for you?
@@ -394,12 +394,27 @@
                         </div>
                         <div class="contact__form__wrapper">
                             <!----name and email----->
-                            <div class="contact__form__inputs"></div>
+                            <div class="contact__form__inputs">
+                                <input type="text" id="name" name="name" placeholder="Your Name">
+                                <input type="email" id="email" name="email" placeholder="Email">
+                            </div>
                             <!----method and phone----->
-                            <div class="contact__form__inputs"></div>
+                            <div class="contact__form__inputs">
+
+                                <div class="custom-select">
+                                    <div class="select-selected">How can we turn-back?</div>
+                                    <div class="select-items select-hide">
+                                        <div data-value="option1">Option 1</div>
+                                        <div data-value="option2">Option 2</div>
+                                        <div data-value="option3">Option 3</div>
+                                    </div>
+                                </div>
+
+                                <input type="number" name="phone" id="phone" placeholder="Phone">
+                            </div>
 
                             <div class="contact__form__message">
-                                <textarea placeholder="Your message" name="message" id="message" ></textarea>
+                                <textarea placeholder="Your message" name="message" id="message"></textarea>
                             </div>
                             <div class="contact__form__indicates">
                                 <span>*</span> indicates a required field
@@ -417,10 +432,67 @@
                 <div class="contact__information">
                     <div class="contact__information__wrapper">
                         <!----contact information------>
-                        <div class="contact__information__data"></div>
+                        <div class="contact__information__data">
+                            <!----->
+                            <div class="contact__information_container">
+                                <div class="contact__information__desc">
+                                    Adress:
+                                </div>
+                                <div class="contact__information__value">
+                                    <p>91 Safarli St. Baku, Azerbaijan AZ1111</p>
+                                </div>
+                            </div>
+                            <!----->
+                            <div class="contact__information_container">
+                                <div class="contact__information__desc">
+                                    Phone:
+                                </div>
+                                <div class="contact__information__value">
+                                    <p>+994 50 444 44 44</p>
+                                </div>
+                            </div>
+                            <!----->
+                            <div class="contact__information_container">
+                                <div class="contact__information__desc">
+                                    Email:
+                                </div>
+                                <div class="contact__information__value">
+                                    <p>hello@buildpark.az</p>
+                                </div>
+                            </div>
+
+                            <!----->
+                            <div class="contact__information_container-social">
+                                <div class="contact__information__desc">
+                                    Social:
+                                </div>
+                                <div class="contact__information__social">
+                                    <a href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+
+                                    <a href="#">
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+
+                                    <a href="#">
+                                        <i class="fa fa-telegram" aria-hidden="true"></i>
+
+                                    </a>
+
+                                    <a href="#">
+                                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                    </a>
+
+                                    <a href="#">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <!-----contact  navigation------>
                         <div class="contact__navigation">
-                            
+
                         </div>
                     </div>
                 </div>
