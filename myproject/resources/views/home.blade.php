@@ -492,7 +492,18 @@
                         </div>
                         <!-----contact  navigation------>
                         <div class="contact__navigation">
+                            <div class="contact_navigation-icon">
 
+                            </div>
+
+                            <div class="contact__navigation-values">
+                                <button>Home</button>
+                                <button>Services</button>
+                                <button>Our Team</button>
+                                <button>About US</button>
+                                <button>Portfolio</button>
+                                <button>Offers</button>
+                            </div>
                         </div>
                     </div>
                 </div>
