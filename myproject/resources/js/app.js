@@ -1,3 +1,8 @@
+// Import main styles
+import '../css/style.css';
+import '../css/header.css';
+import '../css/home.css';
+
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header__wrapper');
     const languageButton = document.querySelector('.header__language');

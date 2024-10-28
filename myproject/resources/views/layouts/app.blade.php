@@ -35,6 +35,11 @@
     <!-- Allow additional page-specific styles -->
     @stack('styles')
 
+    <link rel="stylesheet" href="{{ asset('build/assets/style-DDcxlfcs.css') }}">
+<link rel="stylesheet" href="{{ asset('build/assets/header.css') }}">
+<link rel="stylesheet" href="{{ asset('build/assets/home.css') }}">
+
+
     <!-- JSON-LD Structured Data for SEO -->
     <script type="application/ld+json">
         {
