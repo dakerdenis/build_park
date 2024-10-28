@@ -384,7 +384,8 @@
             <div class="contact__container">
                 <!-----contact form------>
                 <div class="contact__form">
-                    <form action="" method="POST" @csrf>
+                    <form action=""  method="POST">
+                        @csrf
                         <div class="contact__form__name">
                             What can we do for you?
                         </div>
@@ -401,7 +402,7 @@
                                 <textarea name="message" id="message" ></textarea>
                             </div>
                             <div class="contact__form__indicates">
-
+                                <span>*</span> indicates a required field
                             </div>
 
                             <div class="contact__form__submit">
