@@ -82,28 +82,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
-    const selected = document.querySelector('.select-selected');
-    const items = document.querySelector('.select-items');
+    const customSelect = document.getElementById('customSelect');
+    const selectedOption = customSelect.querySelector('.selected-option');
+    const dropdownOptions = customSelect.querySelector('.dropdown-options');
+    const selectArrow = customSelect.querySelector('.select-arrow');
 
-    selected.addEventListener('click', () => {
-        items.classList.toggle('select-hide');
-        selected.classList.toggle('select-arrow-active');
+    // Toggle dropdown visibility
+    customSelect.addEventListener('click', () => {
+        const isOpen = dropdownOptions.style.display === 'block';
+        dropdownOptions.style.display = isOpen ? 'none' : 'block';
+        customSelect.classList.toggle('active', !isOpen); // Toggle arrow rotation
     });
 
-    items.querySelectorAll('div').forEach(option => {
-        option.addEventListener('click', () => {
-            selected.textContent = option.textContent;
-            items.classList.add('select-hide');
-            selected.classList.remove('select-arrow-active');
-        });
-    });
-
-    // Close the dropdown if clicked outside
+    // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
-        if (!e.target.closest('.custom-select')) {
-            items.classList.add('select-hide');
-            selected.classList.remove('select-arrow-active');
+        if (!customSelect.contains(e.target)) {
+            dropdownOptions.style.display = 'none';
+            customSelect.classList.remove('active'); // Reset arrow rotation
         }
+    });
+
+    // Handle option selection
+    dropdownOptions.querySelectorAll('li').forEach(option => {
+        option.addEventListener('click', (e) => {
+            selectedOption.textContent = e.target.textContent;
+            dropdownOptions.style.display = 'none';
+            customSelect.classList.remove('active'); // Reset arrow rotation
+        });
     });
 });

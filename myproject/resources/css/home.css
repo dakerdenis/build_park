@@ -704,14 +704,22 @@
 .contact__form__inputs input::placeholder {
     color: #A3AAC2;
     opacity: 1;
-    /* Firefox */
-
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
     text-align: left;
-
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -725,62 +733,66 @@
 .custom-select {
     position: relative;
     width: 280px;
-    font-family: Poppins;
-    font-size: 18px;
-    line-height: 27px;
-    color: #3F3F3F;
-    height: 100%;
-}
-
-.select-selected {
-    background-color: #F5F5F5;
-    border-radius: var(--button-radius);
-    padding: 10px 8px;
     cursor: pointer;
-    color: #3F3F3F;
-    font-weight: 400;
+    border-radius: var(--button-radius);
+    padding: 10px;
+    background: #f3f3f3;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.select-selected:after {
-    content: "▼";
-    color: #A3AAC2;
+.custom-select .selected-option {
+    font-size: 18px;
+    font-weight: 400;
+    color: #3F3F3F;
+}
+
+.custom-select .select-arrow {
     font-size: 12px;
-    margin-left: 5px;
+    color: #3F3F3F;
+    transition: transform 0.3s ease;
 }
 
-.select-selected.select-arrow-active:after {
-    content: "▲";
+/* Rotate arrow when dropdown is active */
+.custom-select.active .select-arrow {
+    transform: rotate(180deg);
 }
 
-.select-items {
+.custom-select .dropdown-options {
+    display: none;
     position: absolute;
-    background-color: #FFF;
-    border-radius: var(--button-radius);
-    width: 100%;
     top: 100%;
     left: 0;
-    z-index: 99;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    display: none;
+    border-radius: var(--button-radius);
+    overflow: hidden;
+    z-index: 10;
 }
 
-.select-items div {
-    color: #3F3F3F;
+.custom-select .dropdown-options li {
     padding: 10px;
+    font-size: 16px;
+    color: #3F3F3F;
     cursor: pointer;
-    user-select: none;
 }
 
-.select-items div:hover {
-    background-color: #f1f1f1;
+.custom-select .dropdown-options li:hover {
+    background-color: #e3e3e3;
 }
 
-.select-items.select-hide {
-    display: none;
-}
+
+
+
+
+
+
+
+
+
 
 
 

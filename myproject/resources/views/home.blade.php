@@ -384,6 +384,7 @@
             <div class="contact__container">
                 <!-----contact form------>
                 <div class="contact__form">
+
                     <form action="" method="POST">
                         @csrf
                         <div class="contact__form__name">
@@ -393,22 +394,21 @@
                             We are ready to work on a project of any complexity, whether it’s commercial or residential.
                         </div>
                         <div class="contact__form__wrapper">
-                            <!----name and email----->
                             <div class="contact__form__inputs">
                                 <input type="text" id="name" name="name" placeholder="Your Name">
                                 <input type="email" id="email" name="email" placeholder="Email">
                             </div>
-                            <!----method and phone----->
                             <div class="contact__form__inputs">
-
-                                <div class="custom-select">
-                                    <div class="select-selected">How can we turn-back?</div>
-                                    <div class="select-items select-hide">
-                                        <div data-value="option1">Option 1</div>
-                                        <div data-value="option2">Option 2</div>
-                                        <div data-value="option3">Option 3</div>
-                                    </div>
+                                <div class="custom-select" id="customSelect">
+                                    <div class="selected-option">How can we turn-back?</div>
+                                    <span class="select-arrow">&#9662;</span> <!-- Arrow Icon -->
+                                    <ul class="dropdown-options">
+                                        <li data-value="1">Option 1</li>
+                                        <li data-value="2">Option 2</li>
+                                        <li data-value="3">Option 3</li>
+                                    </ul>
                                 </div>
+
 
                                 <input type="number" name="phone" id="phone" placeholder="Phone">
                             </div>
@@ -425,6 +425,7 @@
                             </div>
                         </div>
                     </form>
+
                 </div>
 
 
@@ -494,9 +495,9 @@
                         <div class="contact__navigation">
                             <div class="contact_navigation-icon">
                                 <img class="" src="{{ Vite::asset('resources\images\contact\contact_icon.png') }}"
-                                alt="Contact icon logo">
+                                    alt="Contact icon logo">
                                 <div class="contact_navigation-icon-line">
-                                    
+
                                 </div>
                             </div>
 
