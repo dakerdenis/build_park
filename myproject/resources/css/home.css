@@ -608,7 +608,9 @@
     background: var(--background-gradient-dark);
 }
 
-.projects__container {}
+.projects__container {
+    padding-top: 103px;
+}
 
 .projects__slider {
     width: 1257px;
@@ -616,6 +618,7 @@
     height: 724px;
     display: flex;
     justify-content: space-between;
+
 }
 
 .projects__slider__navigation {}
