@@ -374,10 +374,98 @@
         <!---Our best offer--->
         <section class="offers" id="offers">
             <div class="offers__container">
+                <!-----offers background1--->
+                <div class="offers__background offers__background1">
+                    <img class=""
+                        src="{{ Vite::asset('resources\images\offers\background1.jpeg') }}" alt="Offers background">
+                </div>
 
+
+                <!-----offers background2--->
+                <div class="offers__background offers__background2">
+                    <img class=""
+                        src="{{ Vite::asset('resources\images\offers\background2.jpeg') }}" alt="Offers background">
+                </div>
+
+
+                <!---offers wrapper----->
+                <div class="offers__wrapper">
+                    <!---offers element----->
+                    <div class="offers__element">
+                        <!--offers element background-->
+                        <div class="offers__element__image">
+                            <img class=""
+                            src="{{ Vite::asset('resources\images\offers\background1.jpeg') }}" alt="Offers background">
+                        </div>
+
+
+                        <!----offers desc text------>
+                        <div class="offers__element__desc">
+                            <div class="offers__element__desc_text">
+                                Epoxy paint and epoxy floor contractor. Have you heard the two terms? And what does that
+                                have to do with the construction of existing buildings? Epoxy itself is included in the type
+                                of resin...
+                            </div>
+                        </div>
+
+
+                        <!----offers button---->
+                        <div class="offers__element__button">
+                            <button>Contact for Order</button>
+                        </div>
+
+
+                        <!-----Offers logo------->
+                        <div class="offers__red-logo">
+                            <!---Offers red image---->
+                            <img class="offers__red-image" src="{{ Vite::asset('resources\images\offers\red_icon.svg') }}" alt="Offers background">
+                            
+                            <!----Offers red image text------>
+                            <p>Build with us and 
+                                get free design!</p>
+                        </div>
+                    
+                    </div>
+
+                    <!---offers element----->
+                    <div class="offers__element">
+                        <!--offers element background-->
+                        <div class="offers__element__image">
+                            <img class=""
+                            src="{{ Vite::asset('resources\images\offers\background1.jpeg') }}" alt="Offers background">
+                        </div>
+
+
+                        <!----offers desc text------>
+                        <div class="offers__element__desc">
+                            <div class="offers__element__desc_text">
+                                Epoxy paint and epoxy floor contractor. Have you heard the two terms? And what does that
+                                have to do with the construction of existing buildings? Epoxy itself is included in the type
+                                of resin...
+                            </div>
+                        </div>
+
+
+                        <!----offers button---->
+                        <div class="offers__element__button">
+                            <button>Contact for Order</button>
+                        </div>
+
+
+                        <!-----Offers logo------->
+                        <div class="offers__red-logo">
+                            <!---Offers red image---->
+                            <img class="offers__red-image" src="{{ Vite::asset('resources\images\offers\red_icon.svg') }}" alt="Offers background">
+                            
+                            <!----Offers red image text------>
+                            <p>Build with us and 
+                                get free design!</p>
+                        </div>
+                    
+                    </div>
+                </div>
             </div>
         </section>
-
 
         <!---COntact with us --->
         <section class="contact" id="contact">
@@ -427,7 +515,11 @@
                     </form>
 
                 </div>
-
+                <!-----contact form svg----->
+                <div class="form__icon">
+                    <img class="" src="{{ Vite::asset('resources\images\contact\form_icon.svg') }}"
+                        alt="Contact icon logo">
+                </div>
 
                 <!----contact information & navigation---->
                 <div class="contact__information">
