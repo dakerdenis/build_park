@@ -347,10 +347,14 @@
                             <button>Residential</button>
                             <button>Other</button>
                         </div>
-                        <div class="projects__slider__arrows">
-                            <button class="next" id="next_slide"></button>
-                            <button class="next" id="prev_slide"></button>
+                        
+                        <!-------->
+                        <div class="projects__all-projects">
+                            <a href="#">
+                                View all projects
+                            </a>
                         </div>
+
                     </div>
 
 
@@ -359,13 +363,24 @@
                         <div class="project__slider__wrapper">
 
                         </div>
+                        <div class="projects__slider__arrows">
+                            <button class="next" id="next_slide">
+                                <img class="" src="{{ Vite::asset('resources\images\projects\arrow.svg') }}"
+                                >
+                            </button>
+                            <button class="next" id="prev_slide">
+                                <img class="" src="{{ Vite::asset('resources\images\projects\arrow.svg') }}"
+                                >
+                            </button>
+                        </div>
                     </div>
                 </div>
 
                 <!----projects map--->
                 <div class="projects__map">
                     <div class="projects__map__container">
-
+                        <img class="" src="{{ Vite::asset('resources\images\projects\map.png') }}"
+                            alt="Story Our main photo">
                     </div>
                 </div>
             </div>
@@ -376,15 +391,15 @@
             <div class="offers__container">
                 <!-----offers background1--->
                 <div class="offers__background offers__background1">
-                    <img class=""
-                        src="{{ Vite::asset('resources\images\offers\background1.jpeg') }}" alt="Offers background">
+                    <img class="" src="{{ Vite::asset('resources\images\offers\background1.jpeg') }}"
+                        alt="Offers background">
                 </div>
 
 
                 <!-----offers background2--->
                 <div class="offers__background offers__background2">
-                    <img class=""
-                        src="{{ Vite::asset('resources\images\offers\background2.jpeg') }}" alt="Offers background">
+                    <img class="" src="{{ Vite::asset('resources\images\offers\background2.jpeg') }}"
+                        alt="Offers background">
                 </div>
 
 
@@ -394,8 +409,8 @@
                     <div class="offers__element">
                         <!--offers element background-->
                         <div class="offers__element__image">
-                            <img class=""
-                            src="{{ Vite::asset('resources\images\offers\background1.jpeg') }}" alt="Offers background">
+                            <img class="" src="{{ Vite::asset('resources\images\offers\background1.jpeg') }}"
+                                alt="Offers background">
                         </div>
 
 
@@ -418,21 +433,22 @@
                         <!-----Offers logo------->
                         <div class="offers__red-logo">
                             <!---Offers red image---->
-                            <img class="offers__red-image" src="{{ Vite::asset('resources\images\offers\red_icon.svg') }}" alt="Offers background">
-                            
+                            <img class="offers__red-image"
+                                src="{{ Vite::asset('resources\images\offers\red_icon.svg') }}" alt="Offers background">
+
                             <!----Offers red image text------>
-                            <p>Build with us and 
+                            <p>Build with us and
                                 get free design!</p>
                         </div>
-                    
+
                     </div>
 
                     <!---offers element----->
                     <div class="offers__element">
                         <!--offers element background-->
                         <div class="offers__element__image">
-                            <img class=""
-                            src="{{ Vite::asset('resources\images\offers\background1.jpeg') }}" alt="Offers background">
+                            <img class="" src="{{ Vite::asset('resources\images\offers\background1.jpeg') }}"
+                                alt="Offers background">
                         </div>
 
 
@@ -455,13 +471,14 @@
                         <!-----Offers logo------->
                         <div class="offers__red-logo">
                             <!---Offers red image---->
-                            <img class="offers__red-image" src="{{ Vite::asset('resources\images\offers\red_icon.svg') }}" alt="Offers background">
-                            
+                            <img class="offers__red-image"
+                                src="{{ Vite::asset('resources\images\offers\red_icon.svg') }}" alt="Offers background">
+
                             <!----Offers red image text------>
-                            <p>Build with us and 
+                            <p>Build with us and
                                 get free design!</p>
                         </div>
-                    
+
                     </div>
                 </div>
             </div>
