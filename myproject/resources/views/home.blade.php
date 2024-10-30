@@ -142,7 +142,30 @@
                     </div>
                 </div>
             </div>
+            <div class="how__work__container">
+                <div class="how__work__name">
+                    How we work
+                </div>
+                <div class="how__work__desc">
+                    Check out our best service you can possibly orders in building your company and don't forget to ask via our email or our customer service if you are interested in using our services
+                </div>
+
+                <div class="how__work__wrapper">
+                    <div class="how__work__element left">
+                        <!-- Content for left block -->
+                    </div>
+                    <div class="how__work__element center">
+                        <!-- Content for center block -->
+                    </div>
+                    <div class="how__work__element right">
+                        <!-- Content for right block -->
+                    </div>
+                </div>
+                
+            </div>
         </section>
+
+
 
         <!----what makes us different--->
         <section class="different" id="different">
@@ -347,7 +370,7 @@
                             <button>Residential</button>
                             <button>Other</button>
                         </div>
-                        
+
                         <!-------->
                         <div class="projects__all-projects">
                             <a href="#">
@@ -360,18 +383,111 @@
 
                     <!----slider content--->
                     <div class="project__slider__content">
-                        <div class="project__slider__wrapper">
 
-                        </div>
-                        <div class="projects__slider__arrows">
-                            <button class="next" id="next_slide">
-                                <img class="" src="{{ Vite::asset('resources\images\projects\arrow.svg') }}"
-                                >
-                            </button>
-                            <button class="next" id="prev_slide">
-                                <img class="" src="{{ Vite::asset('resources\images\projects\arrow.svg') }}"
-                                >
-                            </button>
+                        <div class="project__slider__wrapper">
+                            <!-- Swiper -->
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="swiper__projects__container">
+                                            <div class="swiper__projects__element">
+                                                <!---swiper element iamge--->
+                                                <div class="swiper__projects__element__image">
+                                                    <img class=""
+                                                        src="{{ Vite::asset('resources\images\projects\placeholder.jpeg') }}">
+
+                                                </div>
+
+                                                <!-----swiper element desc-->
+                                                <div class="swiper__projects__element__desc">
+                                                    <div class="swiper__projects__element__name">
+                                                        Wildstone Infra Hotel
+                                                    </div>
+                                                    <div class="swiper__projects__element__adress">
+                                                        Address
+                                                    </div>
+                                                    <div class="swiper__projects__element__more">
+                                                        <button>See more...</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper__projects__element">
+                                                <!---swiper element iamge--->
+                                                <div class="swiper__projects__element__image">
+                                                    <img class=""
+                                                        src="{{ Vite::asset('resources\images\projects\placeholder.jpeg') }}">
+
+                                                </div>
+
+                                                <!-----swiper element desc-->
+                                                <div class="swiper__projects__element__desc">
+                                                    <div class="swiper__projects__element__name">
+                                                        Wildstone Infra Hotel
+                                                    </div>
+                                                    <div class="swiper__projects__element__adress">
+                                                        Address
+                                                    </div>
+                                                    <div class="swiper__projects__element__more">
+                                                        <button>See more...</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper__projects__element">
+                                                <!---swiper element iamge--->
+                                                <div class="swiper__projects__element__image">
+                                                    <img class=""
+                                                        src="{{ Vite::asset('resources\images\projects\placeholder.jpeg') }}">
+
+                                                </div>
+
+                                                <!-----swiper element desc-->
+                                                <div class="swiper__projects__element__desc">
+                                                    <div class="swiper__projects__element__name">
+                                                        Wildstone Infra Hotel
+                                                    </div>
+                                                    <div class="swiper__projects__element__adress">
+                                                        Address
+                                                    </div>
+                                                    <div class="swiper__projects__element__more">
+                                                        <button>See more...</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper__projects__element">
+                                                <!---swiper element iamge--->
+                                                <div class="swiper__projects__element__image">
+                                                    <img class=""
+                                                        src="{{ Vite::asset('resources\images\projects\placeholder.jpeg') }}">
+
+                                                </div>
+
+                                                <!-----swiper element desc-->
+                                                <div class="swiper__projects__element__desc">
+                                                    <div class="swiper__projects__element__name">
+                                                        Wildstone Infra Hotel
+                                                    </div>
+                                                    <div class="swiper__projects__element__adress">
+                                                        Address
+                                                    </div>
+                                                    <div class="swiper__projects__element__more">
+                                                        <button>See more...</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">Slide 2</div>
+                                </div>
+                                <!-- Navigation buttons -->
+                                <div class="swiper-button-next">
+                                    <img class="swiper-button-img"
+                                        src="{{ Vite::asset('resources\images\projects\arrow.svg') }}">
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <img class="swiper-button-img"
+                                        src="{{ Vite::asset('resources\images\projects\arrow.svg') }}">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -384,10 +500,24 @@
                     </div>
                 </div>
             </div>
+
+            <div class="projects__svg projects__svg1">
+                <img class="" src="{{ Vite::asset('resources\images\projects\vector1.svg') }}"
+                alt="">
+            </div>
+            <div class="projects__svg projects__svg2">
+                <img class="" src="{{ Vite::asset('resources\images\projects\vector2.svg') }}"
+                alt="">
+            </div>
         </section>
 
         <!---Our best offer--->
         <section class="offers" id="offers">
+            <div class="offers__svg">
+                <img class="" src="{{ Vite::asset('resources\images\offers\svg1.svg') }}"
+                alt="">
+            </div>
+
             <div class="offers__container">
                 <!-----offers background1--->
                 <div class="offers__background offers__background1">
@@ -628,6 +758,29 @@
         @include('layouts.partials.footer')
     </div>
 @endsection
+@push('styles')
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    @vite(['resources/css/home.css'])
+@endpush
+
+@push('scripts')
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new Swiper(".mySwiper", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                loop: true,
+            });
+        });
+    </script>
+@endpush
 @push('styles')
     @vite(['resources/css/home.css']) <!-- Adding styles specific to the homepage -->
 @endpush
