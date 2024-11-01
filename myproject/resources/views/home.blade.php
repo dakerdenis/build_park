@@ -152,13 +152,47 @@
 
                 <div class="how__work__wrapper">
                     <div class="how__work__element left">
-                        <!-- Content for left block -->
+
+                        <div class="how__work__blur">
+
+                        </div>
+
+                        <div class="how__work__element-image">
+                            <img class="" src="{{ Vite::asset('resources\images\how_work\1.png') }}"
+                            alt="Story Our main photo">
+                        </div>
+
+                        <div class="how__work__element__desc">
+                            <div class="how__work__element__desc__name">
+                                Name of Stage of Work
+                            </div>
+                            <div class="how__work__element__desc__text">
+                                <p>Our experience of 25 years of
+                                    building and making
+                                    achievements in the world
+                                    of development</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="how__work__element center">
-                        <!-- Content for center block -->
+                        <div class="how__work__element-image">
+                            <img class="" src="{{ Vite::asset('resources\images\how_work\2.png') }}"
+                            alt="Story Our main photo">
+                        </div>
+
+                        <div class="how__work__element__desc">
+                            asdasd
+                        </div>
                     </div>
                     <div class="how__work__element right">
-                        <!-- Content for right block -->
+                        <div class="how__work__element-image">
+                            <img class="" src="{{ Vite::asset('resources\images\how_work\3.png') }}"
+                            alt="Story Our main photo">
+                        </div>
+
+                        <div class="how__work__element__desc">
+                            asdasd
+                        </div>
                     </div>
                 </div>
                 
