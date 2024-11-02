@@ -142,6 +142,8 @@
                     </div>
                 </div>
             </div>
+
+            <!--- HOw we work---->
             <div class="how__work__container">
                 <div class="how__work__name">
                     How we work
@@ -166,7 +168,7 @@
                             <div class="how__work__element__desc__name">
                                 Name of Stage of Work
                             </div>
-                            <div class="how__work__element__desc__text">
+                            <div class="how__work__element__desc__text ">
                                 <p>Our experience of 25 years of
                                     building and making
                                     achievements in the world
@@ -175,23 +177,46 @@
                         </div>
                     </div>
                     <div class="how__work__element center">
+                        <div class="how__work__blur">
+
+                        </div>
                         <div class="how__work__element-image">
                             <img class="" src="{{ Vite::asset('resources\images\how_work\2.png') }}"
                             alt="Story Our main photo">
                         </div>
 
                         <div class="how__work__element__desc">
-                            asdasd
+                            <div class="how__work__element__desc__name">
+                                Name of Stage of Work
+                            </div>
+                            <div class="how__work__element__desc__text ">
+                                <p>Our experience of 25 years of
+                                    building and making
+                                    achievements in the world
+                                    of development</p>
+                            </div>
                         </div>
                     </div>
                     <div class="how__work__element right">
+                        <div class="how__work__blur">
+
+                        </div>
+                        
                         <div class="how__work__element-image">
                             <img class="" src="{{ Vite::asset('resources\images\how_work\3.png') }}"
                             alt="Story Our main photo">
                         </div>
 
                         <div class="how__work__element__desc">
-                            asdasd
+                            <div class="how__work__element__desc__name">
+                                Name of Stage of Work
+                            </div>
+                            <div class="how__work__element__desc__text how__work__element__desc__textright">
+                                <p>Our experience of 25 years of
+                                    building and making
+                                    achievements in the world
+                                    of development</p>
+                            </div>
                         </div>
                     </div>
                 </div>
