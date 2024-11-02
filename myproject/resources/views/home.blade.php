@@ -910,28 +910,39 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize first Swiper -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            new Swiper(".mySwiper", {
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                loop: true,
-            });
-
-            // Initialize second Swiper for clients section
-            new Swiper(".clientsSwiper", {
-                slidesPerView: 4,
-                loop: true,
-                autoplay: {
-                    delay: 2500, // Adjust delay as needed for auto sliding
-                    disableOnInteraction: false,
-                },
-            });
+<!-- Initialize first Swiper -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true,
         });
-    </script>
+
+        // Initialize second Swiper for clients section with breakpoints
+        new Swiper(".clientsSwiper", {
+            slidesPerView: 3,
+            loop: true,
+            autoplay: {
+                delay: 2500, // Adjust delay as needed for auto sliding
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                // When window width is <= 768px (tablet/mobile)
+                768: {
+                    slidesPerView: 4
+                },
+                // When window width is <= 480px (smaller mobile devices)
+                480: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    });
+</script>
+
 @endpush
 
 @push('styles')

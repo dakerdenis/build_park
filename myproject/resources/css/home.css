@@ -1982,14 +1982,8 @@ body.no-scroll {
 }
 
 @media only screen and (max-width: 770px) {
-    .clients{
-        display: none;
-        visibility: hidden;
-    }
-    .services{
-        display: none;
-        visibility: hidden;
-    }
+
+
     .different{
         display: none;
         visibility: hidden;
@@ -2070,5 +2064,64 @@ body.no-scroll {
     }
     .hero__statistics{
         left: 7%;
+    }
+
+
+    /*********************/
+    .clients{
+        height: 120px;
+    }
+    .swiper__slider__customer{
+        width: 100px;
+        height: 50px;
+
+    }
+
+    /********SERVICEs************/
+    .services__container{
+        width: 100%;
+        padding-top: 28px;
+    }
+    .services__name__desc{
+        display: flex;
+        flex-direction: column;
+    }
+    .services__main-name{
+        width: initial;
+        font-size: 33px;
+        line-height: 61px;
+    }
+    .services__desc{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .services__wrapper{
+        width: 90%;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+
+    }
+    .services__element {
+        width: 330px;
+        height: 456px;
+    }
+    .services__image{
+        height: 230px;
+    }
+    .services__name {
+        margin-top: 11px;
+        font-size: 26px;
+        line-height: 31px;
+    }
+    .servies__desc {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+    .services{
+        min-height: initial;
     }
 }
