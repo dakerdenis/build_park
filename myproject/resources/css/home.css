@@ -1962,8 +1962,113 @@ body.no-scroll {
     .swiper__projects__element{
         width: 400px;
         height: 280px;
+        margin-bottom: 0;
     }
     .project__slider__wrapper .swiper{
+        height: calc(628px + 32px + 30px);
+    }
+    .projects__slider__name{
+        font-size: 36px;
+    }
+    .projects__slider__navigation__elements button{
+        font-size: 20px;
+    }
+    .project__slider__content {
+        width: 840px;
+    }
+    .form__icon{
+        left: calc(50% + 214px);
+    }
+}
 
+@media only screen and (max-width: 770px) {
+    .clients{
+        display: none;
+        visibility: hidden;
+    }
+    .services{
+        display: none;
+        visibility: hidden;
+    }
+    .different{
+        display: none;
+        visibility: hidden;
+    }
+    .our__team{
+        display: none;
+        visibility: hidden;
+    }
+    .story{
+        display: none;
+        visibility: hidden;
+    }
+
+    .projects{
+        display: none;
+        visibility: hidden;
+    }
+    .offers{
+        display: none;
+        visibility: hidden;
+    }
+    .contact{
+        display: none;
+        visibility: hidden;
+    }
+    .hero__backgroud{
+        display: none;
+        visibility: hidden;
+    }
+
+    
+
+
+    .hero__name__big{
+        font-size: 30px;
+        line-height: 49px;
+    }
+    .hero__name__small{
+        max-width: 300px;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 35px;
+    }
+    .hero__logo{
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        height: 109px;
+    }
+    .hero__logo__desc{
+        display: none;
+        visibility: hidden;
+    }
+    .hero__statistics {
+        bottom: 210px;
+        width: 310px;
+    }
+    .hero__logo__name p {
+        font-size: 41px;
+    }
+    .hero__logo__name img {
+        right: 0px;
+        top: -8px;
+    }
+    .hero__name{
+        left: 8%;
+
+    }
+    .hero__name__big {
+        font-size: 21px;
+        line-height: 38px;
+    }
+    .hero__name__small {
+        max-width: 300px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+    .hero__statistics{
+        left: 7%;
     }
 }

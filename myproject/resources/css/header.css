@@ -174,3 +174,41 @@
 .header__theme.active .circle__changer {
     left: -5px; /* Move to -5px on active */
 }
+.burger__menu{
+    display: none;
+    visibility: hidden;
+}
+@media only screen and (max-width: 770px) {
+    .haeder__navigation{
+        display: none;
+        visibility: hidden;
+    }
+    .header__language{
+        display: none;
+        visibility: hidden;
+    }
+
+    .header__theme{
+        margin-left: 0;
+        margin-right: 50px;
+    }
+
+
+    .burger__menu{
+        display: block;
+        visibility: visible;
+
+        height: 50px;
+        width: 50px;
+        background-color: red;
+    }
+    .header__logo{
+        width: 50px;
+        height: 50px;
+        top: 15px;
+        left: 21px;
+    }
+    .header__wrapper{
+        padding: 0px 20px 0px 30px;
+    }
+}
