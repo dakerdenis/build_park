@@ -76,56 +76,56 @@
             </div>
         </section>
 
-<!----Our clients---->
-<section class="clients">
-    <div class="swiper clientsSwiper">
-        <div class="swiper-wrapper">
-            <!-- Repeat this block for each client logo -->
-            <div class="swiper-slide">
-                <div class="swiper__slider__customer">
-                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
+        <!----Our clients---->
+        <section class="clients">
+            <div class="swiper clientsSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Repeat this block for each client logo -->
+                    <div class="swiper-slide">
+                        <div class="swiper__slider__customer">
+                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper__slider__customer">
+                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper__slider__customer">
+                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper__slider__customer">
+                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper__slider__customer">
+                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper__slider__customer">
+                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper__slider__customer">
+                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper__slider__customer">
+                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                        </div>
+                    </div>
+                    <!-- Add more client logos as needed up to 10 slides -->
                 </div>
-               
             </div>
-            <div class="swiper-slide">
-                <div class="swiper__slider__customer">
-                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper__slider__customer">
-                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper__slider__customer">
-                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper__slider__customer">
-                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper__slider__customer">
-                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper__slider__customer">
-                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper__slider__customer">
-                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
-                </div>
-            </div>
-            <!-- Add more client logos as needed up to 10 slides -->
-        </div>
-    </div>
-</section>
+        </section>
 
 
 
@@ -199,7 +199,8 @@
                     How we work
                 </div>
                 <div class="how__work__desc">
-                    Check out our best service you can possibly orders in building your company and don't forget to ask via our email or our customer service if you are interested in using our services
+                    Check out our best service you can possibly orders in building your company and don't forget to ask via
+                    our email or our customer service if you are interested in using our services
                 </div>
 
                 <div class="how__work__wrapper">
@@ -211,7 +212,7 @@
 
                         <div class="how__work__element-image">
                             <img class="" src="{{ Vite::asset('resources\images\how_work\1.png') }}"
-                            alt="Story Our main photo">
+                                alt="Story Our main photo">
                         </div>
 
                         <div class="how__work__element__desc">
@@ -232,7 +233,7 @@
                         </div>
                         <div class="how__work__element-image">
                             <img class="" src="{{ Vite::asset('resources\images\how_work\2.png') }}"
-                            alt="Story Our main photo">
+                                alt="Story Our main photo">
                         </div>
 
                         <div class="how__work__element__desc">
@@ -254,7 +255,7 @@
 
                         <div class="how__work__element-image">
                             <img class="" src="{{ Vite::asset('resources\images\how_work\3.png') }}"
-                            alt="Story Our main photo">
+                                alt="Story Our main photo">
                         </div>
 
                         <div class="how__work__element__desc">
@@ -270,7 +271,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </section>
 
@@ -279,8 +280,12 @@
         <!----what makes us different--->
         <section class="different" id="different">
             <!----absolute left image-->
-            <img class="different__absolute__image" src="{{ Vite::asset('resources\images\different\different_left.svg') }}"
+            <img class="different__absolute__image"
+                src="{{ Vite::asset('resources/images/different/different_left.svg') }}"
+                data-dark-src="{{ Vite::asset('resources/images/different/different_left.svg') }}"
+                data-light-src="{{ Vite::asset('resources/images/different/different_left_white.svg') }}"
                 alt="Different left svg">
+
 
             <div class="different__container">
                 <!---different name & DESC---->
@@ -446,7 +451,7 @@
 
 
                     <div class="story__desc__button">
-                        <button>See More</button>
+                        <button id="openStoryPopup">See More</button>
                     </div>
                 </div>
                 <!-----STORY IMAGE------>
@@ -456,10 +461,35 @@
                 </div>
             </div>
             <!----absolute left image-->
-            <img class="story__absolute__image" src="{{ Vite::asset('resources\images\story\placeholder_bottom.svg') }}"
+            <img class="story__absolute__image" src="{{ Vite::asset('resources/images/story/placeholder_bottom.svg') }}"
+                data-dark-src="{{ Vite::asset('resources/images/story/placeholder_bottom.svg') }}"
+                data-light-src="{{ Vite::asset('resources/images/story/placeholder_bottom_white.svg') }}"
                 alt="Story bottom svg">
 
+
         </section>
+
+<!-- Story Popup -->
+<div class="story-popup" id="storyPopup">
+    <div class="story-popup__content">
+        <div class="story-popup__image">
+            <img class="" src="{{ Vite::asset('resources\images\story\popup.jpg') }}"
+            alt="Story Our main photo">
+        </div>
+        <button class="story-popup__close-btn" id="closeStoryPopupBtn">&times;</button>
+        <h2>Our Story & Who We Are</h2>
+
+        <div class="popup__content__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis accumsan justo in luctus. Fusce ut rutrum ligula, quis dictum augue. Vestibulum pulvinar nunc ut iaculis imperdiet. Donec at feugiat lacus. Aliquam erat volutpat. Aenean ut massa vitae sem facilisis commodo. Vestibulum a accumsan quam. </p>
+            <p>Vivamus placerat cursus lacus, et egestas nunc elementum et. Praesent id sollicitudin odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis imperdiet erat id orci sollicitudin, id convallis turpis dignissim. Donec efficitur consequat augue nec laoreet. </p>
+            <p>Sed vulputate erat eget justo commodo congue. Nunc nisl arcu, sodales et dolor convallis, eleifend pellentesque nibh. </p>
+        </div>
+    </div>
+</div>
+
+
+
+
 
         <!---Our projects --->
         <section class="projects" id="projects">
@@ -611,20 +641,17 @@
             </div>
 
             <div class="projects__svg projects__svg1">
-                <img class="" src="{{ Vite::asset('resources\images\projects\vector1.svg') }}"
-                alt="">
+                <img class="" src="{{ Vite::asset('resources\images\projects\vector1.svg') }}" alt="">
             </div>
             <div class="projects__svg projects__svg2">
-                <img class="" src="{{ Vite::asset('resources\images\projects\vector2.svg') }}"
-                alt="">
+                <img class="" src="{{ Vite::asset('resources\images\projects\vector2.svg') }}" alt="">
             </div>
         </section>
 
         <!---Our best offer--->
         <section class="offers" id="offers">
             <div class="offers__svg">
-                <img class="" src="{{ Vite::asset('resources\images\offers\svg1.svg') }}"
-                alt="">
+                <img class="" src="{{ Vite::asset('resources\images\offers\svg1.svg') }}" alt="">
             </div>
 
             <div class="offers__container">

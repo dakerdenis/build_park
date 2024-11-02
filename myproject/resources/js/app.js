@@ -1,8 +1,3 @@
-// Import main styles
-import '../css/style.css';
-import '../css/header.css';
-import '../css/home.css';
-
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header__wrapper');
     const languageButton = document.querySelector('.header__language');
@@ -13,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const servicesSection = document.querySelector('.services');
     const differentSection = document.querySelector('.different');
     const storySection = document.querySelector('.story');
+    const howWorkName = document.querySelector('.how__work__name');
+    const howWorkDesc = document.querySelector('.how__work__desc');
+    const differentImage = document.querySelector('.different__absolute__image');
+    const storyImage = document.querySelector('.story__absolute__image'); // Added for the story section
     let isLightTheme = false;
 
     // Smooth scrolling function
@@ -67,15 +66,29 @@ document.addEventListener('DOMContentLoaded', () => {
             button.classList.toggle('dark-theme-button');
         });
 
-        // Toggle light theme class on hero section
-        if (heroSection) {
-            heroSection.classList.toggle('light-theme');
-        }
-
-        // Toggle light theme class on other sections
+        // Toggle light theme class on hero section and other sections
+        heroSection?.classList.toggle('light-theme');
         servicesSection?.classList.toggle('light-theme');
         differentSection?.classList.toggle('light-theme');
         storySection?.classList.toggle('light-theme');
+
+        // Change colors of "How We Work" section
+        if (howWorkName) {
+            howWorkName.style.color = isLightTheme ? '#3F3F3F' : '#fff';
+        }
+        if (howWorkDesc) {
+            howWorkDesc.style.color = isLightTheme ? '#3F3F3F' : '#fff';
+        }
+
+        // Change the image source for the "different" section
+        if (differentImage) {
+            differentImage.src = isLightTheme ? differentImage.getAttribute('data-light-src') : differentImage.getAttribute('data-dark-src');
+        }
+
+        // Change the image source for the "story" section
+        if (storyImage) {
+            storyImage.src = isLightTheme ? storyImage.getAttribute('data-light-src') : storyImage.getAttribute('data-dark-src');
+        }
 
         // Update header background immediately when toggling theme
         updateHeaderBackgroundOnScroll();
@@ -114,5 +127,35 @@ document.addEventListener('DOMContentLoaded', () => {
             dropdownOptions.style.display = 'none';
             customSelect.classList.remove('active'); // Reset arrow rotation
         });
+    });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const openPopupButton = document.getElementById('openStoryPopup');
+    const storyPopup = document.getElementById('storyPopup');
+    const closePopupButtonExtra = document.getElementById('closeStoryPopupBtn'); // Updated close button selector
+
+    // Open popup logic
+    openPopupButton.addEventListener('click', () => {
+        storyPopup.style.display = 'flex';
+        document.body.classList.add('no-scroll'); // Prevent body from scrolling
+    });
+
+    // Close popup logic for the close button
+    if (closePopupButtonExtra) {
+        closePopupButtonExtra.addEventListener('click', () => {
+            storyPopup.style.display = 'none';
+            document.body.classList.remove('no-scroll'); // Allow body scrolling
+        });
+    }
+
+    // Close popup when clicking outside the content area
+    storyPopup.addEventListener('click', (e) => {
+        if (e.target === storyPopup) {
+            storyPopup.style.display = 'none';
+            document.body.classList.remove('no-scroll');
+        }
     });
 });

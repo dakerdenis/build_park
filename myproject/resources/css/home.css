@@ -219,23 +219,23 @@
 
 .clientsSwiper img {
     width: auto;
-    height: 100px; /* Adjust as needed */
+    height: 100px;
+    /* Adjust as needed */
     object-fit: contain;
 }
 
-.swiper__slider__customer{
+.swiper__slider__customer {
     width: 220px;
     height: 112px;
 }
+
 .swiper__slider__customer img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.clients .swiper{
-
-}
+.clients .swiper {}
 
 
 
@@ -247,32 +247,35 @@
     min-height: 926px;
     background: var(--background-gradient-dark);
 }
+
 .how__work__container {
-    margin-top: 30px;
+    margin-top: 50px;
     width: 100%;
 
 }
+
 .how__work__name {
 
-font-size: 46px;
-font-weight: 600;
-line-height: 69px;
-text-align: center;
-color: #fff;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 69px;
+    text-align: center;
+    color: #fff;
 
 
 
 }
+
 .how__work__desc {
     margin-top: 31px;
     font-size: 18px;
-font-weight: 500;
-line-height: 27px;
-text-align: center;
-color: #fff;
-max-width: 1100px;
-margin: 0 auto;
-margin-bottom: 52px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+    color: #fff;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 52px;
 }
 
 
@@ -281,13 +284,14 @@ margin-bottom: 52px;
 
 
 .how__work__wrapper {
-    background-color: #e90e0ecb;
+
     width: 100%;
     height: 621px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
+
 .how__work__element {
     width: 33.3%;
     height: 100%;
@@ -309,15 +313,17 @@ margin-bottom: 52px;
     position: relative;
     overflow: hidden;
 }
-.how__work__element{
+
+.how__work__element {
     display: flex;
-    
+
 }
-.how__work__element:hover .how__work__blur{
+
+.how__work__element:hover .how__work__blur {
     opacity: 1;
 }
 
-.how__work__element:hover .how__work__element__desc{
+.how__work__element:hover .how__work__element__desc {
     opacity: 1;
 }
 
@@ -327,7 +333,8 @@ margin-bottom: 52px;
 
 /* Left Block */
 .how__work__element.left {
-    width: 36.5%; /* Slightly increase to ensure overlap */
+    width: 36.5%;
+    /* Slightly increase to ensure overlap */
     height: 100%;
 
     clip-path: polygon(0% 0, 100% 0, 85% 100%, 0% 100%);
@@ -341,12 +348,14 @@ margin-bottom: 52px;
 /* Center Block */
 .how__work__element.center {
     position: absolute;
-    width: 800px; /* Increase width to overlap slightly */
+    width: 800px;
+    /* Increase width to overlap slightly */
     height: 100%;
 
     clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
     z-index: 2;
-    margin: 0 -2%; /* Adjust margin for better alignment */
+    margin: 0 -2%;
+    /* Adjust margin for better alignment */
     position: relative;
     left: calc(50% - 400px);
     z-index: 300;
@@ -354,7 +363,8 @@ margin-bottom: 52px;
 
 /* Right Block */
 .how__work__element.right {
-    width: 41.5%; /* Slightly increase to match the alignment */
+    width: 41.5%;
+    /* Slightly increase to match the alignment */
     height: 100%;
 
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
@@ -364,19 +374,21 @@ margin-bottom: 52px;
     z-index: 200;
 }
 
-.how__work__element-image{
+.how__work__element-image {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 100;
 
 }
+
 .how__work__element-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.how__work__blur{
+
+.how__work__blur {
     backdrop-filter: blur(18.200000762939453px);
     position: absolute;
     width: 100%;
@@ -386,7 +398,7 @@ margin-bottom: 52px;
 }
 
 
-.how__work__element__desc{
+.how__work__element__desc {
     position: absolute;
     bottom: 0;
     opacity: 0;
@@ -396,49 +408,56 @@ margin-bottom: 52px;
     background: #1E1E1E80;
 
 }
-.how__work__element__desc__name{
+
+.how__work__element__desc__name {
     position: absolute;
     width: 280px;
     top: -55px;
     left: calc(50% - 140px);
 
-font-size: 24px;
-font-weight: 600;
-line-height: 36px;
-text-align: left;
-color: #830002;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+    color: #830002;
 }
-.how__work__element__desc__text{
+
+.how__work__element__desc__text {
     width: 315px;
     height: 153px;
 
 
-font-size: 18px;
-font-weight: 400;
-line-height: 40px;
-text-align: left;
-color: #fff;
-position: absolute;
-left: calc(50% - 157.5px);
-top: 76px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+    color: #fff;
+    position: absolute;
+    left: calc(50% - 157.5px);
+    top: 76px;
 }
 
-.left .how__work__element__desc__text{
+.left .how__work__element__desc__text {
     left: calc(50% - 230px);
 }
-.left .how__work__element__desc__name{
+
+.left .how__work__element__desc__name {
     left: calc(50% - 190px);
 }
-.center .how__work__element__desc__name{
+
+.center .how__work__element__desc__name {
     left: calc(50% - 155px);
 }
-.right .how__work__element__desc__text{
+
+.right .how__work__element__desc__text {
     left: initial;
     left: calc(50% - 0px);
 }
-.right .how__work__element__desc__name{
+
+.right .how__work__element__desc__name {
     left: calc(50% - 40px);
 }
+
 .services__container {
     width: 1200px;
     margin: 0 auto;
@@ -800,6 +819,8 @@ top: 76px;
     bottom: -140px;
 }
 
+
+
 /********* Light Theme for Story Section **************/
 .story.light-theme {
     background-color: #fff;
@@ -821,6 +842,127 @@ top: 76px;
     /* Updated border color */
 }
 
+/* Story Popup Styles */
+.story-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
+    z-index: 1000;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-popup__content {
+
+    background: linear-gradient(219.84deg, #FFFFFF 4.14%, #CBCBCB 82.76%);
+
+
+    border-radius: 10px;
+    width: 1240px;
+    height: 762px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.story-popup__image {
+    width: 100%;
+    height: 265px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.story-popup__image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.story-popup__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+body.no-scroll {
+    overflow: hidden;
+    /* Prevents body from scrolling */
+}
+
+/* Close Button Styling */
+/* Close Button Styling */
+.story-popup__close-btn {
+    background: linear-gradient(97.73deg, #C66565 -6.96%, #CA2225 40.89%, #830002 73.64%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    top: 48px;
+    right: 37px;
+    cursor: pointer;
+
+    z-index: 1001;
+    /* Ensures it's above other content */
+}
+
+.story-popup__close-btn:hover {
+    color: #000;
+    /* Darken on hover */
+}
+
+.story-popup__content h2 {
+    color: #000;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 69px;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.popup__content__text {
+    max-width: 1021px;
+    margin: 0 auto;
+}
+
+.popup__content__text p {
+    text-align: left;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 34px;
+    text-align: left;
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -831,17 +973,21 @@ top: 76px;
     position: relative;
     z-index: 300;
 }
-.projects__svg{
+
+.projects__svg {
     position: absolute;
     z-index: 100;
 }
-.projects__svg1{
-left: 18.5%;
-top: 36%;
+
+.projects__svg1 {
+    left: 18.5%;
+    top: 36%;
 }
-.projects__svg2{
+
+.projects__svg2 {
     top: 44%;
 }
+
 .projects__container {
     position: relative;
     padding-top: 103px;
@@ -1055,13 +1201,14 @@ top: 36%;
 .swiper__projects__element__more {
     margin-top: 5px;
 }
-.swiper__projects__element__more button{
+
+.swiper__projects__element__more button {
     color: var(--basic-red);
     background-color: rgba(0, 0, 0, 0);
-font-size: 18px;
-font-weight: 400;
-line-height: 21.11px;
-text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.11px;
+    text-align: left;
 
 }
 
@@ -1105,7 +1252,7 @@ text-align: left;
 
 }
 
-.offers__svg{
+.offers__svg {
     position: absolute;
     right: 0;
     top: -120px;
