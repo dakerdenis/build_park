@@ -1959,4 +1959,11 @@ body.no-scroll {
     text-align: left;
     margin-bottom: 16px;
     }
+    .swiper__projects__element{
+        width: 400px;
+        height: 280px;
+    }
+    .project__slider__wrapper .swiper{
+
+    }
 }
