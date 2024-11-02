@@ -262,7 +262,7 @@
                             <div class="how__work__element__desc__name">
                                 Name of Stage of Work
                             </div>
-                            <div class="how__work__element__desc__text how__work__element__desc__textright">
+                            <div class="how__work__element__desc__text">
                                 <p>Our experience of 25 years of
                                     building and making
                                     achievements in the world
@@ -469,23 +469,29 @@
 
         </section>
 
-<!-- Story Popup -->
-<div class="story-popup" id="storyPopup">
-    <div class="story-popup__content">
-        <div class="story-popup__image">
-            <img class="" src="{{ Vite::asset('resources\images\story\popup.jpg') }}"
-            alt="Story Our main photo">
-        </div>
-        <button class="story-popup__close-btn" id="closeStoryPopupBtn">&times;</button>
-        <h2>Our Story & Who We Are</h2>
+        <!-- Story Popup -->
+        <div class="story-popup" id="storyPopup">
+            <div class="story-popup__content">
+                <div class="story-popup__image">
+                    <img class="" src="{{ Vite::asset('resources\images\story\popup.jpg') }}"
+                        alt="Story Our main photo">
+                </div>
+                <button class="story-popup__close-btn" id="closeStoryPopupBtn">&times;</button>
+                <h2>Our Story & Who We Are</h2>
 
-        <div class="popup__content__text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis accumsan justo in luctus. Fusce ut rutrum ligula, quis dictum augue. Vestibulum pulvinar nunc ut iaculis imperdiet. Donec at feugiat lacus. Aliquam erat volutpat. Aenean ut massa vitae sem facilisis commodo. Vestibulum a accumsan quam. </p>
-            <p>Vivamus placerat cursus lacus, et egestas nunc elementum et. Praesent id sollicitudin odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis imperdiet erat id orci sollicitudin, id convallis turpis dignissim. Donec efficitur consequat augue nec laoreet. </p>
-            <p>Sed vulputate erat eget justo commodo congue. Nunc nisl arcu, sodales et dolor convallis, eleifend pellentesque nibh. </p>
+                <div class="popup__content__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis accumsan justo in luctus.
+                        Fusce ut rutrum ligula, quis dictum augue. Vestibulum pulvinar nunc ut iaculis imperdiet. Donec at
+                        feugiat lacus. Aliquam erat volutpat. Aenean ut massa vitae sem facilisis commodo. Vestibulum a
+                        accumsan quam. </p>
+                    <p>Vivamus placerat cursus lacus, et egestas nunc elementum et. Praesent id sollicitudin odio. Interdum
+                        et malesuada fames ac ante ipsum primis in faucibus. Duis imperdiet erat id orci sollicitudin, id
+                        convallis turpis dignissim. Donec efficitur consequat augue nec laoreet. </p>
+                    <p>Sed vulputate erat eget justo commodo congue. Nunc nisl arcu, sodales et dolor convallis, eleifend
+                        pellentesque nibh. </p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
 
 

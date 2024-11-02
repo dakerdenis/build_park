@@ -1922,4 +1922,41 @@ body.no-scroll {
         width: 650px;
         left: calc(50% - 325px);
     }
+    .left .how__work__element__desc__text{
+        left: calc(50% - 200px);
+        top: 49px;
+    }
+    .right .how__work__element__desc__text{
+        left: calc(50% - 60px);
+        top: 49px;
+    }
+    .center .how__work__element__desc__text{
+
+        top: 49px;
+    }
+    .story-popup__content{
+        width: 1000px;
+        height: 600px;
+    }
+    .story-popup__content h2{
+        font-size: 41px;
+        font-weight: 600;
+        line-height: 59px;
+        text-align: center;
+        margin-top: 13px;
+    }
+    .story-popup__image {
+        height: 230px;
+    }
+    .popup__content__text{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .popup__content__text p{
+        font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: left;
+    margin-bottom: 16px;
+    }
 }
