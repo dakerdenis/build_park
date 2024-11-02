@@ -205,7 +205,38 @@
     width: 100%;
     height: 229px;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
+
+.clientsSwiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clientsSwiper img {
+    width: auto;
+    height: 100px; /* Adjust as needed */
+    object-fit: contain;
+}
+
+.swiper__slider__customer{
+    width: 220px;
+    height: 112px;
+}
+.swiper__slider__customer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clients .swiper{
+
+}
+
 
 
 
@@ -895,7 +926,7 @@ top: 36%;
     height: 100%;
 }
 
-.swiper {
+.project__slider__wrapper .swiper {
     width: 100%;
     height: calc(628px + 32px + 64px);
 

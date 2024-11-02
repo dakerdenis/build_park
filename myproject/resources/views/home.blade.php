@@ -76,7 +76,57 @@
             </div>
         </section>
 
-        <section class="clients"></section>
+<!----Our clients---->
+<section class="clients">
+    <div class="swiper clientsSwiper">
+        <div class="swiper-wrapper">
+            <!-- Repeat this block for each client logo -->
+            <div class="swiper-slide">
+                <div class="swiper__slider__customer">
+                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
+                </div>
+               
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper__slider__customer">
+                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper__slider__customer">
+                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper__slider__customer">
+                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper__slider__customer">
+                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper__slider__customer">
+                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper__slider__customer">
+                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper__slider__customer">
+                    <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log" >
+                </div>
+            </div>
+            <!-- Add more client logos as needed up to 10 slides -->
+        </div>
+    </div>
+</section>
+
 
 
 
@@ -201,7 +251,7 @@
                         <div class="how__work__blur">
 
                         </div>
-                        
+
                         <div class="how__work__element-image">
                             <img class="" src="{{ Vite::asset('resources\images\how_work\3.png') }}"
                             alt="Story Our main photo">
@@ -827,7 +877,7 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
+    <!-- Initialize first Swiper -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             new Swiper(".mySwiper", {
@@ -837,9 +887,20 @@
                 },
                 loop: true,
             });
+
+            // Initialize second Swiper for clients section
+            new Swiper(".clientsSwiper", {
+                slidesPerView: 4,
+                loop: true,
+                autoplay: {
+                    delay: 2500, // Adjust delay as needed for auto sliding
+                    disableOnInteraction: false,
+                },
+            });
         });
     </script>
 @endpush
+
 @push('styles')
     @vite(['resources/css/home.css']) <!-- Adding styles specific to the homepage -->
 @endpush
