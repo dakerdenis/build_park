@@ -2354,7 +2354,9 @@ body.no-scroll {
         background: var(--background-gradient-red-button);
         color: #fff;
     }
-
+    .swiper__projects__container{
+        justify-content: space-evenly;
+    }
 
 
     /************OFFERS***********/
