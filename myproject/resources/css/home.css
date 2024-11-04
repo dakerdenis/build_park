@@ -1984,18 +1984,12 @@ body.no-scroll {
 @media only screen and (max-width: 770px) {
 
 
-    .different{
-        display: none;
-        visibility: hidden;
-    }
+
     .our__team{
         display: none;
         visibility: hidden;
     }
-    .story{
-        display: none;
-        visibility: hidden;
-    }
+
 
     .projects{
         display: none;
@@ -2144,10 +2138,138 @@ body.no-scroll {
         line-height: 25px;
     }
     .how__work__wrapper{
+        margin-top: 30px;
         flex-direction: column;
-
+        height: initial;
     }
     .how__work__element {
+        position: initial;
         height: 500px;
+    }
+
+
+
+    /******Different*********/
+    .different{
+        min-height: initial;
+    }
+    .different__container{
+        width: 95%;
+        margin: 0 auto;
+        padding-top: 120px;
+    }
+
+    .different__name__text {
+        font-size: 31px;
+        font-weight: 600;
+        line-height: 43px;
+    }
+    .different__absolute__image {
+        top: -207px;
+    }
+    .different__name__desc{
+        flex-direction: column;
+        height: initial;
+    }
+    .different__desc{
+        width: 100%;
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+
+
+
+
+    .different__wrapper{
+        flex-direction: column;
+        width: 100%;
+    }
+    .different__element{
+        height: 325px;
+        width: 100%;
+
+        margin-bottom: 10px;
+        padding-left: 15px;
+    }
+    .different_placeholder {
+        left: -23px;
+
+    }
+    .different_placeholder-img {
+        left: 32.5px;
+    }
+    .different__element:nth-child(2) .different_placeholder-img{
+        left: 33.5px;
+    }
+    .different__element:nth-child(3) .different_placeholder-img {
+        left: 34px;
+    }
+    .different__element__desc {
+        
+    }
+        
+    /**************OUT STOry************/
+    .story{
+        height: initial;
+    }
+    .story__container{
+        width: 95%;
+        margin: 0 auto;
+        flex-direction: column-reverse;
+        margin-top: 30px;
+    }
+    .story__image{
+        width: 100%;
+        height: 280px;
+        border: 5x solid #fff;
+    }
+    .story__desc{
+        width: 100%;
+    }
+
+    .story__desc__name{
+        font-size: 34px;
+        line-height: 43px;
+    }
+    .story__desc__button{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .story-popup__content{
+        width: 95%;
+        height: 80vh;
+    }
+    .story-popup__close-btn {
+        top: 22px;
+        right: 22px;
+    }
+    .story-popup__content h2 {
+        font-size: 32px;
+        line-height: 43px;
+        height: 86px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .story-popup__image{
+        height: 35%;
+    }
+    .popup__content__text{
+        height: calc(95% - 35% - 86px);
+
+        overflow-y: scroll;
+        padding-right: 10px;
+    }
+    .popup__content__text::-webkit-scrollbar {
+        width: 12px; /* Increase the width */
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    .popup__content__text::-webkit-scrollbar-thumb {
+        background-color: var(--basic-red); /* Change the background color of the scrollbar thumb */
+        border-radius: 5px; /* Add rounded corners */
     }
 }
