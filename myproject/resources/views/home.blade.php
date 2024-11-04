@@ -637,6 +637,11 @@
                     </div>
                 </div>
 
+                <div class="mobile__all_projects">
+                    <a href="#">
+                        View all projects
+                    </a>
+                </div>
                 <!----projects map--->
                 <div class="projects__map">
                     <div class="projects__map__container">

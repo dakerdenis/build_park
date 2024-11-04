@@ -1211,7 +1211,10 @@ body.no-scroll {
     text-align: left;
 
 }
-
+.mobile__all_projects{
+    display: none;
+    visibility: hidden;
+}
 
 
 
@@ -1991,18 +1994,6 @@ body.no-scroll {
     }
 
 
-    .projects{
-        display: none;
-        visibility: hidden;
-    }
-    .offers{
-        display: none;
-        visibility: hidden;
-    }
-    .contact{
-        display: none;
-        visibility: hidden;
-    }
     .hero__backgroud{
         display: none;
         visibility: hidden;
@@ -2271,5 +2262,249 @@ body.no-scroll {
     .popup__content__text::-webkit-scrollbar-thumb {
         background-color: var(--basic-red); /* Change the background color of the scrollbar thumb */
         border-radius: 5px; /* Add rounded corners */
+    }
+.story{
+    padding-bottom: 40px;
+}
+    /************Projects***********/
+    .projects__container{
+        width: 95%;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 35px;
+    }
+    .projects__map{
+        display: none;
+        visibility: hidden;
+    }
+
+    .projects__slider{
+        flex-direction: column;
+        width: 100%;
+        height: initial;
+    }
+    .projects__all-projects{
+        display: none;
+        visibility: hidden;
+    }
+    .projects__slider__navigation{
+        
+    }
+    
+    .project__slider__content {
+        width: 100%;
+    }
+    .swiper__projects__element{
+        width: 155px;
+        height: 48.5%;
+        overflow: hidden;
+    }
+    .project__slider__content{
+        height: 500px;
+    }
+    .project__slider__wrapper .swiper{
+        height: 490px;
+    }
+    .swiper-slide{
+        height: 405px;
+    }
+    .swiper-button-next{
+        top: 93%;
+    }
+    .swiper-button-prev{
+        top: 93%;
+    }
+    .swiper__projects__element__desc{
+        padding: 7px;
+        height: 80px;
+    }
+    .swiper__projects__element__name{
+        font-size: 12px;
+        line-height: 13px;
+        height: 28px;
+    }
+    .swiper__projects__element__adress {
+        font-size: 9px;
+        margin-top: 4px;
+        line-height: 12px;
+    }
+    
+    .swiper__projects__element__more button {
+        font-size: 14px;
+    }
+    .swiper-button-next, .swiper-button-prev{
+        width: 75px;
+        height: 55px;
+    }
+    .mobile__all_projects{
+        display: flex;
+        visibility: visible;
+        align-items: center;
+        justify-content: center;
+        height: 55px;
+        margin-top: 20px;
+    }
+    .mobile__all_projects a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 55px;
+        border-radius: var(--button-radius);
+        background: var(--background-gradient-red-button);
+        color: #fff;
+    }
+
+
+
+    /************OFFERS***********/
+    .offers{
+        min-height: initial;
+        width: 100%;
+    }
+    .offers__container{
+        max-width: initial;
+        width: 90%;
+        margin: 0 auto;
+        min-height: 900px;
+    }
+    .offers__background{
+        width: 80%;
+        height: 500px;
+    }
+
+    .offers__background1 {
+        top: 0px;
+        left: -41px;
+    }
+
+
+
+    .offers__wrapper{
+        width: 100%;
+        height: initial;
+        flex-direction: column;
+        left: 0;
+        top: 50px;
+    }
+    .offers__element{
+        width: 100%;
+        height: 350px;
+        border-radius: 10px;
+    }
+    .offers__element__image img{
+        border-radius: 10px;
+    }
+    .offers__red-logo {
+        transform: scale(0.5);
+        right: -58px;
+        top: -103px;
+    }
+    .offers__element__image{
+        width: 100%;
+        height: 100%;
+    }
+    .offers__element__desc{
+        width: 100%;
+        border-radius: 0px 0px 10px 10px;
+        height: 185px;
+    }
+    .offers__element__desc_text{
+        padding: 14px 10px 0px 10px;
+        font-size: 13px;
+    }
+    .offers__element:nth-child(2) {
+        margin-top: 110px;
+    }
+    /*************Contacts*****************/
+    .contact__form{
+        width: 95%;
+        margin: 0 auto;
+        left: initial;
+        height: initial;
+        position: initial;
+    }
+    .contact__form form{
+        width: 95%;
+        padding-top: 18px;
+    }
+    .contact__form__inputs{
+        flex-direction: column;
+    }
+    .contact__form__message{
+        width: 100%;
+    }
+    .contact__form__inputs input{
+        width: 100%;
+    }
+    .contact__form__name{
+        font-size: 23px;
+    }
+    .contact__form__desc {
+        font-size: 15px;
+        line-height: 27px;
+    }
+    .contact__form__inputs{
+        height: initial;
+        flex-direction: column-reverse;
+    }
+    .contact__form__inputs input{
+        height: 47px;
+    }
+    .contact__form__inputs input[type="email"]{
+        margin-bottom: 15px;
+    }
+    .contact__form__inputs input[type="number"]{
+        margin-bottom: 15px;
+    }
+    .custom-select{
+        width: 100%;
+    }
+
+    .form__icon{
+        display: none;
+        visibility: hidden;
+    }
+
+
+    .contact__container{
+        height: initial;
+        padding-top: 22px;
+    }
+    .contact__information{
+        width: initial;
+        height: initial;
+        position: initial;
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 30px;
+
+
+    }
+    .contact__information__wrapper{
+
+        flex-direction: column;
+        align-items: initial;
+    }
+    .contact__information__value {
+        font-size: 14px;
+
+    }
+    .contact__information__desc{
+        font-size: 15px;
+        width: 67px;
+    }
+    .contact__information__social a{
+        margin-right: 14px;
+    }
+    .contact__navigation{
+        margin-top: 18px;
+    }
+    .contact__navigation{
+        margin-right: 0px;
+    }
+    .contact__navigation-values button {
+        margin-left: 17px;
+        font-size: 16px;
     }
 }
