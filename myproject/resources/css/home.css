@@ -2101,7 +2101,7 @@ body.no-scroll {
         margin: 0 auto;
         flex-direction: column;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 40px;
 
     }
     .services__element {
@@ -2119,9 +2119,35 @@ body.no-scroll {
     .servies__desc {
         margin-top: 10px;
         font-size: 15px;
-        line-height: 30px;
+        line-height: 27px;
+    }
+    .services__desc{
+        font-size: 14px;
+        line-height: 23px;
+        width: 90%;
+        margin: 0 auto;
+
+    }
+    .services__main-name{
+        font-size: 25px;
     }
     .services{
         min-height: initial;
+    }
+    .how__work__name{
+        font-size: 25px;
+    }
+    .how__work__desc{
+        font-size: 15px;
+        width: 90%;
+        margin: 0 auto;
+        line-height: 25px;
+    }
+    .how__work__wrapper{
+        flex-direction: column;
+
+    }
+    .how__work__element {
+        height: 500px;
     }
 }
