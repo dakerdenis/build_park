@@ -348,7 +348,7 @@
                                         alt="Different placeholder image">
 
                                         <img class="different_placeholder-img"
-                                        src="{{asset('images/different/different1.svg') }}"
+                                        src="{{asset('images/different/different2.svg') }}"
                                         alt="We are experienced">
                                 </div>
                             </div>
@@ -376,7 +376,7 @@
                                         alt="Different placeholder image">
 
                                         <img class="different_placeholder-img"
-                                        src="{{asset('images/different/different1.svg') }}"
+                                        src="{{asset('images/different/different3.svg') }}"
                                         alt="We are experienced">
                                 </div>
                             </div>
@@ -402,9 +402,9 @@
                                         data-dark-src="{{ asset('images/different/different_placeholder.svg') }}"
                                         data-light-src="{{ asset('images/different/different_placeholder_white.svg') }}"
                                         alt="Different placeholder image">
-                                        
+
                                         <img class="different_placeholder-img"
-                                        src="{{asset('images/different/different1.svg') }}"
+                                        src="{{asset('images/different/different4.svg') }}"
                                         alt="We are experienced">
                                 </div>
                             </div>

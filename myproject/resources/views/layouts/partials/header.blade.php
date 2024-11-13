@@ -80,7 +80,7 @@
                 <button data-section="hero">Home</button>
                 <button data-section="services">Services</button>
                 <button data-section="different">About Us</button>
-                <button data-section="our__team">Find a Team</button>
+                <!--button data-section="our__team">Find a Team</button -->
                 <button data-section="projects">Portfolio</button>
                 <button data-section="offers">Offers</button>
                 <button data-section="contact">Contact Us</button>

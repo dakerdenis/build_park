@@ -2148,6 +2148,7 @@ body.no-scroll {
         width: 95%;
         margin: 0 auto;
         padding-top: 120px;
+        padding-bottom: 45px;
     }
 
     .different__name__text {
@@ -2222,6 +2223,7 @@ body.no-scroll {
     .story__desc__name{
         font-size: 34px;
         line-height: 43px;
+        margin-top: 10px;
     }
     .story__desc__button{
         text-align: center;
