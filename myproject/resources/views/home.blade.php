@@ -16,16 +16,16 @@
                         <p>- everything in one place:</p>
                         <p> Offices, Houses, Villas.</p>
                     </div>
-
+        
                     <div class="hero__name__small">
                         <p>Order a renovation and receive a design as a gift!</p>
                     </div>
-
+        
                     <div class="hero__button">
                         <button>Contact For Consultation</button>
                     </div>
                 </div>
-
+        
                 <!--------->
                 <div class="hero__statistics">
                     <div class="hero__statistics__element">
@@ -53,20 +53,19 @@
                         </div>
                     </div>
                 </div>
-
+        
                 <!------->
                 <div class="hero__backgroud">
-                    <img src="{{ Vite::asset('resources/images/hero_back.png') }}" alt="Build park example of future !">
+                    <img src="{{ asset('images/hero_back.png') }}" alt="Build park example of future!">
                 </div>
-
-
+        
                 <!----Build Park---->
                 <div class="hero__logo">
                     <div class="hero__logo__name">
                         <p>Build Park</p>
-                        <img src="{{ Vite::asset('resources/images/logo_white.svg') }}" alt="Build Park Company Small Logo">
+                        <img src="{{ asset('images/logo_white.svg') }}" alt="Build Park Company Small Logo">
                     </div>
-
+        
                     <div class="hero__logo__desc">
                         <p>As a trusted general project that has been
                             operating for 25 years, our commitment is
@@ -75,6 +74,7 @@
                 </div>
             </div>
         </section>
+        
 
         <!----Our clients---->
         <section class="clients">
@@ -83,43 +83,43 @@
                     <!-- Repeat this block for each client logo -->
                     <div class="swiper-slide">
                         <div class="swiper__slider__customer">
-                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
                         </div>
 
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper__slider__customer">
-                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper__slider__customer">
-                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper__slider__customer">
-                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper__slider__customer">
-                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper__slider__customer">
-                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper__slider__customer">
-                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper__slider__customer">
-                            <img src="{{ Vite::asset('resources/images/customers/customer1.png') }}" alt="Client log">
+                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
                         </div>
                     </div>
                     <!-- Add more client logos as needed up to 10 slides -->
@@ -150,7 +150,7 @@
                 <div class="services__wrapper">
                     <div class="services__element">
                         <div class="services__image">
-                            <img src="{{ Vite::asset('resources/images/services/services1.jpg') }}" alt="Build">
+                            <img src="{{ asset('images/services/services1.jpg') }}" alt="Build">
                         </div>
                         <div class="services__name">
                             <p>Project Management</p>
@@ -164,7 +164,7 @@
                     </div>
                     <div class="services__element">
                         <div class="services__image">
-                            <img src="{{ Vite::asset('resources/images/services/services2.jpg') }}" alt="Build">
+                            <img src="{{ asset('images/services/services2.jpg') }}" alt="Build">
                         </div>
                         <div class="services__name">
                             <p>Project Management</p>
@@ -178,7 +178,7 @@
                     </div>
                     <div class="services__element">
                         <div class="services__image">
-                            <img src="{{ Vite::asset('resources/images/services/services2.jpg') }}" alt="Build">
+                            <img src="{{ asset('images/services/services2.jpg') }}" alt="Build">
                         </div>
                         <div class="services__name">
                             <p>Project Management</p>
@@ -211,7 +211,7 @@
                         </div>
 
                         <div class="how__work__element-image">
-                            <img class="" src="{{ Vite::asset('resources\images\how_work\1.png') }}"
+                            <img class="" src="{{ asset('images\how_work\1.png') }}"
                                 alt="Story Our main photo">
                         </div>
 
@@ -232,7 +232,7 @@
 
                         </div>
                         <div class="how__work__element-image">
-                            <img class="" src="{{ Vite::asset('resources\images\how_work\2.png') }}"
+                            <img class="" src="{{ asset('images\how_work\2.png') }}"
                                 alt="Story Our main photo">
                         </div>
 
@@ -254,7 +254,7 @@
                         </div>
 
                         <div class="how__work__element-image">
-                            <img class="" src="{{ Vite::asset('resources\images\how_work\3.png') }}"
+                            <img class="" src="{{ asset('images\how_work\3.png') }}"
                                 alt="Story Our main photo">
                         </div>
 
@@ -281,9 +281,9 @@
         <section class="different" id="different">
             <!----absolute left image-->
             <img class="different__absolute__image"
-                src="{{ Vite::asset('resources/images/different/different_left.svg') }}"
-                data-dark-src="{{ Vite::asset('resources/images/different/different_left.svg') }}"
-                data-light-src="{{ Vite::asset('resources/images/different/different_left_white.svg') }}"
+                src="{{ asset('images/different/different_left.svg') }}"
+                data-dark-src="{{asset('images/different/different_left.svg') }}"
+                data-light-src="{{ asset('images/different/different_left_white.svg') }}"
                 alt="Different left svg">
 
 
@@ -314,13 +314,13 @@
                             <div class="different__element__image">
                                 <div class="different__image__container">
                                     <img class="different_placeholder"
-                                        src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
-                                        data-dark-src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
-                                        data-light-src="{{ Vite::asset('resources/images/different/different_placeholder_white.svg') }}"
+                                        src="{{ asset('images/different/different_placeholder.svg') }}"
+                                        data-dark-src="{{ asset('images/different/different_placeholder.svg') }}"
+                                        data-light-src="{{asset('images/different/different_placeholder_white.svg') }}"
                                         alt="Different placeholder image">
 
                                     <img class="different_placeholder-img"
-                                        src="{{ Vite::asset('resources\images\different\different1.svg') }}"
+                                        src="{{ asset('images\different\different1.svg') }}"
                                         alt="We are experienced">
                                 </div>
                             </div>
@@ -342,13 +342,13 @@
                             <div class="different__element__image">
                                 <div class="different__image__container">
                                     <img class="different_placeholder"
-                                        src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
-                                        data-dark-src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
-                                        data-light-src="{{ Vite::asset('resources/images/different/different_placeholder_white.svg') }}"
+                                        src="{{ asset('images/different/different_placeholder.svg') }}"
+                                        data-dark-src="{{ asset('images/different/different_placeholder.svg') }}"
+                                        data-light-src="{{ asset('images/different/different_placeholder_white.svg') }}"
                                         alt="Different placeholder image">
 
                                     <img class="different_placeholder-img"
-                                        src="{{ Vite::asset('resources\images\different\different2.svg') }}"
+                                        src="{{ asset('images\different\different2.svg') }}"
                                         alt="We are experienced">
                                 </div>
                             </div>
@@ -370,13 +370,13 @@
                             <div class="different__element__image">
                                 <div class="different__image__container">
                                     <img class="different_placeholder"
-                                        src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
-                                        data-dark-src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
-                                        data-light-src="{{ Vite::asset('resources/images/different/different_placeholder_white.svg') }}"
+                                        src="{{ asset('images/different/different_placeholder.svg') }}"
+                                        data-dark-src="{{ asset('images/different/different_placeholder.svg') }}"
+                                        data-light-src="{{ asset('images/different/different_placeholder_white.svg') }}"
                                         alt="Different placeholder image">
 
                                     <img class="different_placeholder-img"
-                                        src="{{ Vite::asset('resources\images\different\different3.svg') }}"
+                                        src="{{ asset('images\different\different3.svg') }}"
                                         alt="We are experienced">
                                 </div>
                             </div>
@@ -398,13 +398,13 @@
                             <div class="different__element__image">
                                 <div class="different__image__container">
                                     <img class="different_placeholder"
-                                        src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
-                                        data-dark-src="{{ Vite::asset('resources/images/different/different_placeholder.svg') }}"
-                                        data-light-src="{{ Vite::asset('resources/images/different/different_placeholder_white.svg') }}"
+                                        src="{{ asset('images/different/different_placeholder.svg') }}"
+                                        data-dark-src="{{ asset('images/different/different_placeholder.svg') }}"
+                                        data-light-src="{{ asset('images/different/different_placeholder_white.svg') }}"
                                         alt="Different placeholder image">
 
                                     <img class="different_placeholder-img"
-                                        src="{{ Vite::asset('resources\images\different\different4.svg') }}"
+                                        src="{{ asset('resources\images\different\different4.svg') }}"
                                         alt="We are experienced">
                                 </div>
                             </div>
@@ -456,14 +456,14 @@
                 </div>
                 <!-----STORY IMAGE------>
                 <div class="story__image">
-                    <img class="" src="{{ Vite::asset('resources\images\story\back.jpg') }}"
+                    <img class="" src="{{ asset('images\story\back.jpg') }}"
                         alt="Story Our main photo">
                 </div>
             </div>
             <!----absolute left image-->
-            <img class="story__absolute__image" src="{{ Vite::asset('resources/images/story/placeholder_bottom.svg') }}"
-                data-dark-src="{{ Vite::asset('resources/images/story/placeholder_bottom.svg') }}"
-                data-light-src="{{ Vite::asset('resources/images/story/placeholder_bottom_white.svg') }}"
+            <img class="story__absolute__image" src="{{ asset('images/story/placeholder_bottom.svg') }}"
+                data-dark-src="{{ asset('images/story/placeholder_bottom.svg') }}"
+                data-light-src="{{ asset('images/story/placeholder_bottom_white.svg') }}"
                 alt="Story bottom svg">
 
 
@@ -473,7 +473,7 @@
         <div class="story-popup" id="storyPopup">
             <div class="story-popup__content">
                 <div class="story-popup__image">
-                    <img class="" src="{{ Vite::asset('resources\images\story\popup.jpg') }}"
+                    <img class="" src="{{ asset('images\story\popup.jpg') }}"
                         alt="Story Our main photo">
                 </div>
                 <button class="story-popup__close-btn" id="closeStoryPopupBtn">&times;</button>
@@ -539,7 +539,7 @@
                                                 <!---swiper element iamge--->
                                                 <div class="swiper__projects__element__image">
                                                     <img class=""
-                                                        src="{{ Vite::asset('resources\images\projects\placeholder.jpeg') }}">
+                                                        src="{{ asset('images\projects\placeholder.jpeg') }}">
 
                                                 </div>
 
@@ -560,7 +560,7 @@
                                                 <!---swiper element iamge--->
                                                 <div class="swiper__projects__element__image">
                                                     <img class=""
-                                                        src="{{ Vite::asset('resources\images\projects\placeholder.jpeg') }}">
+                                                        src="{{ asset('images\projects\placeholder.jpeg') }}">
 
                                                 </div>
 
@@ -581,7 +581,7 @@
                                                 <!---swiper element iamge--->
                                                 <div class="swiper__projects__element__image">
                                                     <img class=""
-                                                        src="{{ Vite::asset('resources\images\projects\placeholder.jpeg') }}">
+                                                        src="{{ asset('images\projects\placeholder.jpeg') }}">
 
                                                 </div>
 
@@ -602,7 +602,7 @@
                                                 <!---swiper element iamge--->
                                                 <div class="swiper__projects__element__image">
                                                     <img class=""
-                                                        src="{{ Vite::asset('resources\images\projects\placeholder.jpeg') }}">
+                                                        src="{{ asset('images\projects\placeholder.jpeg') }}">
 
                                                 </div>
 
@@ -626,11 +626,11 @@
                                 <!-- Navigation buttons -->
                                 <div class="swiper-button-next">
                                     <img class="swiper-button-img"
-                                        src="{{ Vite::asset('resources\images\projects\arrow.svg') }}">
+                                        src="{{ asset('images\projects\arrow.svg') }}">
                                 </div>
                                 <div class="swiper-button-prev">
                                     <img class="swiper-button-img"
-                                        src="{{ Vite::asset('resources\images\projects\arrow.svg') }}">
+                                        src="{{ asset('images\projects\arrow.svg') }}">
                                 </div>
                             </div>
                         </div>
@@ -652,30 +652,30 @@
             </div>
 
             <div class="projects__svg projects__svg1">
-                <img class="" src="{{ Vite::asset('resources\images\projects\vector1.svg') }}" alt="">
+                <img class="" src="{{asset('images\projects\vector1.svg') }}" alt="">
             </div>
             <div class="projects__svg projects__svg2">
-                <img class="" src="{{ Vite::asset('resources\images\projects\vector2.svg') }}" alt="">
+                <img class="" src="{{ asset('images\projects\vector2.svg') }}" alt="">
             </div>
         </section>
 
         <!---Our best offer--->
         <section class="offers" id="offers">
             <div class="offers__svg">
-                <img class="" src="{{ Vite::asset('resources\images\offers\svg1.svg') }}" alt="">
+                <img class="" src="{{ asset('images\offers\svg1.svg') }}" alt="">
             </div>
 
             <div class="offers__container">
                 <!-----offers background1--->
                 <div class="offers__background offers__background1">
-                    <img class="" src="{{ Vite::asset('resources\images\offers\background1.jpeg') }}"
+                    <img class="" src="{{ asset('images\offers\background1.jpeg') }}"
                         alt="Offers background">
                 </div>
 
 
                 <!-----offers background2--->
                 <div class="offers__background offers__background2">
-                    <img class="" src="{{ Vite::asset('resources\images\offers\background2.jpeg') }}"
+                    <img class="" src="{{ asset('images\offers\background2.jpeg') }}"
                         alt="Offers background">
                 </div>
 
@@ -686,7 +686,7 @@
                     <div class="offers__element">
                         <!--offers element background-->
                         <div class="offers__element__image">
-                            <img class="" src="{{ Vite::asset('resources\images\offers\background1.jpeg') }}"
+                            <img class="" src="{{ asset('images\offers\background1.jpeg') }}"
                                 alt="Offers background">
                         </div>
 
@@ -711,7 +711,7 @@
                         <div class="offers__red-logo">
                             <!---Offers red image---->
                             <img class="offers__red-image"
-                                src="{{ Vite::asset('resources\images\offers\red_icon.svg') }}" alt="Offers background">
+                                src="{{ asset('images\offers\red_icon.svg') }}" alt="Offers background">
 
                             <!----Offers red image text------>
                             <p>Build with us and
@@ -724,7 +724,7 @@
                     <div class="offers__element">
                         <!--offers element background-->
                         <div class="offers__element__image">
-                            <img class="" src="{{ Vite::asset('resources\images\offers\background1.jpeg') }}"
+                            <img class="" src="{{ asset('images\offers\background1.jpeg') }}"
                                 alt="Offers background">
                         </div>
 
@@ -749,7 +749,7 @@
                         <div class="offers__red-logo">
                             <!---Offers red image---->
                             <img class="offers__red-image"
-                                src="{{ Vite::asset('resources\images\offers\red_icon.svg') }}" alt="Offers background">
+                                src="{{ asset('images\offers\red_icon.svg') }}" alt="Offers background">
 
                             <!----Offers red image text------>
                             <p>Build with us and
@@ -811,7 +811,7 @@
                 </div>
                 <!-----contact form svg----->
                 <div class="form__icon">
-                    <img class="" src="{{ Vite::asset('resources\images\contact\form_icon.svg') }}"
+                    <img class="" src="{{ asset('images\contact\form_icon.svg') }}"
                         alt="Contact icon logo">
                 </div>
 
@@ -880,7 +880,7 @@
                         <!-----contact  navigation------>
                         <div class="contact__navigation">
                             <div class="contact_navigation-icon">
-                                <img class="" src="{{ Vite::asset('resources\images\contact\contact_icon.png') }}"
+                                <img class="" src="{{ asset('images\contact\contact_icon.png') }}"
                                     alt="Contact icon logo">
                                 <div class="contact_navigation-icon-line">
 

@@ -3,7 +3,8 @@
         <!-- Header Logo -->
         <div class="header__logo">
             <button>
-                <img src="{{ Vite::asset('resources/images/logo.png') }}" alt="Build Park Company Logo">
+                <img src="{{ asset('images/logo.png') }}" alt="Build Park Company Logo">
+
             </button>
         </div>
 
@@ -37,7 +38,7 @@
         <div class="header__language">
             <button class="active_language">
                 <p>EN</p>
-                <img src="{{ Vite::asset('resources/images/lang_arrow.svg') }}" alt="Language arrow">
+                <img src="{{ asset('images/lang_arrow.svg') }}" alt="Language arrow">
             </button>
             <div class="language-dropdown">
                 <button>AZ</button>
@@ -48,8 +49,8 @@
         <!-- Theme Changer -->
         <div class="header__theme">
             <div class="theme_surface">
-                <img src="{{ Vite::asset('resources/images/theme_changer/sun.svg') }}" alt="Sun theme changer">
-                <img src="{{ Vite::asset('resources/images/theme_changer/mun.svg') }}" alt="Moon theme changer">
+                <img src="{{ asset('images/theme_changer/sun.svg') }}" alt="Sun theme changer">
+                <img src="{{ asset('images/theme_changer/mun.svg') }}" alt="Moon theme changer">
             </div>
             <div class="circle__changer"></div>
         </div>
