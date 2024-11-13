@@ -645,7 +645,7 @@
                 <!----projects map--->
                 <div class="projects__map">
                     <div class="projects__map__container">
-                        <img class="" src="{{ Vite::asset('resources\images\projects\map.png') }}"
+                        <img class="" src="{{ asset('images\projects\map.png') }}"
                             alt="Story Our main photo">
                     </div>
                 </div>
@@ -905,11 +905,7 @@
         @include('layouts.partials.footer')
     </div>
 @endsection
-@push('styles')
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    @vite(['resources/css/home.css'])
-@endpush
+
 
 @push('scripts')
     <!-- Swiper JS -->
