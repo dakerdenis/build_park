@@ -55,9 +55,50 @@
             <div class="circle__changer"></div>
         </div>
 
-        <!----burger menu----->
-        <div class="burger__menu">
-            
+
+        <!-- Burger Menu Icon -->
+        <div class="burger__menu" id="burgerMenuButton">
+            <div class="burger-line top"></div>
+            <div class="burger-line middle"></div>
+            <div class="burger-line bottom"></div>
         </div>
+
+<!-- Full-Screen Burger Menu Overlay -->
+<div class="burger-menu-overlay" id="burgerMenuOverlay">
+    <button class="burger-menu-close" id="closeBurgerMenuButton">&times;</button>
+    <div class="burger-menu-content">
+
+            <div class="burger__menu__languages">
+                <a href="#">AZ</a>
+                <a href="#">RU</a>
+                <a href="#">EN</a>
+            </div>
+
+
+
+            <div class="burdger__menu__navigation">
+                <button data-section="hero">Home</button>
+                <button data-section="services">Services</button>
+                <button data-section="different">About Us</button>
+                <button data-section="our__team">Find a Team</button>
+                <button data-section="projects">Portfolio</button>
+                <button data-section="offers">Offers</button>
+                <button data-section="contact">Contact Us</button>
+            </div>
+
+
+            
+    </div>
+    <div class="burger__menu__placeholder burger__menu__placeholder1">
+        <img src="{{ asset('images/burger/placeholder_1.svg') }}" alt="">                
+    </div>
+
+    <div class="burger__menu__placeholder burger__menu__placeholder2">
+        <img src="{{ asset('images/burger/placeholder_1.svg') }}" alt="">                
+    </div>
+</div>
+
+
+
     </div>
 </header>

@@ -178,6 +178,10 @@
     display: none;
     visibility: hidden;
 }
+.burger-menu-overlay{
+    display: none;
+    visibility: hidden;
+}
 @media only screen and (max-width: 770px) {
     .haeder__navigation{
         display: none;
@@ -200,7 +204,7 @@
 
         height: 50px;
         width: 50px;
-        background-color: red;
+
     }
     .header__logo{
         width: 50px;
@@ -211,4 +215,170 @@
     .header__wrapper{
         padding: 0px 20px 0px 30px;
     }
+
+
+
+
+    /* Initial burger icon */
+/* Burger menu icon default style */
+.burger__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.burger-line {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+}
+
+/* Animation for the "X" transformation */
+.burger__menu.active .top {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger__menu.active .middle {
+    opacity: 0; /* Hide the middle line */
+}
+
+.burger__menu.active .bottom {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+
+
+/* Return to original lines on close */
+.burger__menu:not(.active) .burger-line {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transform: none;
+    opacity: 1;
+}
+
+
+.burger__menu .burger-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+/* Burger menu overlay styles */
+.burger-menu-overlay {
+    position: fixed;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Close button for the burger menu */
+.burger-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 300;
+    background: var(--background-gradient-red-button);
+    border-radius: 40px;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid #ffffff88;
+
+}
+
+.burger-menu-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    z-index: 200;
+}
+.burger__menu__languages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.burger__menu__languages a {
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    height: 40px;
+    width: 60px;
+    border-radius: var(--button-radius);
+    justify-content: center;
+    align-items: center;
+    background: var(--background-gradient-red-button);
+
+}
+
+.burger__menu__languages a:nth-child(2){
+    margin: 0px 20px;
+}
+.burdger__menu__navigation{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 20px;
+}
+
+.burdger__menu__navigation button {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 15px;
+
+}
+.burger__menu__placeholder{
+    position: absolute;
+    z-index: 100;
+}
+.burger__menu__placeholder1{
+    right: 0;
+    top: 10%;
+}
+.burger__menu__placeholder2{
+    transform: rotate(180deg);
+    left: 0;
+    bottom: 10%;
+}
+/* Prevent body from scrolling */
+.no-scroll {
+    overflow: hidden;
+}
+
+
+
+
+
 }

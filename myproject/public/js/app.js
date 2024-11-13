@@ -1,28 +1,32 @@
+// Define the scrollToSection function globally so it can be used anywhere in this file
+const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header__wrapper');
     const languageButton = document.querySelector('.header__language');
     const dropdown = document.querySelector('.language-dropdown');
     const themeButton = document.querySelector('.header__theme');
     const navButtons = document.querySelectorAll('.header__navigation__element button');
-    const heroSection = document.querySelector('.hero');
-    const servicesSection = document.querySelector('.services');
-    const differentSection = document.querySelector('.different');
-    const storySection = document.querySelector('.story');
+    const heroSection = document.getElementById('hero');
+    const servicesSection = document.getElementById('services');
+    const differentSection = document.getElementById('different');
+    const storySection = document.getElementById('story');
     const howWorkName = document.querySelector('.how__work__name');
     const howWorkDesc = document.querySelector('.how__work__desc');
     const differentImage = document.querySelector('.different__absolute__image');
-    const storyImage = document.querySelector('.story__absolute__image'); // Added for the story section
+    const storyImage = document.querySelector('.story__absolute__image');
     let isLightTheme = false;
 
-    // Smooth scrolling function
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    };
 
-    // Add click event listener to each navigation button
+
+    // Add click event listener to each navigation button in the header
     navButtons.forEach(button => {
         button.addEventListener('click', () => {
             const sectionId = button.getAttribute('data-section');
@@ -99,37 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const customSelect = document.getElementById('customSelect');
-    const selectedOption = customSelect.querySelector('.selected-option');
-    const dropdownOptions = customSelect.querySelector('.dropdown-options');
-    const selectArrow = customSelect.querySelector('.select-arrow');
-
-    // Toggle dropdown visibility
-    customSelect.addEventListener('click', () => {
-        const isOpen = dropdownOptions.style.display === 'block';
-        dropdownOptions.style.display = isOpen ? 'none' : 'block';
-        customSelect.classList.toggle('active', !isOpen); // Toggle arrow rotation
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!customSelect.contains(e.target)) {
-            dropdownOptions.style.display = 'none';
-            customSelect.classList.remove('active'); // Reset arrow rotation
-        }
-    });
-
-    // Handle option selection
-    dropdownOptions.querySelectorAll('li').forEach(option => {
-        option.addEventListener('click', (e) => {
-            selectedOption.textContent = e.target.textContent;
-            dropdownOptions.style.display = 'none';
-            customSelect.classList.remove('active'); // Reset arrow rotation
-        });
-    });
-});
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -157,5 +130,43 @@ document.addEventListener('DOMContentLoaded', () => {
             storyPopup.style.display = 'none';
             document.body.classList.remove('no-scroll');
         }
+    });
+});
+
+
+
+
+
+
+// Burger menu functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const burgerMenuButton = document.getElementById('burgerMenuButton');
+    const burgerMenuOverlay = document.getElementById('burgerMenuOverlay');
+    const closeBurgerMenuButton = document.getElementById('closeBurgerMenuButton');
+    const burgerMenuButtons = burgerMenuOverlay.querySelectorAll('.burger-menu-content button');
+
+    // Open the burger menu
+    burgerMenuButton.addEventListener('click', () => {
+        burgerMenuOverlay.style.display = 'flex';
+        document.body.classList.add('no-scroll'); // Disable page scrolling
+    });
+
+    // Close the burger menu
+    closeBurgerMenuButton.addEventListener('click', () => {
+        burgerMenuOverlay.style.display = 'none';
+        document.body.classList.remove('no-scroll'); // Enable page scrolling
+    });
+
+    // Function to scroll to section and close burger menu
+    const handleBurgerMenuClick = (button) => {
+        const sectionId = button.getAttribute('data-section');
+        scrollToSection(sectionId); // Use the same smooth scroll function
+        burgerMenuOverlay.style.display = 'none'; // Close the menu
+        document.body.classList.remove('no-scroll'); // Enable page scrolling
+    };
+
+    // Close the menu when clicking on a button in the burger menu
+    burgerMenuButtons.forEach(button => {
+        button.addEventListener('click', () => handleBurgerMenuClick(button));
     });
 });

@@ -320,7 +320,7 @@
                                         alt="Different placeholder image">
 
                                     <img class="different_placeholder-img"
-                                        src="{{ asset('images\different\different1.svg') }}"
+                                        src="{{asset('images/different/different1.svg') }}"
                                         alt="We are experienced">
                                 </div>
                             </div>
@@ -347,8 +347,8 @@
                                         data-light-src="{{ asset('images/different/different_placeholder_white.svg') }}"
                                         alt="Different placeholder image">
 
-                                    <img class="different_placeholder-img"
-                                        src="{{ asset('images\different\different2.svg') }}"
+                                        <img class="different_placeholder-img"
+                                        src="{{asset('images/different/different1.svg') }}"
                                         alt="We are experienced">
                                 </div>
                             </div>
@@ -375,8 +375,8 @@
                                         data-light-src="{{ asset('images/different/different_placeholder_white.svg') }}"
                                         alt="Different placeholder image">
 
-                                    <img class="different_placeholder-img"
-                                        src="{{ asset('images\different\different3.svg') }}"
+                                        <img class="different_placeholder-img"
+                                        src="{{asset('images/different/different1.svg') }}"
                                         alt="We are experienced">
                                 </div>
                             </div>
@@ -402,9 +402,9 @@
                                         data-dark-src="{{ asset('images/different/different_placeholder.svg') }}"
                                         data-light-src="{{ asset('images/different/different_placeholder_white.svg') }}"
                                         alt="Different placeholder image">
-
-                                    <img class="different_placeholder-img"
-                                        src="{{ asset('resources\images\different\different4.svg') }}"
+                                        
+                                        <img class="different_placeholder-img"
+                                        src="{{asset('images/different/different1.svg') }}"
                                         alt="We are experienced">
                                 </div>
                             </div>
