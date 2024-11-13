@@ -70,7 +70,8 @@
     --form-background: linear-gradient(38.67deg, #474747 11.49%, #222222 76.87%);
 
 
-
+    /**! *****Fonts and radiuses**/
+    --button-radius: 5px;
 
 }
 
@@ -118,7 +119,7 @@ body {
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     font-family: "Poppins", sans-serif;
-    background-color: #3F3F3F;
+
 }
 
 body::-webkit-scrollbar {
@@ -173,4 +174,12 @@ h5,
 h6 {
     font-size: inherit;
     font-weight: 400;
+}
+
+
+
+/************all rest styles**************/
+.main__wrapper{
+    width: 100%;
+    min-height: 100vh;
 }

@@ -16,7 +16,7 @@
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:title" content="@yield('og_title', config('app.name', 'Build Park'))">
     <meta property="og:description" content="@yield('og_description', 'Default description for Build Park on social media')">
-    <meta property="og:image" content="{{ Vite::asset('resources/images/logo.png') }}">
+    <meta property="og:image" content="{{ asset('images/logo.png') }}">
     <meta property="og:url" content="{{ request()->url() }}">
     <meta property="og:type" content="website">
 
@@ -24,22 +24,21 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="@yield('twitter_title', config('app.name', 'Build Park'))">
     <meta name="twitter:description" content="@yield('twitter_description', 'Default Twitter description for Build Park')">
-    <meta name="twitter:image" content="{{ Vite::asset('resources/images/logo.png') }}">
+    <meta name="twitter:image" content="{{ asset('images/logo.png') }}">
 
-    <!-- Favicon with Vite -->
-    <link rel="icon" href="{{ Vite::asset('resources/images/logo.png') }}" type="image/png">
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
 
-
-
-
+    <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Add CSS files -->
-    @vite(['resources/css/style.css', 'resources/css/header.css', 'resources/css/home.css', 'resources/js/app.js'], true)
-
-    <!-- Allow additional page-specific styles -->
+    
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    
+    <!-- Additional page-specific styles -->
     @stack('styles')
-
-
 
     <!-- JSON-LD Structured Data for SEO -->
     <script type="application/ld+json">
@@ -48,7 +47,7 @@
             "@type": "Organization",
             "name": "Build Park",
             "url": "{{ url('/') }}",
-            "logo": "{{ Vite::asset('resources/images/logo.png') }}",
+            "logo": "{{ asset('images/logo.png') }}",
             "description": "Build Park offers a wide range of renovation, construction, and design services to meet your needs.",
             "contactPoint": {
                 "@type": "ContactPoint",
@@ -66,8 +65,10 @@
         @yield('content')
     </div>
 
+    <!-- Main JavaScript File -->
+    <script src="{{ asset('js/app.js') }}"></script>
+
     <!-- Additional page-specific scripts -->
     @stack('scripts')
 </body>
-
 </html>
