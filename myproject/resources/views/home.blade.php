@@ -518,7 +518,7 @@
 
                         <!-------->
                         <div class="projects__all-projects">
-                            <a href="#">
+                            <a href="{{ route('projects') }}">
                                 View all projects
                             </a>
                         </div>
@@ -638,7 +638,7 @@
                 </div>
 
                 <div class="mobile__all_projects">
-                    <a href="#">
+                    <a href="{{ route('projects') }}">
                         View all projects
                     </a>
                 </div>
