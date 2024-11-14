@@ -1,14 +1,32 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Middleware\LanguageMiddleware;
+use App\Http\Controllers\AllProjectsController;
 
 // Redirect root to the default language (English)
 Route::get('/', function () {
     return redirect('/en');
 });
+// Group for language-prefixed routes
+Route::group(['prefix' => '{lang}', 'middleware' => LanguageMiddleware::class], function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+})->where('lang', 'en|ru|az'); // Allow only 'en', 'ru', and 'az' as valid language prefixes
+// Route for the Projects page
+Route::get('/projects', [AllProjectsController::class, 'index'])->name('projects');
+// Catch-all route for any undefined route, to show a 404 error page
+Route::fallback(function () {
+    abort(404);
+});
+
+
+
+
+
+
 
 // Admin login route
 Route::get('/admin', function () {
@@ -33,14 +51,4 @@ Route::middleware(['auth'])->group(function () {
 
     // Logout route for admin
     Route::post('/admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
-});
-
-// Group for language-prefixed routes
-Route::group(['prefix' => '{lang}', 'middleware' => LanguageMiddleware::class], function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home');
-})->where('lang', 'en|ru|az'); // Allow only 'en', 'ru', and 'az' as valid language prefixes
-
-// Catch-all route for any undefined route, to show a 404 error page
-Route::fallback(function () {
-    abort(404);
 });
