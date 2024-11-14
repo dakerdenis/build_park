@@ -1,0 +1,185 @@
+:root {
+
+
+
+    --white: #fff;
+
+
+
+    /**! *****DARK THEME********/
+    --text-dark: #C4C4C4;
+
+    /******HERO , Our Services,*******/
+    --background-gradient-dark: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
+
+    /*****About block*****/
+    --card-gradient-grey: linear-gradient(219.84deg, #FFFFFF 4.14%, #CBCBCB 82.76%);
+
+    /*******projects-background**********/
+    --projects-background-dark: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
+
+
+    /*****BACKGROUN OF PAGE*********/
+    --basic-background-grey: #484848;
+
+
+
+
+    /**! **WHITE THEME*******/
+    --text-grey: #3F3F3F;
+
+    /******HERO , Our Services,*******/
+    --card-gradient-dark: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
+
+    /*****About block*****/
+    --background-gradient-grey: linear-gradient(219.84deg, #FFFFFF 4.14%, #CBCBCB 82.76%);
+
+    /*******projects-background**********/
+    --projects-background-white: linear-gradient(219.84deg, #FFFFFF 4.14%, #CBCBCB 82.76%);
+
+
+    /*****BACKGROUND OF PAGE*********/
+    --basic-background-white: #F8F8F8;
+
+
+
+    /**! ***OVERALL STYLEs**********/
+
+    /*******HERO BLOCK**********/
+    --background-gradient-red: linear-gradient(97.73deg, #C66565 -6.96%, #CA2225 40.89%, #830002 73.64%);
+
+    /*******ALL buttons ********/
+    --background-gradient-red-button: linear-gradient(97.65deg, #C66565 0.33%, #830002 93.35%);
+
+    /******ALL lines*********/
+    --background-gradient-red-line: linear-gradient(97.73deg, #C66565 -6.96%, #CA2225 40.89%, #830002 73.64%);
+
+    --basic-red: #DF0615;
+    --black: #000;
+
+    /******ALL swiper's arrows*********/
+    --arrows-swiper: linear-gradient(97.65deg, #C66565 0.33%, #830002 93.35%);
+
+    /******Forms background*****/
+    --form-background: linear-gradient(38.67deg, #474747 11.49%, #222222 76.87%);
+
+
+    /**! *****Fonts and radiuses**/
+    --button-radius: 5px;
+
+}
+
+
+
+.admin_login__wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+
+.admin_login__background{
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    background: var(--basic-background-grey);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    z-index: 200;
+}
+.admin_login__background img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+.admin_login__logo{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 40px;
+    z-index: 300;
+}
+
+
+.admin_login__form-block{
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.admin_login__form-block form {
+    width: 473px;
+    height: 370px;
+}
+
+.admin_login__form-block button {
+    background: var(--background-gradient-red-button);
+    width: 291px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20.57px;
+    text-align: center;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+.login__hello{
+    color: #222222;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.38px;
+    text-align: center;
+}
+.login__desc{
+    margin-top: 31px;
+    color: #222222;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.38px;
+    text-align: center;
+    margin-bottom: 50px
+}
+
+.input__container {
+    width: 473px;
+    height: 73px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.input__container__desc {
+    position: absolute;
+    background-color: #fff;
+    padding: 0px 12px;
+    top: -10px;
+    left: 20px;
+    color: #830002;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21.48px;
+    text-align: left;
+}
+.input__field{
+    width: 473px;
+    height: 62px;
+}
+.input__field input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #407382;
+    border-radius: 4px;
+    padding: 20px 35px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.15px;
+    text-align: left;
+}

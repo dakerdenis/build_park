@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use App\Models\User;
 
 class AdminLoginController extends Controller
 {
@@ -34,4 +32,15 @@ class AdminLoginController extends Controller
             'error' => 'Invalid credentials or you do not have admin access.',
         ]);
     }
+
+    // Handle logout functionality
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('admin.login');
+    }
 }
+

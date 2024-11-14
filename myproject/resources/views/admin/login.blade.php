@@ -3,26 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login</title>
+    <title>Admin Login 123</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/admin.css') }}">
 </head>
 <body>
-    <h2>Admin Login</h2>
-    <form action="{{ route('admin.login.submit') }}" method="POST">
-        @csrf
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
+
+    <div class="admin_login__wrapper">
+        <div class="admin_login__logo">
+            <img src="{{ asset('images/logo.png') }}" alt="Build Park Company Logo">
         </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required>
+        
+        <div class="admin_login__form-block">
+            <form action="{{ route('admin.login.submit') }}" method="POST">
+                @csrf
+                <div class="login__hello">
+                    Xoş gəldiniz!
+                </div>
+                <div class="login__desc">
+                    BUILDPARK İdarəetmə panelı
+                </div>
+                <div class="input__container">
+                    <div class="input__container__desc">
+                        Login
+                    </div>
+
+                    <div class="input__field">
+                        <input type="text" id="email" name="email" placeholder="Login |" required="">
+                    </div>
+                </div>
+                <div class="input__container">
+                    <div class="input__container__desc">
+                        Şifrə
+                    </div>
+
+                    <div class="input__field">
+                        <input type="password" id="password" name="password" placeholder="Şifrə |" required="">
+                    </div>
+                </div>
+                <button type="submit">Daxil ol</button>
+                @if($errors->any())
+                    <div style="color: red;">
+                        {{ $errors->first('error') }}
+                    </div>
+                @endif
+            </form>
         </div>
-        <button type="submit">Login</button>
-        @if($errors->any())
-            <div style="color: red;">
-                {{ $errors->first('error') }}
-            </div>
-        @endif
-    </form>
+        
+        <div class="admin_login__background">
+            <img src="{{ asset('images/projects/placeholder.jpeg') }}" alt="Build Park Company Logo">
+        </div>
+
+    </div>
+
+
 </body>
 </html>
