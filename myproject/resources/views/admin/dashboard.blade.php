@@ -76,22 +76,26 @@
                             </a>
                         </div>
                         <div class="admin__content__content">
-                            <form id="imageUploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+                            <form id="imageUploadForm" action="{{ route('client.upload') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <!-- Drag and Drop Zone -->
                                 <div class="upload-area" id="uploadArea">
                                     <p>Drag & drop an image here or click to select</p>
                                     <input type="file" name="image" id="imageInput" accept="image/*" hidden>
                                 </div>
-
+                            
                                 <!-- Preview Area -->
                                 <div class="preview-area" id="previewArea" style="display: none;">
                                     <img id="previewImage" src="" alt="Image Preview">
                                     <button type="button" id="removeImageButton" class="remove-button">Remove</button>
                                 </div>
-
+                            
+                                <!-- Description Input -->
+                                <textarea name="description" placeholder="Enter a description for the client (optional)"></textarea>
+                            
                                 <button type="submit">Upload</button>
                             </form>
+                            
                         </div>
 
                     </div>

@@ -7,7 +7,7 @@ use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AllProjectsController;
 use App\Http\Middleware\LanguageMiddleware;
-
+use App\Http\Controllers\ClientController;
 // Redirect root to the default language (English)
 Route::get('/', function () {
     return redirect('/en');
@@ -29,6 +29,7 @@ Route::post('/admin', [AdminLoginController::class, 'login'])->name('admin.login
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin/dashboard/{section?}', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
     Route::post('/admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
+    Route::post('/admin/upload-client', [ClientController::class, 'store'])->name('client.upload');
 });
 
 
