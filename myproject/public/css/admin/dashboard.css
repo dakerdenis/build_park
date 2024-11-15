@@ -1,0 +1,277 @@
+:root {
+
+
+
+    --white: #fff;
+
+
+
+    /**! *****DARK THEME********/
+    --text-dark: #C4C4C4;
+
+    /******HERO , Our Services,*******/
+    --background-gradient-dark: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
+
+    /*****About block*****/
+    --card-gradient-grey: linear-gradient(219.84deg, #FFFFFF 4.14%, #CBCBCB 82.76%);
+
+    /*******projects-background**********/
+    --projects-background-dark: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
+
+
+    /*****BACKGROUN OF PAGE*********/
+    --basic-background-grey: #484848;
+
+
+
+
+    /**! **WHITE THEME*******/
+    --text-grey: #3F3F3F;
+
+    /******HERO , Our Services,*******/
+    --card-gradient-dark: linear-gradient(219.84deg, #474747 4.14%, #222222 44.22%);
+
+    /*****About block*****/
+    --background-gradient-grey: linear-gradient(219.84deg, #FFFFFF 4.14%, #CBCBCB 82.76%);
+
+    /*******projects-background**********/
+    --projects-background-white: linear-gradient(219.84deg, #FFFFFF 4.14%, #CBCBCB 82.76%);
+
+
+    /*****BACKGROUND OF PAGE*********/
+    --basic-background-white: #F8F8F8;
+
+
+
+    /**! ***OVERALL STYLEs**********/
+
+    /*******HERO BLOCK**********/
+    --background-gradient-red: linear-gradient(97.73deg, #C66565 -6.96%, #CA2225 40.89%, #830002 73.64%);
+
+    /*******ALL buttons ********/
+    --background-gradient-red-button: linear-gradient(97.65deg, #C66565 0.33%, #830002 93.35%);
+
+    /******ALL lines*********/
+    --background-gradient-red-line: linear-gradient(97.73deg, #C66565 -6.96%, #CA2225 40.89%, #830002 73.64%);
+
+    --basic-red: #DF0615;
+    --black: #000;
+
+    /******ALL swiper's arrows*********/
+    --arrows-swiper: linear-gradient(97.65deg, #C66565 0.33%, #830002 93.35%);
+
+    /******Forms background*****/
+    --form-background: linear-gradient(38.67deg, #474747 11.49%, #222222 76.87%);
+
+
+    /**! *****Fonts and radiuses**/
+    --button-radius: 5px;
+
+}
+
+.admin__panel__container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--text-dark);
+    display: flex;
+    justify-content: space-between;
+}
+.admin__panel__navigation {
+    width: 235px;
+    height: 100%;
+    background: var(--projects-background-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.admin__navigation__logo {
+    margin-top: 42px;
+    height: 97px;
+    width: 97px;
+}
+.admin__navigation__logo img{
+    width: 100%;
+    object-fit: cover;
+}
+.admin__navigation__line {
+    width: 200px;
+    height: 0.5px;
+    background-color: #f8f8f811;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+.admin__navigation__block {
+    width: 200px;
+    text-align: left;
+}
+.admin__navigation__block  a {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+.admin__navigation__block  a:hover{
+    color: var(--basic-red);
+}
+.admin__navigation__logout {
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+}
+.admin__navigation__logout button{
+    width: 113px;
+    height: 31px;
+    background: var(--background-gradient-red-button);
+    border-radius: 20px;
+    color: #fff;
+}
+.admin__panel__content__container {
+    width: calc(100% - 235px);
+    overflow-y: scroll;
+    padding: 20px;
+}
+.admin__panel__content__container::-webkit-scrollbar-button {
+    display: none; /* Hides the scrollbar arrows in Chrome, Safari */
+}
+
+.admin__panel__content__container::-webkit-scrollbar {
+    width: 8px; /* Sets the width of the scrollbar */
+}
+
+.admin__panel__content__container::-webkit-scrollbar-thumb {
+    background-color: var(--basic-red); /* Thumb color */
+    border-radius: 4px; /* Rounded corners on the scrollbar thumb */
+}
+
+
+.admin__panel__content__container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Track color */
+}
+
+.admin__content__wrapper{
+    width: calc(100% - 30px);
+    min-height: 500px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: #83000225 0px 2px 8px 0px;
+}
+.admin__content__block{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.admin__content__block-hello{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.admin__content__block-hello h1{
+    margin-top: 30px;
+    color: #830002;
+    font-size: 40px;
+
+}
+.admin__content__block-hello p {
+    margin-top: 30px;
+    
+}
+.admin__content__line{
+    height: 64px;
+    width: 100%;
+    border-bottom: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.admin__content__line p{
+font-size: 20px;
+color: #000;
+}
+.admin__content__line a {
+    display: flex;
+    width: 193px;
+    height: 49px;
+    border-radius: var(--button-radius);
+    border: 2px solid #000;
+    justify-content: center;
+    align-items: center;
+}
+.admin__content__line a p {
+    font-size: 16px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+.admin__content__line a:hover{}
+
+
+.admin__content__content{
+    width: 100%;
+    height: 100%;
+
+}
+
+/**********CLIENTS*********/
+
+
+.admin__content__content-clients{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.admin__content-client{
+    margin-right: 30px;
+    height: 150px;
+    width: 300px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.admin__content-client img{
+    width: 90%;
+    object-fit: cover;
+}
+.admin__content-client:hover{
+    box-shadow: #df06143a 0px 2px 8px 0px;
+}
+.upload-area {
+    border: 2px dashed #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.upload-area.dragover {
+    border-color: #333;
+    color: #333;
+}
+
+.preview-area {
+    margin-top: 20px;
+    position: relative;
+}
+
+.preview-area img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 5px;
+}
+
+.remove-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 12px;
+}

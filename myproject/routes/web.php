@@ -27,11 +27,10 @@ Route::post('/admin', [AdminLoginController::class, 'login'])->name('admin.login
 
 // Admin dashboard route with authentication and admin-only access
 Route::middleware(['auth'])->group(function () {
-    Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
-
-    // Logout route for admin
+    Route::get('/admin/dashboard/{section?}', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
     Route::post('/admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 });
+
 
 // Group for language-prefixed routes
 Route::group(['prefix' => '{lang}', 'middleware' => LanguageMiddleware::class], function () {
