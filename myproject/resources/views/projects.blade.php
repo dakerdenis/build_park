@@ -146,6 +146,8 @@
                 </div>
                 <!------>
             </div>
+
+            <div class="projects__portfolio__bottom-placeholder"></div>
         </section>
 
 

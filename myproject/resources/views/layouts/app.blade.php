@@ -31,15 +31,15 @@
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Main CSS Files -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    
-<!-- Page-specific styles -->
-@stack('styles')
+
+    <!-- Page-specific styles -->
+    @stack('styles')
 
     <!-- JSON-LD Structured Data for SEO -->
     <script type="application/ld+json">
@@ -72,4 +72,5 @@
     <!-- Additional page-specific scripts -->
     @stack('scripts')
 </body>
+
 </html>
