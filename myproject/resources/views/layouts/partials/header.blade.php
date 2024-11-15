@@ -2,10 +2,10 @@
     <div class="header__wrapper">
         <!-- Header Logo -->
         <div class="header__logo">
-            <button>
+            <a href="{{ route('home', ['lang' => app()->getLocale()]) }}">
                 <img src="{{ asset('images/logo.png') }}" alt="Build Park Company Logo">
-
-            </button>
+            </a>
+            
         </div>
 
         <!-- Header Navigation -->
