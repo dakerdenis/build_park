@@ -29,7 +29,120 @@
             <div class="projects__portfolio__wrapper">
                 <!--------->
                 <div class="projects__element">
-
+                    <div class="projects__element__image">
+                        <img src="{{asset('images/all_projects/placeholder.png')}}" alt="">
+                    </div>
+                    <div class="projects__element__container">
+                        <div class="projects__element__desc">
+                            <div class="projects__element__desc-name">
+                                Project Name
+                            </div>
+                            <div class="projects__element__desc-more">
+                                <button>
+                                    See More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------>
+                <!--------->
+                <!--------->
+                <div class="projects__element">
+                    <div class="projects__element__image">
+                        <img src="{{asset('images/all_projects/placeholder.png')}}" alt="">
+                    </div>
+                    <div class="projects__element__container">
+                        <div class="projects__element__desc">
+                            <div class="projects__element__desc-name">
+                                Project Name
+                            </div>
+                            <div class="projects__element__desc-more">
+                                <button>
+                                    See More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------>
+                <!--------->
+                <!--------->
+                <div class="projects__element">
+                    <div class="projects__element__image">
+                        <img src="{{asset('images/all_projects/placeholder.png')}}" alt="">
+                    </div>
+                    <div class="projects__element__container">
+                        <div class="projects__element__desc">
+                            <div class="projects__element__desc-name">
+                                Project Name
+                            </div>
+                            <div class="projects__element__desc-more">
+                                <button>
+                                    See More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------>
+                <!--------->
+                <!--------->
+                <div class="projects__element">
+                    <div class="projects__element__image">
+                        <img src="{{asset('images/all_projects/placeholder.png')}}" alt="">
+                    </div>
+                    <div class="projects__element__container">
+                        <div class="projects__element__desc">
+                            <div class="projects__element__desc-name">
+                                Project Name
+                            </div>
+                            <div class="projects__element__desc-more">
+                                <button>
+                                    See More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------>
+                <!--------->
+                <!--------->
+                <!--------->
+                <div class="projects__element">
+                    <div class="projects__element__image">
+                        <img src="{{asset('images/all_projects/placeholder.png')}}" alt="">
+                    </div>
+                    <div class="projects__element__container">
+                        <div class="projects__element__desc">
+                            <div class="projects__element__desc-name">
+                                Project Name
+                            </div>
+                            <div class="projects__element__desc-more">
+                                <button>
+                                    See More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------>
+                <div class="projects__element">
+                    <div class="projects__element__image">
+                        <img src="{{asset('images/all_projects/placeholder.png')}}" alt="">
+                    </div>
+                    <div class="projects__element__container">
+                        <div class="projects__element__desc">
+                            <div class="projects__element__desc-name">
+                                Project Name
+                            </div>
+                            <div class="projects__element__desc-more">
+                                <button>
+                                    See More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!------>
             </div>

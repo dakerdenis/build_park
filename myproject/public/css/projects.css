@@ -100,6 +100,7 @@
     min-height: 100vh;
     width: 100%;
     background: var(--background-gradient-dark);
+    min-height: 1000px;
 }
 .projects__portfolio__paceholder {
     width: 100%;
@@ -138,11 +139,84 @@
     text-align: center;
     color: #c2c7d6;
 }
-.projects__portfolio__nav-element:hover{
+.projects__portfolio__nav-element:hover {
     border-left: 3px solid var(--basic-red);
     color: var(--basic-red);
 }
 .projects__portfolio__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: calc(456px * 3 + 7.8px * 2);
+    margin: 0 auto;
+    margin-top: 20px;
+    flex-wrap: wrap;
 }
 .projects__element {
+    width: 456px;
+    height: 456px;
+
+    margin-bottom: 7.8px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.projects__element__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text-grey);
+    z-index: 100;
+}
+.projects__element__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.projects__element__container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 200;
+    border: 8.5px solid #d9d9d9;
+    border-radius: 5px;
+    opacity: 0;
+}
+.projects__element__container:hover{
+    opacity: 1;
+}
+.projects__element__desc {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background: #1e1e1e80;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.projects__element__desc-name {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+}
+.projects__element__desc-more {
+    width: 100%;
+    text-align: center;
+}
+.projects__element__desc-more button {
+    background: var(--background-gradient-red-button);
+    width: 181px;
+    height: 64px;
+    border-radius: var(--button-radius);
+    margin-top: 37px;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
 }
