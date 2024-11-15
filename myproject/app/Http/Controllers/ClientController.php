@@ -18,11 +18,11 @@ class ClientController extends Controller
     
         // Handle the image upload
         if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageName = time() . '_' . $image->getClientOriginalName();
-            $imagePath = $image->storeAs('public/client_images', $imageName); // Store in storage/app/public/client_images
+            $uploadedImage = $request->file('image');
+            $imageName = time() . '_' . $uploadedImage->getClientOriginalName();
     
-
+            // Move the image to the public/uploads/client_images directory
+            $uploadedImage->move(public_path('uploads/client_images'), $imageName);
     
             // Create a new client entry in the database
             $client = new Client();
@@ -32,11 +32,11 @@ class ClientController extends Controller
     
             return response()->json([
                 'message' => 'Client image uploaded successfully!',
-                'data' => $client,
-                'image_path' => asset('storage/client_images/' . $imageName)
+                'data' => $client
             ]);
         }
     
         return response()->json(['message' => 'Image upload failed!'], 500);
     }
+    
 }
