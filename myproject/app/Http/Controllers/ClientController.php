@@ -15,25 +15,28 @@ class ClientController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'description' => 'nullable|string'
         ]);
-
+    
         // Handle the image upload
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . '_' . $image->getClientOriginalName();
             $imagePath = $image->storeAs('public/client_images', $imageName); // Store in storage/app/public/client_images
+    
 
+    
             // Create a new client entry in the database
             $client = new Client();
             $client->image_name = $imageName;
             $client->description = $request->input('description');
             $client->save();
-
+    
             return response()->json([
                 'message' => 'Client image uploaded successfully!',
-                'data' => $client
+                'data' => $client,
+                'image_path' => asset('storage/client_images/' . $imageName)
             ]);
         }
-
+    
         return response()->json(['message' => 'Image upload failed!'], 500);
     }
 }
