@@ -38,7 +38,8 @@
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     
-
+<!-- Page-specific styles -->
+@stack('styles')
 
     <!-- JSON-LD Structured Data for SEO -->
     <script type="application/ld+json">

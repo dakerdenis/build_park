@@ -20,6 +20,10 @@
                 <a href="#">
                     Projects
                 </a>
+
+                <a href="#">
+                    Map
+                </a>
             </div>
         </div>
 

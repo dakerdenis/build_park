@@ -1,13 +1,40 @@
 @extends('layouts.app')
 
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/projects.css') }}">
+@endpush
+
 @section('content')
     <div class="main__wrapper">
         <!-- Include the header component -->
         @include('layouts.partials.header')
 
 
+        <section class="projects__main__section">
+            <div class="projects__portfolio__paceholder"></div>
+            <div class="projects__portfolio__navigation">
+                <div class="projects__portfolio__name">
+                    Portfolio
+                </div>
 
-asdasdasd
+                <div class="projects__portfolio__nav">
+                    <a href="#" class="projects__portfolio__nav-element">All</a>
+                    <a href="#" class="projects__portfolio__nav-element">Commercial</a>
+                    <a href="#" class="projects__portfolio__nav-element">Residential</a>
+                    <a href="#" class="projects__portfolio__nav-element">Test</a>
+                    <a href="#" class="projects__portfolio__nav-element">Other</a>
+                </div>
+            </div>
+
+            <div class="projects__portfolio__wrapper">
+                <!--------->
+                <div class="projects__element">
+
+                </div>
+                <!------>
+            </div>
+        </section>
+
 
         <!---COntact with us --->
         <section class="contact" id="contact">
@@ -57,11 +84,7 @@ asdasdasd
                     </form>
 
                 </div>
-                <!-----contact form svg----->
-                <div class="form__icon">
-                    <img class="" src="{{ asset('images\contact\form_icon.svg') }}"
-                        alt="Contact icon logo">
-                </div>
+
 
                 <!----contact information & navigation---->
                 <div class="contact__information">
