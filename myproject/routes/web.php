@@ -30,6 +30,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/dashboard/{section?}', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
     Route::post('/admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
     Route::post('/admin/upload-client', [ClientController::class, 'store'])->name('client.upload');
+    Route::delete('/admin/delete-client/{id}', [ClientController::class, 'destroy'])->name('client.delete');
+
 });
 
 

@@ -38,5 +38,21 @@ class ClientController extends Controller
     
         return response()->json(['message' => 'Image upload failed!'], 500);
     }
-    
+    public function destroy($id)
+    {
+        // Find the client
+        $client = Client::findOrFail($id);
+
+        // Delete the image file from the storage
+        $imagePath = public_path('uploads/client_images/' . $client->image_name);
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+
+        // Delete the client record
+        $client->delete();
+
+        // Redirect back to the clients section with a success message
+        return redirect()->route('admin.dashboard', ['section' => 'clients'])->with('success', 'Client deleted successfully!');
+    }  
 }

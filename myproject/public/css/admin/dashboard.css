@@ -230,10 +230,37 @@ color: #000;
     margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: relative;
 }
 .admin__content-client img{
-    width: 90%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 100;
+}
+.admin__content-client:hover .admin__content-client__delete{
+    opacity: 1;
+}
+.admin__content-client__delete{
+    position: absolute;
+    z-index: 200;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgba(99, 99, 99, 0.596);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    font-size: 25px;
+
+    opacity: 0;
+    cursor: pointer;
 }
 .admin__content-client:hover{
     box-shadow: #df06143a 0px 2px 8px 0px;
@@ -274,4 +301,35 @@ color: #000;
     padding: 5px 8px;
     cursor: pointer;
     font-size: 12px;
+}
+
+
+/* Popup Overlay */
+.delete-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup Content */
+.delete-popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+/* Close Button */
+.close-popup {
+    font-weight: bold;
+    color: black;
 }
