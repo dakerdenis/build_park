@@ -30,14 +30,15 @@ class ClientController extends Controller
             $client->description = $request->input('description');
             $client->save();
     
-            return response()->json([
-                'message' => 'Client image uploaded successfully!',
-                'data' => $client
-            ]);
+            // Redirect to the clients section
+            return redirect()->route('admin.dashboard', ['section' => 'clients'])
+                ->with('success', 'Client image uploaded successfully!');
         }
     
-        return response()->json(['message' => 'Image upload failed!'], 500);
+        // If image upload fails, redirect back with an error message
+        return redirect()->back()->with('error', 'Image upload failed!');
     }
+    
     public function destroy($id)
     {
         // Find the client
