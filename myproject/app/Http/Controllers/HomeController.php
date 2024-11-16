@@ -1,14 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-use function view;
 
+use App\Models\Client;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('home'); // This will return the 'home.blade.php' view
+        // Fetch all clients from the database
+        $clients = Client::all();
+
+        // Pass the clients to the home view
+        return view('home', compact('clients'));
     }
 }

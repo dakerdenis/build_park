@@ -80,53 +80,18 @@
         <section class="clients">
             <div class="swiper clientsSwiper">
                 <div class="swiper-wrapper">
-                    <!-- Repeat this block for each client logo -->
-                    <div class="swiper-slide">
-                        <div class="swiper__slider__customer">
-                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
+                    <!-- Dynamically display client images -->
+                    @foreach ($clients as $client)
+                        <div class="swiper-slide">
+                            <div class="swiper__slider__customer">
+                                <img src="{{ asset('uploads/client_images/' . $client->image_name) }}" alt="Client Logo">
+                            </div>
                         </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper__slider__customer">
-                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper__slider__customer">
-                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper__slider__customer">
-                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper__slider__customer">
-                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper__slider__customer">
-                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper__slider__customer">
-                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper__slider__customer">
-                            <img src="{{ asset('images/customers/customer1.png') }}" alt="Client log">
-                        </div>
-                    </div>
-                    <!-- Add more client logos as needed up to 10 slides -->
+                    @endforeach
                 </div>
             </div>
         </section>
-
+        
 
 
 
