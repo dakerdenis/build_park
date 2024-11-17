@@ -892,7 +892,7 @@
             slidesPerView: 3,
             loop: true,
             autoplay: {
-                delay: 2500, // Adjust delay as needed for auto sliding
+                delay: 1900, // Adjust delay as needed for auto sliding
                 disableOnInteraction: false,
             },
             breakpoints: {
