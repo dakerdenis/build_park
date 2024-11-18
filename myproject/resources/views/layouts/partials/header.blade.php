@@ -84,7 +84,7 @@
 
 
             <div class="burdger__menu__navigation">
-                <button data-section="hero">{{ __('header_hero') }}</button>
+                <button data-section="hero">{{ __('header_home') }}</button>
                 <button data-section="services">{{ __('header_services') }}</button>
                 <button data-section="different">{{ __('header_different') }}</button>
                 <!--button data-section="our__team">Find a Team</button -->

@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AllProjectsController;
 use App\Http\Middleware\LanguageMiddleware;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ProjectsController;
 // Redirect root to the default language (English)
 Route::get('/', function () {
     return redirect('/en');
@@ -31,6 +32,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
     Route::post('/admin/upload-client', [ClientController::class, 'store'])->name('client.upload');
     Route::delete('/admin/delete-client/{id}', [ClientController::class, 'destroy'])->name('client.delete');
+    Route::post('/upload-projects', [ProjectsController::class, 'uploadProjects'])->name('projects.upload');
+
 
 });
 
