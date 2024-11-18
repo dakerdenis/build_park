@@ -116,23 +116,24 @@
                             </div>
                         @endif
                     </div>
+                    <script>
+                        function openDeletePopup(clientId) {
+                            const popup = document.getElementById(`deletePopup-${clientId}`);
+                            if (popup) {
+                                popup.style.display = 'flex';
+                            }
+                        }
+    
+                        function closeDeletePopup(clientId) {
+                            const popup = document.getElementById(`deletePopup-${clientId}`);
+                            if (popup) {
+                                popup.style.display = 'none';
+                            }
+                        }
+                    </script>
                 @endif
 
-                <script>
-                    function openDeletePopup(clientId) {
-                        const popup = document.getElementById(`deletePopup-${clientId}`);
-                        if (popup) {
-                            popup.style.display = 'flex';
-                        }
-                    }
 
-                    function closeDeletePopup(clientId) {
-                        const popup = document.getElementById(`deletePopup-${clientId}`);
-                        if (popup) {
-                            popup.style.display = 'none';
-                        }
-                    }
-                </script>
 
                 <!---Add Clinet Section--->
                 @if ($section === 'add_client')
@@ -229,8 +230,16 @@
                     <div class="admin__content__block">
                         <h2>Projects</h2>
                         <p>Details about our projects will be displayed here.</p>
+                        <a href="{{ route('admin.dashboard', ['section' => 'add_client']) }}">Add New project</a>
                     </div>
                 @endif
+
+                @if ($section === 'add_project')
+                <div class="admin__content__block">
+                    <h2>Projects</h2>
+                    <p>Details about our projects will be displayed here.</p>
+                </div>
+            @endif
 
                 <!-- Map Section -->
                 @if ($section === 'map')

@@ -76,9 +76,9 @@
     <div class="burger-menu-content">
 
             <div class="burger__menu__languages">
-                <a href="#">AZ</a>
-                <a href="#">RU</a>
-                <a href="#">EN</a>
+                <a href="{{ route('home', ['lang' => 'az']) }}">AZ</a>
+                <a href="{{ route('home', ['lang' => 'ru']) }}">RU</a>
+                <a href="{{ route('home', ['lang' => 'en']) }}">EN</a>
             </div>
 
 
