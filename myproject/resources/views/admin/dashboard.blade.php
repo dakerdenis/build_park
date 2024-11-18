@@ -267,7 +267,40 @@
                                     <div class="preview-area" id="previewArea">
                                         <!-- Preview images will be dynamically inserted here -->
                                     </div>
-                                
+                                    
+
+                                    <div class="project__desc__block">
+                                        <div class="projects__desc__name-block">
+                                            <div class="project__desc__name-input">
+                                                <p>Project's name RU</p>
+                                                <input type="text" name="project__name__ru" id="project__name__ru">
+                                            </div>
+                                            <div class="project__desc__name-input">
+                                                <p>Project's name EN</p>
+                                                <input type="text" name="project__name__en" id="project__name__en">
+                                            </div>
+                                        </div>
+
+                                        <div class="projects__desc__desc-block">
+                                            <div class="project__desc__desc-input">
+                                                <p>Project's DESCRIPTION RU</p>
+                                                <textarea nname="project__desc__en" id="project__name__en"cols="30" rows="10"></textarea>
+                                            </div>
+                                            <div class="project__desc__desc-input">
+                                                <p>Project's DESCRIPTION EN</p>
+                                                <textarea nname="project__desc__en" id="project__name__en"cols="30" rows="10"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/Ejlptae_xq4" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
+                                    </div>
                                     <button type="submit" id="submitButton" disabled>Submit</button>
                                 </form>
                                 
