@@ -1,15 +1,18 @@
 {
-    "header_home": "Ana səyifə",
-    "header_services": "Xidmətlər",
-    "header_different": "Haqqımızda",
-    "header_our__team": "Komandamız",
-    "header_projects": "Layihələr",
-    "header_offers": "Tətbirlər",
-    "header_contact": "Əlaqə",
+    "header_home": "Главная",
+    "header_services": "Услуги",
+    "header_different": "О нас",
+    "header_our__team": "Команда",
+    "header_projects": "Проекты",
+    "header_offers": "Предложения",
+    "header_contact": "Контакты",
+    "hero_contact": "Напишите для информации",
 
     "hero_title": "От ремонта до дизайна",
     "hero_subtitle": "- все в одном месте:",
     "hero_subtitle2":"Офисы, дома, виллы.",
     "hero_offer": "Закажите ремонт и получите дизайн в подарок!",
-    "statistics_amazing_people": "Удивительные люди"
+    "hero_statistics1": "Проекты",
+    "hero_statistics2": "Клиенты",
+    "hero_statistics3": "Лет"
 }

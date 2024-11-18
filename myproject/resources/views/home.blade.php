@@ -22,7 +22,7 @@
                     </div>
         
                     <div class="hero__button">
-                        <button>{{ __('Contact For Consultation') }}</button>
+                        <button>{{ __('hero_contact') }}</button>
                     </div>
                 </div>
         
@@ -33,7 +33,7 @@
                             300<span>+</span>
                         </div>
                         <div class="hero__statstics__element_desc">
-                            <p>{{ __('statistics_amazing_people') }}</p>
+                            <p>{{ __('hero_statistics1') }}</p>
                         </div>
                     </div>
                     <div class="hero__statistics__element">
@@ -41,7 +41,7 @@
                             900<span>+</span>
                         </div>
                         <div class="hero__statstics__element_desc">
-                            <p>{{ __('statistics_amazing_people') }}</p>
+                            <p>{{ __('hero_statistics2') }}</p>
                         </div>
                     </div>
                     <div class="hero__statistics__element">
@@ -49,7 +49,7 @@
                             20<span>+</span>
                         </div>
                         <div class="hero__statstics__element_desc">
-                            <p>{{ __('statistics_amazing_people') }}</p>
+                            <p>{{ __('hero_statistics3') }}</p>
                         </div>
                     </div>
                 </div>

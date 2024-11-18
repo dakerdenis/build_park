@@ -6,10 +6,13 @@
     "header_projects": "Layihələr",
     "header_offers": "Tətbirlər",
     "header_contact": "Əlaqə",
+    "hero_contact": "Bizə yazın",
 
     "hero_title": "Təmir və dizayndan",
     "hero_subtitle": "- hamısı bir yerdə:",
     "hero_subtitle2":"Ofislər, evlər, villalar.",
     "hero_offer": "Təmir sifariş edin və dizayn hədiyyə alın!",
-    "statistics_amazing_people": "Möhtəşəm insanlar"
+    "hero_statistics1": "Layihələr",
+    "hero_statistics2": "Müştərilərimiz",
+    "hero_statistics3": "İllər"
 }

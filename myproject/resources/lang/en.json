@@ -6,9 +6,13 @@
     "header_projects": "Projects",
     "header_offers": "Offers",
     "header_contact": "Contact us",
+    "hero_contact": "Cpntact for Consultation",
+
     "hero_title": "From renovation to design",
     "hero_subtitle": "- everything in one place:",
     "hero_subtitle2": "Offices, Houses, Villas.",
     "hero_offer": "Order a renovation and receive a design as a gift!",
-    "statistics_amazing_people": "Amazing people"
+    "hero_statistics1": "Projects",
+    "hero_statistics2": "Customers",
+    "hero_statistics3": "Years"
 }
