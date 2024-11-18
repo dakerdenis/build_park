@@ -108,7 +108,7 @@
 }
 
 /* Language button inside the dropdown */
-.language-dropdown button {
+.language-dropdown a {
     height: 40px;
     background: none;
     color: var(--white);

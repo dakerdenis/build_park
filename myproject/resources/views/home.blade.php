@@ -9,31 +9,31 @@
 
         <section class="hero" id="hero">
             <div class="hero__wrapper">
-                <!---main goal and contact button---->
+                <!-- Main goal and contact button -->
                 <div class="hero__name">
                     <div class="hero__name__big">
-                        <p>From renovation to design</p>
-                        <p>- everything in one place:</p>
-                        <p> Offices, Houses, Villas.</p>
+                        <p>{{ __('hero_title') }}</p>
+                        <p>{{ __('hero_subtitle') }}</p>
+                        <p>{{ __('hero_subtitle2') }}</p>
                     </div>
         
                     <div class="hero__name__small">
-                        <p>Order a renovation and receive a design as a gift!</p>
+                        <p>{{ __('hero_offer') }}</p>
                     </div>
         
                     <div class="hero__button">
-                        <button>Contact For Consultation</button>
+                        <button>{{ __('Contact For Consultation') }}</button>
                     </div>
                 </div>
         
-                <!--------->
+                <!-- Statistics Section -->
                 <div class="hero__statistics">
                     <div class="hero__statistics__element">
                         <div class="hero__statistics__element-number">
                             300<span>+</span>
                         </div>
                         <div class="hero__statstics__element_desc">
-                            <p>Amazing people</p>
+                            <p>{{ __('statistics_amazing_people') }}</p>
                         </div>
                     </div>
                     <div class="hero__statistics__element">
@@ -41,7 +41,7 @@
                             900<span>+</span>
                         </div>
                         <div class="hero__statstics__element_desc">
-                            <p>Amazing people</p>
+                            <p>{{ __('statistics_amazing_people') }}</p>
                         </div>
                     </div>
                     <div class="hero__statistics__element">
@@ -49,17 +49,17 @@
                             20<span>+</span>
                         </div>
                         <div class="hero__statstics__element_desc">
-                            <p>Amazing people</p>
+                            <p>{{ __('statistics_amazing_people') }}</p>
                         </div>
                     </div>
                 </div>
         
-                <!------->
+                <!-- Background -->
                 <div class="hero__backgroud">
                     <img src="{{ asset('images/hero_back.png') }}" alt="Build park example of future!">
                 </div>
         
-                <!----Build Park---->
+                <!-- Build Park Section -->
                 <div class="hero__logo">
                     <div class="hero__logo__name">
                         <p>Build Park</p>
@@ -67,13 +67,12 @@
                     </div>
         
                     <div class="hero__logo__desc">
-                        <p>As a trusted general project that has been
-                            operating for 25 years, our commitment is
-                            always to prioritize our client satisfaction</p>
+                        <p>{{ __('As a trusted general project that has been operating for 25 years, our commitment is always to prioritize our client satisfaction') }}</p>
                     </div>
                 </div>
             </div>
         </section>
+        
         
 
         <!----Our clients---->

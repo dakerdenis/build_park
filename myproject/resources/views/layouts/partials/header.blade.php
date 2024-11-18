@@ -11,40 +11,47 @@
         <!-- Header Navigation -->
         <nav class="haeder__navigation">
             <div class="header__navigation__element">
-                <button data-section="hero">Home</button>
+                <button data-section="hero">{{ __('header_home') }}</button>
             </div>
             <div class="header__navigation__element">
-                <button data-section="services">Services</button>
+                <button data-section="services">{{ __('header_services') }}</button>
             </div>
             <div class="header__navigation__element">
-                <button data-section="different">About Us</button>
+                <button data-section="different">{{ __('header_different') }}</button>
             </div>
             <div class="header__navigation__element">
-                <button data-section="our__team">Find a Team</button>
+                <button data-section="our__team">{{ __('header_our__team') }}</button>
             </div>
             <div class="header__navigation__element">
-                <button data-section="projects">Portfolio</button>
+                <button data-section="projects">{{ __('header_projects') }}</button>
             </div>
 
             <div class="header__navigation__element">
-                <button data-section="offers">Offers</button>
+                <button data-section="offers">{{ __('header_offers') }}</button>
             </div>
             <div class="header__navigation__element">
-                <button data-section="contact">Contact us</button>
+                <button data-section="contact">{{ __('header_contact') }}</button>
             </div>
         </nav>
 
         <!-- Language Change -->
         <div class="header__language">
+            <!-- Button to show active language -->
             <button class="active_language">
-                <p>EN</p>
+                <p>{{ strtoupper(app()->getLocale()) }}</p> <!-- Display the current active language -->
                 <img src="{{ asset('images/lang_arrow.svg') }}" alt="Language arrow">
             </button>
+        
+            <!-- Dropdown for language selection -->
             <div class="language-dropdown">
-                <button>AZ</button>
-                <button>RU</button>
+                @foreach (['az', 'ru', 'en'] as $lang)
+                    @if ($lang !== app()->getLocale()) <!-- Exclude the active language from the dropdown -->
+                        <a href="{{ url($lang . substr(request()->getPathInfo(), 3)) }}">{{ strtoupper($lang) }}</a>
+                    @endif
+                @endforeach
             </div>
         </div>
+        
 
         <!-- Theme Changer -->
         <div class="header__theme">
@@ -77,13 +84,13 @@
 
 
             <div class="burdger__menu__navigation">
-                <button data-section="hero">Home</button>
-                <button data-section="services">Services</button>
-                <button data-section="different">About Us</button>
+                <button data-section="hero">{{ __('header_hero') }}</button>
+                <button data-section="services">{{ __('header_services') }}</button>
+                <button data-section="different">{{ __('header_different') }}</button>
                 <!--button data-section="our__team">Find a Team</button -->
-                <button data-section="projects">Portfolio</button>
-                <button data-section="offers">Offers</button>
-                <button data-section="contact">Contact Us</button>
+                <button data-section="projects">{{ __('header_projects') }}</button>
+                <button data-section="offers">{{ __('header_offers') }}</button>
+                <button data-section="contact">{{ __('header_contact') }} Us</button>
             </div>
 
 
