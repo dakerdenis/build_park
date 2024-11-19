@@ -32,7 +32,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
     Route::post('/admin/upload-client', [ClientController::class, 'store'])->name('client.upload');
     Route::delete('/admin/delete-client/{id}', [ClientController::class, 'destroy'])->name('client.delete');
-    Route::post('/upload-projects', [ProjectsController::class, 'uploadProjects'])->name('projects.upload');
+    Route::post('/admin/upload-projects', [ProjectsController::class, 'uploadProjects'])->name('projects.upload');
 
 
 });

@@ -226,6 +226,7 @@
                 @endif
 
                 <!-- Projects Section -->
+                <!-- Projects Section -->
                 @if ($section === 'projects')
                     <div class="admin__content__block">
                         <div class="admin__content__line">
@@ -236,15 +237,38 @@
                             </a>
                         </div>
                         <div class="admin__content__content">
-                            <!------ Clients Section ------>
-                            <div class="admin__content__content-clients">
-                                HEre will be projects
+                            <div class="admin__content__content-projects">
+                                @foreach ($projects as $project)
+                                    <div class="admin__content__content-singleproject">
+                                        <!-- Display project name -->
+                                        <h3>{{ $project->name_en }}</h3>
 
+                                        <!-- Display project description -->
+                                        <p>{{ $project->description_en }}</p>
+
+                                        <!-- Display project images -->
+                                        <div class="project-images">
+                                            @foreach ($project->images as $image)
+                                                <img src="{{ asset('uploads/project_images/' . $image) }}"
+                                                    alt="Project Image">
+                                            @endforeach
+                                        </div>
+
+                                        <!-- Display YouTube link -->
+                                        @if ($project->youtube_link)
+                                            <a href="{{ $project->youtube_link }}" target="_blank">Watch Video</a>
+                                        @endif
+                                    </div>
+                                @endforeach
+
+                                @if ($projects->isEmpty())
+                                    <p>No projects available.</p>
+                                @endif
                             </div>
-                            <!------ End of Clients Section ------>
                         </div>
                     </div>
                 @endif
+
 
                 @if ($section === 'add_project')
                     <div class="admin__content__block">
@@ -271,7 +295,6 @@
                                         <!-- Preview images will be dynamically inserted here -->
                                     </div>
 
-
                                     <div class="project__desc__block">
                                         <div class="projects__desc__name-block">
                                             <div class="project__desc__name-input">
@@ -289,25 +312,24 @@
                                         <div class="projects__desc__desc-block">
                                             <div class="project__desc__desc-input">
                                                 <p>Project's DESCRIPTION RU</p>
-                                                <textarea required nname="project__desc__en" id="project__name__en"cols="30" rows="10"></textarea>
+                                                <textarea required name="project__desc__ru" id="project__desc__ru" cols="30" rows="10"></textarea>
                                             </div>
                                             <div class="project__desc__desc-input">
                                                 <p>Project's DESCRIPTION EN</p>
-                                                <textarea required nname="project__desc__en" id="project__name__en"cols="30" rows="10"></textarea>
+                                                <textarea required name="project__desc__en" id="project__desc__en" cols="30" rows="10"></textarea>
                                             </div>
                                         </div>
 
                                         <div class="project__youtube__link">
                                             <div class="project__desc__desc-input">
                                                 <p>Project's YouTube link</p>
-                                                <input type="text" name="project__video"
-                                                id="project__video">
+                                                <input type="text" name="project__video" id="project__video">
                                             </div>
                                         </div>
-
                                     </div>
                                     <button type="submit" id="submitButton" disabled>Submit</button>
                                 </form>
+
 
 
 
