@@ -46,7 +46,44 @@
     "differrent4__name": "Ən yaxşı materiallar",
     "differrent4__desc": "Material binanı müəyyən edir, buna görə biz sizə öz sinfində ən yaxşı və keyfiyyətli materiallardan istifadə etməyi tövsiyə edirik.",
 
-    "story__desc__name": "Our Story &  Who we are",
-    "story__desc__text" : "Established in 1992, PT. Wahana Cipta operates as a General Contracting company with a footprint that we have planted throughout Indonesia. Initially, we focused on construction in the field of residential housing development in Jakarta. As the company grows, now we are present as a reliable..."
+    "story__desc__name": "Bizim Hekayəmiz və Biz Kimik",
+    "story__desc__text": "1992-ci ildə yaradılmış PT. Wahana Cipta ümumi podratçı şirkət kimi fəaliyyət göstərir və İndoneziyanın müxtəlif yerlərində iz qoymuşdur. Əvvəlcə Cakartada yaşayış yerlərinin tikintisi sahəsində fəaliyyət göstərmişik. Şirkət böyüdükcə, biz etibarlı bir şirkət kimi tanındıq...",
+    "story__desc__button": "Daha Çox Gör",
+    "story__popup__name": "Bizim Hekayəmiz və Biz Kimik",
+    "popup__content__text1" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis accumsan justo in luctus. Fusce ut rutrum ligula, quis dictum augue. Vestibulum pulvinar nunc ut iaculis imperdiet. Donec at feugiat lacus. Aliquam erat volutpat. Aenean ut massa vitae sem facilisis commodo. Vestibulum a accumsan quam. ",
+    "popup__content__text2" : "Vivamus placerat cursus lacus, et egestas nunc elementum et. Praesent id sollicitudin odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis imperdiet erat id orci sollicitudin, id convallis turpis dignissim. Donec efficitur consequat augue nec laoreet.",
+    "popup__content__text3": "Sed vulputate erat eget justo commodo congue. Nunc nisl arcu, sodales et dolor convallis, eleifend pellentesque nibh.",           
 
+
+    "projects__name": "Layihələr",
+    "projects__all_button": "Bütün layihələr",
+
+    "offers1__name": "Bizimlə tikin və pulsuz dizayn əldə edin!",
+    "offers1__desc": "Epoksi boya və epoksi döşəmə podratçısı. Bu iki termini eşitmisinizmi? Və bunun mövcud binaların tikintisi ilə nə əlaqəsi var? Epoksi qatran növünə daxildir...",
+    
+    "offers2__name": "Dizayn sizdən - mebel bizdən",
+    "offers2__desc": "Epoksi boya və epoksi döşəmə podratçısı. Bu iki termini eşitmisinizmi? Və bunun mövcud binaların tikintisi ilə nə əlaqəsi var? Epoksi qatran növünə daxildir...",
+
+    "offers__element__button": "Sifariş üçün əlaqə",
+
+    "contact__form__name": "Sizin üçün nə edə bilərik?",
+    "contact__form__desc": "Biz istənilən çətinlikdə layihə üzərində işləməyə hazırıq, istər kommersiya, istərsə də yaşayış.",
+    "contact__form__inputs_name": "Sizin adınız",
+    "contact__form__inputs_email": "Sizin email",
+    "contact__form__option": "Necə əlaqə saxlaya bilərik?",
+
+    "contact__form__option1": "Whatsapp",
+    "contact__form__option2": "Zəng",
+    "contact__form__option3": "Email",
+
+    "contact__form__inputs_phone": "Sizin telefon",
+    "contact__form__inputs_message": "Sizin mesaj",
+
+    "contact__form__indicates": "vacib sahəni göstərir",
+    "contact__form__submit": "Göndər",
+
+    "contact__information__desc-adress": "Ünvan:",
+    "contact__information__desc-phone": "Telefon:",
+    "contact__information__desc-email": "Email:",
+    "contact__information__desc-social": "Sosial:"
 }

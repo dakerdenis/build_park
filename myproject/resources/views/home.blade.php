@@ -408,18 +408,18 @@
                         alt="Story Our main photo">
                 </div>
                 <button class="story-popup__close-btn" id="closeStoryPopupBtn">&times;</button>
-                <h2>Our Story & Who We Are</h2>
+                <h2>{{__('story__popup__name')}}</h2>
 
                 <div class="popup__content__text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis accumsan justo in luctus.
-                        Fusce ut rutrum ligula, quis dictum augue. Vestibulum pulvinar nunc ut iaculis imperdiet. Donec at
-                        feugiat lacus. Aliquam erat volutpat. Aenean ut massa vitae sem facilisis commodo. Vestibulum a
-                        accumsan quam. </p>
-                    <p>Vivamus placerat cursus lacus, et egestas nunc elementum et. Praesent id sollicitudin odio. Interdum
-                        et malesuada fames ac ante ipsum primis in faucibus. Duis imperdiet erat id orci sollicitudin, id
-                        convallis turpis dignissim. Donec efficitur consequat augue nec laoreet. </p>
-                    <p>Sed vulputate erat eget justo commodo congue. Nunc nisl arcu, sodales et dolor convallis, eleifend
-                        pellentesque nibh. </p>
+                    <p>
+                        {{__('popup__content__text1')}}
+                    </p>
+                    <p>
+                        {{__('popup__content__text2')}}
+                    </p>
+                    <p>
+                        {{__('popup__content__text3')}}
+                    </p>
                 </div>
             </div>
         </div>
@@ -436,7 +436,7 @@
                     <!---slider navigation--->
                     <div class="projects__slider__navigation">
                         <div class="projects__slider__name">
-                            <p>Projects</p>
+                            <p>{{__('projects__name')}}</p>
                         </div>
                         <div class="projects__slider__navigation__elements">
                             <button>All</button>
@@ -450,7 +450,7 @@
                         <!-------->
                         <div class="projects__all-projects">
                             <a href="{{ route('projects') }}">
-                                View all projects
+                                {{__('projects__all_button')}}
                             </a>
                         </div>
 
@@ -625,16 +625,14 @@
                         <!----offers desc text------>
                         <div class="offers__element__desc">
                             <div class="offers__element__desc_text">
-                                Epoxy paint and epoxy floor contractor. Have you heard the two terms? And what does that
-                                have to do with the construction of existing buildings? Epoxy itself is included in the type
-                                of resin...
+                                {{__('offers1__desc')}}
                             </div>
                         </div>
 
 
                         <!----offers button---->
                         <div class="offers__element__button">
-                            <button>Contact for Order</button>
+                            <button>{{__('offers__element__button')}}</button>
                         </div>
 
 
@@ -645,8 +643,9 @@
                                 src="{{ asset('images\offers\red_icon.svg') }}" alt="Offers background">
 
                             <!----Offers red image text------>
-                            <p>Build with us and
-                                get free design!</p>
+                            <p>
+                                {{__('offers1__name')}}
+                            </p>
                         </div>
 
                     </div>
@@ -663,16 +662,16 @@
                         <!----offers desc text------>
                         <div class="offers__element__desc">
                             <div class="offers__element__desc_text">
-                                Epoxy paint and epoxy floor contractor. Have you heard the two terms? And what does that
-                                have to do with the construction of existing buildings? Epoxy itself is included in the type
-                                of resin...
+                                {{__('offers2__desc')}}
                             </div>
                         </div>
 
 
                         <!----offers button---->
                         <div class="offers__element__button">
-                            <button>Contact for Order</button>
+                            <button>
+                                {{__('offers__element__button')}}
+                            </button>
                         </div>
 
 
@@ -683,8 +682,9 @@
                                 src="{{ asset('images\offers\red_icon.svg') }}" alt="Offers background">
 
                             <!----Offers red image text------>
-                            <p>Build with us and
-                                get free design!</p>
+                            <p>
+                                {{__('offers2__name')}}
+                            </p>
                         </div>
 
                     </div>
@@ -701,40 +701,40 @@
                     <form action="" method="POST">
                         @csrf
                         <div class="contact__form__name">
-                            What can we do for you?
+                            {{__('contact__form__name')}}
                         </div>
                         <div class="contact__form__desc">
-                            We are ready to work on a project of any complexity, whether it’s commercial or residential.
+                            {{__('contact__form__desc')}}
                         </div>
                         <div class="contact__form__wrapper">
                             <div class="contact__form__inputs">
-                                <input type="text" id="name" name="name" placeholder="Your Name">
-                                <input type="email" id="email" name="email" placeholder="Email">
+                                <input type="text" id="name" name="name" placeholder="{{__('contact__form__inputs_name')}}">
+                                <input type="email" id="email" name="email" placeholder="{{__('contact__form__inputs_email')}}">
                             </div>
                             <div class="contact__form__inputs">
                                 <div class="custom-select" id="customSelect">
-                                    <div class="selected-option">How can we turn-back?</div>
+                                    <div class="selected-option">{{__('contact__form__option')}}</div>
                                     <span class="select-arrow">&#9662;</span> <!-- Arrow Icon -->
                                     <ul class="dropdown-options">
-                                        <li data-value="1">Option 1</li>
-                                        <li data-value="2">Option 2</li>
-                                        <li data-value="3">Option 3</li>
+                                        <li data-value="1">{{__('contact__form__option1')}}</li>
+                                        <li data-value="2">{{__('contact__form__option2')}}</li>
+                                        <li data-value="3">{{__('contact__form__option3')}}</li>
                                     </ul>
                                 </div>
 
 
-                                <input type="number" name="phone" id="phone" placeholder="Phone">
+                                <input type="number" name="phone" id="phone" placeholder="{{__('contact__form__inputs_phone')}}">
                             </div>
 
                             <div class="contact__form__message">
-                                <textarea placeholder="Your message" name="message" id="message"></textarea>
+                                <textarea placeholder="{{__('contact__form__inputs_message')}}" name="message" id="message"></textarea>
                             </div>
                             <div class="contact__form__indicates">
-                                <span>*</span> indicates a required field
+                                <span>*</span>{{__('contact__form__indicates')}}
                             </div>
 
                             <div class="contact__form__submit">
-                                <button type="submit">Submit</button>
+                                <button type="submit">{{__('contact__form__submit')}}</button>
                             </div>
                         </div>
                     </form>
@@ -754,7 +754,7 @@
                             <!----->
                             <div class="contact__information_container">
                                 <div class="contact__information__desc">
-                                    Adress:
+                                    {{__('contact__information__desc-adress')}}
                                 </div>
                                 <div class="contact__information__value">
                                     <p>91 Safarli St. Baku, Azerbaijan AZ1111</p>
@@ -763,7 +763,7 @@
                             <!----->
                             <div class="contact__information_container">
                                 <div class="contact__information__desc">
-                                    Phone:
+                                    {{__('contact__information__desc-phone')}}
                                 </div>
                                 <div class="contact__information__value">
                                     <p>+994 50 444 44 44</p>
@@ -772,7 +772,7 @@
                             <!----->
                             <div class="contact__information_container">
                                 <div class="contact__information__desc">
-                                    Email:
+                                    {{__('contact__information__desc-email')}}
                                 </div>
                                 <div class="contact__information__value">
                                     <p>hello@buildpark.az</p>
@@ -782,7 +782,7 @@
                             <!----->
                             <div class="contact__information_container-social">
                                 <div class="contact__information__desc">
-                                    Social:
+                                    {{__('contact__information__desc-social')}}
                                 </div>
                                 <div class="contact__information__social">
                                     <a href="#">
@@ -819,12 +819,12 @@
                             </div>
 
                             <div class="contact__navigation-values">
-                                <button>Home</button>
-                                <button>Services</button>
-                                <button>Our Team</button>
-                                <button>About US</button>
-                                <button>Portfolio</button>
-                                <button>Offers</button>
+                                <button>{{__('header_home')}}</button>
+                                <button>{{__('header_services')}}</button>
+                                <button>{{__('header_different')}}</button>
+                                <button>{{__('header_our__team')}}</button>
+                                <button>{{__('header_projects')}}</button>
+                                <button>{{__('header_offers')}}</button>
                             </div>
                         </div>
                     </div>

@@ -45,5 +45,48 @@
     "different3__name" : "On Time",
     "different3__desc": "We prioritize the quality of our work and finish it on time",
     "differrent4__name": "Best Materials",
-    "differrent4__desc" : "The material determines the building itself so we recommend that you use the best & quality materials in its class."
+    "differrent4__desc" : "The material determines the building itself so we recommend that you use the best & quality materials in its class.",
+
+    "story__desc__name": "Our Story &  Who we are",
+    "story__desc__text" : "Established in 1992, PT. Wahana Cipta operates as a General Contracting company with a footprint that we have planted throughout Indonesia. Initially, we focused on construction in the field of residential housing development in Jakarta. As the company grows, now we are present as a reliable...",
+    "story__desc__button": "See More",
+    "story__popup__name" : "Our Story & Who We Are",
+    "popup__content__text1" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis accumsan justo in luctus. Fusce ut rutrum ligula, quis dictum augue. Vestibulum pulvinar nunc ut iaculis imperdiet. Donec at feugiat lacus. Aliquam erat volutpat. Aenean ut massa vitae sem facilisis commodo. Vestibulum a accumsan quam. ",
+    "popup__content__text2" : "Vivamus placerat cursus lacus, et egestas nunc elementum et. Praesent id sollicitudin odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis imperdiet erat id orci sollicitudin, id convallis turpis dignissim. Donec efficitur consequat augue nec laoreet.",
+    "popup__content__text3": "Sed vulputate erat eget justo commodo congue. Nunc nisl arcu, sodales et dolor convallis, eleifend pellentesque nibh.",
+    
+    "projects__name": "Projects",
+    "projects__all_button": "View all projects",
+
+
+    "offers1__name": "Build with us and get free design!",
+    "offers1__desc": "Epoxy paint and epoxy floor contractor. Have you heard the two terms? And what does that have to do with the construction of existing buildings? Epoxy itself is included in the type of resin...",
+    
+    "offers2__name": "Design from you - furniture from us",
+    "offers2__desc": "Epoxy paint and epoxy floor contractor. Have you heard the two terms? And what does that have to do with the construction of existing buildings? Epoxy itself is included in the type of resin...",
+
+    "offers__element__button": "Contact for Order",
+
+
+    "contact__form__name" :"What can we do for you?",
+    "contact__form__desc": " We are ready to work on a project of any complexity, whether it’s commercial or residential.",
+    "contact__form__inputs_name" : "Your name",
+    "contact__form__inputs_email" : "Your email",
+    "contact__form__option" : "How can we turn-back?",
+
+    "contact__form__option1" : "Whatsapp",
+    "contact__form__option2" : "Call",
+    "contact__form__option3" : "Email",   
+    
+    "contact__form__inputs_phone" : "Your phone",
+    "contact__form__inputs_message" : "Your message",
+
+    "contact__form__indicates" : "indicates a required field",
+    "contact__form__submit" : "Send",
+
+    "contact__information__desc-adress" : "Adress:",
+    "contact__information__desc-phone" :"Phone:",
+    "contact__information__desc-email" :"Email:",
+    "contact__information__desc-social" :"Social:"
+
 }

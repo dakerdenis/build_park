@@ -46,5 +46,45 @@
     "different3__name": "В срок",
     "different3__desc": "Мы уделяем большое внимание качеству нашей работы и завершаем её в срок.",
     "differrent4__name": "Лучшие материалы",
-    "differrent4__desc": "Материалы определяют качество здания, поэтому мы рекомендуем использовать самые лучшие и качественные материалы."
+    "differrent4__desc": "Материалы определяют качество здания, поэтому мы рекомендуем использовать самые лучшие и качественные материалы.",
+
+    "story__desc__name": "Наша история и кто мы",
+    "story__desc__text": "Основанная в 1992 году, PT. Wahana Cipta работает как генеральный подрядчик с присутствием по всей Индонезии. Изначально мы сосредоточились на строительстве в сфере жилищного строительства в Джакарте. По мере роста компании мы зарекомендовали себя как надежные...",
+    "story__desc__button": "Узнать больше",
+    "story__popup__name": "Наша история и кто мы",
+    "popup__content__text1" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis accumsan justo in luctus. Fusce ut rutrum ligula, quis dictum augue. Vestibulum pulvinar nunc ut iaculis imperdiet. Donec at feugiat lacus. Aliquam erat volutpat. Aenean ut massa vitae sem facilisis commodo. Vestibulum a accumsan quam. ",
+    "popup__content__text2" : "Vivamus placerat cursus lacus, et egestas nunc elementum et. Praesent id sollicitudin odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis imperdiet erat id orci sollicitudin, id convallis turpis dignissim. Donec efficitur consequat augue nec laoreet.",
+    "popup__content__text3": "Sed vulputate erat eget justo commodo congue. Nunc nisl arcu, sodales et dolor convallis, eleifend pellentesque nibh.",           
+
+    "projects__name": "Проекты",
+    "projects__all_button": "Все проекты",
+
+    "offers1__name": "Стройте с нами и получите бесплатный дизайн!",
+    "offers1__desc": "Эпоксидная краска и эпоксидный пол. Вы слышали эти два термина? И какое это имеет отношение к строительству существующих зданий? Эпоксид относится к типу смолы...",
+    
+    "offers2__name": "Дизайн от вас - мебель от нас",
+    "offers2__desc": "Эпоксидная краска и эпоксидный пол. Вы слышали эти два термина? И какое это имеет отношение к строительству существующих зданий? Эпоксид относится к типу смолы...",
+
+    "offers__element__button": "Связаться для заказа",
+    
+    "contact__form__name": "Что мы можем сделать для вас?",
+    "contact__form__desc": "Мы готовы работать над проектом любой сложности, будь то коммерческий или жилой.",
+    "contact__form__inputs_name": "Ваше имя",
+    "contact__form__inputs_email": "Ваш email",
+    "contact__form__option": "Как с вами связаться?",
+
+    "contact__form__option1": "Whatsapp",
+    "contact__form__option2": "Звонок",
+    "contact__form__option3": "Email",
+
+    "contact__form__inputs_phone": "Ваш телефон",
+    "contact__form__inputs_message": "Ваше сообщение",
+
+    "contact__form__indicates": "обозначает обязательное поле",
+    "contact__form__submit": "Отправить",
+
+    "contact__information__desc-adress": "Адрес:",
+    "contact__information__desc-phone": "Телефон:",
+    "contact__information__desc-email": "Email:",
+    "contact__information__desc-social": "Социальные сети:"
 }
