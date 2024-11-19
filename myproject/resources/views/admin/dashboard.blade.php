@@ -257,53 +257,58 @@
                         <div class="admin__content__content">
                             <!------ Clients Section ------>
                             <div class="admin__content__content-clients">
-                                <form id="projectImageUploadForm" action="{{ route('projects.upload') }}" method="POST" enctype="multipart/form-data">
+                                <form id="projectImageUploadForm" action="{{ route('projects.upload') }}"
+                                    method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="upload-area" id="uploadArea">
-                                        <p>Drag & drop images here or click to select (max: 5 images, max size: 2MB each)</p>
-                                        <input type="file" id="projectImageInput" name="images[]" accept="image/*" multiple hidden>
+                                        <p>Drag & drop images here or click to select (max: 5 images, max size: 2MB
+                                            each)</p>
+                                        <input type="file" id="projectImageInput" name="images[]"
+                                            accept="image/*" multiple hidden>
                                     </div>
-                                
+
                                     <div class="preview-area" id="previewArea">
                                         <!-- Preview images will be dynamically inserted here -->
                                     </div>
-                                    
+
 
                                     <div class="project__desc__block">
                                         <div class="projects__desc__name-block">
                                             <div class="project__desc__name-input">
                                                 <p>Project's name RU</p>
-                                                <input type="text" name="project__name__ru" id="project__name__ru">
+                                                <input required type="text" name="project__name__ru"
+                                                    id="project__name__ru">
                                             </div>
                                             <div class="project__desc__name-input">
                                                 <p>Project's name EN</p>
-                                                <input type="text" name="project__name__en" id="project__name__en">
+                                                <input required type="text" name="project__name__en"
+                                                    id="project__name__en">
                                             </div>
                                         </div>
 
                                         <div class="projects__desc__desc-block">
                                             <div class="project__desc__desc-input">
                                                 <p>Project's DESCRIPTION RU</p>
-                                                <textarea nname="project__desc__en" id="project__name__en"cols="30" rows="10"></textarea>
+                                                <textarea required nname="project__desc__en" id="project__name__en"cols="30" rows="10"></textarea>
                                             </div>
                                             <div class="project__desc__desc-input">
                                                 <p>Project's DESCRIPTION EN</p>
-                                                <textarea nname="project__desc__en" id="project__name__en"cols="30" rows="10"></textarea>
+                                                <textarea required nname="project__desc__en" id="project__name__en"cols="30" rows="10"></textarea>
                                             </div>
                                         </div>
 
-                                        <iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/Ejlptae_xq4" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-</iframe>
+                                        <div class="project__youtube__link">
+                                            <div class="project__desc__desc-input">
+                                                <p>Project's YouTube link</p>
+                                                <input type="text" name="project__video"
+                                                id="project__video">
+                                            </div>
+                                        </div>
 
                                     </div>
                                     <button type="submit" id="submitButton" disabled>Submit</button>
                                 </form>
-                                
+
 
 
                             </div>
@@ -314,108 +319,108 @@
 
 
                     <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const uploadArea = document.getElementById('uploadArea');
-    const projectImageInput = document.getElementById('projectImageInput');
-    const previewArea = document.getElementById('previewArea');
-    const submitButton = document.getElementById('submitButton');
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const uploadArea = document.getElementById('uploadArea');
+                            const projectImageInput = document.getElementById('projectImageInput');
+                            const previewArea = document.getElementById('previewArea');
+                            const submitButton = document.getElementById('submitButton');
 
-    let uploadedImages = [];
+                            let uploadedImages = [];
 
-    const updateSubmitButtonState = () => {
-        submitButton.disabled = uploadedImages.length === 0;
-    };
+                            const updateSubmitButtonState = () => {
+                                submitButton.disabled = uploadedImages.length === 0;
+                            };
 
-    const handleFiles = (files) => {
-        for (let file of files) {
-            if (uploadedImages.length >= 5) {
-                alert('You can only upload a maximum of 5 images.');
-                break;
-            }
-            if (file.size > 2 * 1024 * 1024) {
-                alert(`${file.name} exceeds the maximum size of 2MB.`);
-                continue;
-            }
+                            const handleFiles = (files) => {
+                                for (let file of files) {
+                                    if (uploadedImages.length >= 5) {
+                                        alert('You can only upload a maximum of 5 images.');
+                                        break;
+                                    }
+                                    if (file.size > 2 * 1024 * 1024) {
+                                        alert(`${file.name} exceeds the maximum size of 2MB.`);
+                                        continue;
+                                    }
 
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                const previewDiv = document.createElement('div');
-                previewDiv.classList.add('preview-image');
+                                    const reader = new FileReader();
+                                    reader.onload = function(e) {
+                                        const previewDiv = document.createElement('div');
+                                        previewDiv.classList.add('preview-image');
 
-                const img = document.createElement('img');
-                img.src = e.target.result;
-                img.alt = file.name;
+                                        const img = document.createElement('img');
+                                        img.src = e.target.result;
+                                        img.alt = file.name;
 
-                const removeButton = document.createElement('button');
-                removeButton.textContent = '×';
-                removeButton.onclick = function () {
-                    previewArea.removeChild(previewDiv);
-                    uploadedImages = uploadedImages.filter((uploadedFile) => uploadedFile !== file);
-                    updateSubmitButtonState();
-                };
+                                        const removeButton = document.createElement('button');
+                                        removeButton.textContent = '×';
+                                        removeButton.onclick = function() {
+                                            previewArea.removeChild(previewDiv);
+                                            uploadedImages = uploadedImages.filter((uploadedFile) => uploadedFile !==
+                                                file);
+                                            updateSubmitButtonState();
+                                        };
 
-                previewDiv.appendChild(img);
-                previewDiv.appendChild(removeButton);
-                previewArea.appendChild(previewDiv);
+                                        previewDiv.appendChild(img);
+                                        previewDiv.appendChild(removeButton);
+                                        previewArea.appendChild(previewDiv);
 
-                uploadedImages.push(file);
-                updateSubmitButtonState();
-            };
-            reader.readAsDataURL(file);
-        }
-    };
+                                        uploadedImages.push(file);
+                                        updateSubmitButtonState();
+                                    };
+                                    reader.readAsDataURL(file);
+                                }
+                            };
 
-    uploadArea.addEventListener('click', () => {
-        projectImageInput.click();
-    });
+                            uploadArea.addEventListener('click', () => {
+                                projectImageInput.click();
+                            });
 
-    uploadArea.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        uploadArea.style.borderColor = '#000';
-    });
+                            uploadArea.addEventListener('dragover', (e) => {
+                                e.preventDefault();
+                                uploadArea.style.borderColor = '#000';
+                            });
 
-    uploadArea.addEventListener('dragleave', () => {
-        uploadArea.style.borderColor = '#ccc';
-    });
+                            uploadArea.addEventListener('dragleave', () => {
+                                uploadArea.style.borderColor = '#ccc';
+                            });
 
-    uploadArea.addEventListener('drop', (e) => {
-        e.preventDefault();
-        uploadArea.style.borderColor = '#ccc';
-        handleFiles(e.dataTransfer.files);
-    });
+                            uploadArea.addEventListener('drop', (e) => {
+                                e.preventDefault();
+                                uploadArea.style.borderColor = '#ccc';
+                                handleFiles(e.dataTransfer.files);
+                            });
 
-    projectImageInput.addEventListener('change', (e) => {
-        handleFiles(e.target.files);
-    });
+                            projectImageInput.addEventListener('change', (e) => {
+                                handleFiles(e.target.files);
+                            });
 
-    document.getElementById('projectImageUploadForm').addEventListener('submit', function (e) {
-        if (uploadedImages.length === 0) {
-            e.preventDefault();
-            alert('Please upload at least one image.');
-        } else {
-            const formData = new FormData();
-            uploadedImages.forEach((file) => formData.append('images[]', file));
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
-                },
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    alert('Project images uploaded successfully!');
-                    console.log(data);
-                    // Redirect or update UI if needed
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-            e.preventDefault(); // Prevent default form submission
-        }
-    });
-});
-
+                            document.getElementById('projectImageUploadForm').addEventListener('submit', function(e) {
+                                if (uploadedImages.length === 0) {
+                                    e.preventDefault();
+                                    alert('Please upload at least one image.');
+                                } else {
+                                    const formData = new FormData();
+                                    uploadedImages.forEach((file) => formData.append('images[]', file));
+                                    fetch(this.action, {
+                                            method: 'POST',
+                                            body: formData,
+                                            headers: {
+                                                'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
+                                            },
+                                        })
+                                        .then((response) => response.json())
+                                        .then((data) => {
+                                            alert('Project images uploaded successfully!');
+                                            console.log(data);
+                                            // Redirect or update UI if needed
+                                        })
+                                        .catch((error) => {
+                                            console.error('Error:', error);
+                                        });
+                                    e.preventDefault(); // Prevent default form submission
+                                }
+                            });
+                        });
                     </script>
                     <style>
                         .upload-area {
