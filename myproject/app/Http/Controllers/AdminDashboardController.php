@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Client; // Import the Client model
+use App\Models\Client;
+use App\Models\Project;
+use App\Models\Category;
 
 class AdminDashboardController extends Controller
 {
-    public function index($section = null) // Provide a default value here
+    public function index($section = null)
     {
-        // Fetch all clients from the database
         $clients = Client::all();
+        $projects = ($section === 'projects') ? Project::with('category')->get() : collect();
+        $categories = Category::all(); // Fetch categories for the dropdown
 
-        // Pass the clients and section to the view
-        return view('admin.dashboard', compact('section', 'clients'));
+        return view('admin.dashboard', compact('section', 'clients', 'projects', 'categories'));
     }
 }

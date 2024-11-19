@@ -10,12 +10,15 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('name_en'); // Project name in English
-            $table->string('name_ru'); // Project name in Russian
-            $table->text('description_en'); // Project description in English
-            $table->text('description_ru'); // Project description in Russian
-            $table->json('images'); // Store image filenames as JSON array
-            $table->string('youtube_link')->nullable(); // Optional YouTube link
+            $table->string('name_en');
+            $table->string('name_ru');
+            $table->string('name_az');
+            $table->text('description_en');
+            $table->text('description_ru');
+            $table->text('description_az');
+            $table->json('images'); // Store image filenames as JSON
+            $table->string('youtube_url')->nullable();
+            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade'); // Link to categories
             $table->timestamps();
         });
     }

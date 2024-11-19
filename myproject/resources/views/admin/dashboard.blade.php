@@ -279,7 +279,7 @@
                             </a>
                         </div>
                         <div class="admin__content__content">
-                            <!------ Clients Section ------>
+                            <!------ Projects Section ------>
                             <div class="admin__content__content-clients">
                                 <form id="projectImageUploadForm" action="{{ route('projects.upload') }}"
                                     method="POST" enctype="multipart/form-data">
@@ -296,6 +296,15 @@
                                     </div>
 
                                     <div class="project__desc__block">
+                                        <div class="project__category">
+                                            <p>Select Project Category</p>
+                                            <select name="category_id" required>
+                                                @foreach ($categories as $category)
+                                                    <option value="{{ $category->id }}">{{ $category->name_en }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    
                                         <div class="projects__desc__name-block">
                                             <div class="project__desc__name-input">
                                                 <p>Project's name RU</p>
@@ -319,6 +328,7 @@
                                                 <textarea required name="project__desc__en" id="project__desc__en" cols="30" rows="10"></textarea>
                                             </div>
                                         </div>
+                                        
 
                                         <div class="project__youtube__link">
                                             <div class="project__desc__desc-input">

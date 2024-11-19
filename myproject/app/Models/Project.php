@@ -10,15 +10,18 @@ class Project extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name_en',
-        'name_ru',
-        'description_en',
-        'description_ru',
-        'images',
-        'youtube_link',
+        'name_en', 'name_ru', 'name_az',
+        'description_en', 'description_ru', 'description_az',
+        'images', 'youtube_url', 'category_id'
     ];
 
     protected $casts = [
-        'images' => 'array', // Automatically cast the images field as an array
+        'images' => 'array', // Cast images JSON to an array
     ];
+
+    // Define the inverse of the relationship
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

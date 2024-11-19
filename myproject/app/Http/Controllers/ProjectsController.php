@@ -4,25 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Project;
+use App\Models\Category;
 
 class ProjectsController extends Controller
 {
     public function uploadProjects(Request $request)
     {
-        // Validate the request
         $request->validate([
-            'project__name__en' => 'required|string|max:255',
-            'project__name__ru' => 'required|string|max:255',
-            'project__desc__en' => 'required|string',
-            'project__desc__ru' => 'required|string',
-            'images' => 'required|array|min:1|max:5',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-            'project__video' => 'nullable|url',
+            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'category_id' => 'required|exists:categories,id',
+            'name_en' => 'required|string|max:255',
+            'name_ru' => 'required|string|max:255',
+            'name_az' => 'required|string|max:255',
+            'description_en' => 'required|string',
+            'description_ru' => 'required|string',
+            'description_az' => 'required|string',
         ]);
 
         $uploadedImages = [];
-
-        // Handle image uploads
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
                 $imageName = time() . '_' . $image->getClientOriginalName();
@@ -31,17 +30,20 @@ class ProjectsController extends Controller
             }
         }
 
-        // Create the project record
+        // Create the project
         $project = Project::create([
-            'name_en' => $request->input('project__name__en'),
-            'name_ru' => $request->input('project__name__ru'),
-            'description_en' => $request->input('project__desc__en'),
-            'description_ru' => $request->input('project__desc__ru'),
+            'name_en' => $request->name_en,
+            'name_ru' => $request->name_ru,
+            'name_az' => $request->name_az,
+            'description_en' => $request->description_en,
+            'description_ru' => $request->description_ru,
+            'description_az' => $request->description_az,
             'images' => $uploadedImages,
-            'youtube_link' => $request->input('project__video'),
+            'youtube_url' => $request->youtube_url,
+            'category_id' => $request->category_id,
         ]);
 
-        // Redirect back to the admin panel with the project section
-        return redirect()->route('admin.dashboard', ['section' => 'all_projects'])->with('success', 'Project added successfully!');
+        return redirect()->route('admin.dashboard', ['section' => 'projects'])
+            ->with('success', 'Project added successfully!');
     }
 }
