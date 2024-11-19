@@ -67,7 +67,7 @@
                     </div>
         
                     <div class="hero__logo__desc">
-                        <p>{{ __('As a trusted general project that has been operating for 25 years, our commitment is always to prioritize our client satisfaction') }}</p>
+                        <p>{{ __('hero_logo__desc') }}</p>
                     </div>
                 </div>
             </div>
@@ -101,13 +101,12 @@
                 <!--SERVIVRS NAME--->
                 <div class="services__name__desc">
                     <div class="services__main-name">
-                        <p>Our Excellent
-                            Services</p>
+                        <p>{{ __('services__name') }}</p>
                     </div>
                     <div class="services__desc">
-                        <p>Check out our best service you can possibly orders in building
-                            your company and don't forget to ask via our email or our
-                            customer service if you are interested in using our services</p>
+                        <p>
+                            {{ __('services__desc') }}
+                        </p>
                     </div>
                 </div>
                 <!---SERVICES--->
@@ -117,13 +116,12 @@
                             <img src="{{ asset('images/services/services1.jpg') }}" alt="Build">
                         </div>
                         <div class="services__name">
-                            <p>Project Management</p>
+                            <p>{{ __('services_excellent1_name') }}</p>
                         </div>
                         <div class="servies__desc">
-                            <p>Residential development is the
-                                beginning that has shaped us to this
-                                day. Our development includes
-                                Houses & Apartments</p>
+                            <p>
+                                {{ __('services_excellent1_desc') }}
+                            </p>
                         </div>
                     </div>
                     <div class="services__element">
@@ -131,13 +129,12 @@
                             <img src="{{ asset('images/services/services2.jpg') }}" alt="Build">
                         </div>
                         <div class="services__name">
-                            <p>Project Management</p>
+                            <p>{{ __('services_excellent2_name') }}</p>
                         </div>
                         <div class="servies__desc">
-                            <p>Residential development is the
-                                beginning that has shaped us to this
-                                day. Our development includes
-                                Houses & Apartments</p>
+                            <p>
+                                {{ __('services_excellent2_desc') }}
+                            </p>
                         </div>
                     </div>
                     <div class="services__element">
@@ -145,13 +142,12 @@
                             <img src="{{ asset('images/services/services2.jpg') }}" alt="Build">
                         </div>
                         <div class="services__name">
-                            <p>Project Management</p>
+                            <p>{{ __('services_excellent3_name') }}</p>
                         </div>
                         <div class="servies__desc">
-                            <p>Residential development is the
-                                beginning that has shaped us to this
-                                day. Our development includes
-                                Houses & Apartments</p>
+                            <p>
+                                {{ __('services_excellent3_desc') }}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -160,11 +156,10 @@
             <!--- HOw we work---->
             <div class="how__work__container">
                 <div class="how__work__name">
-                    How we work
+                    {{__('how__wework__')}}
                 </div>
                 <div class="how__work__desc">
-                    Check out our best service you can possibly orders in building your company and don't forget to ask via
-                    our email or our customer service if you are interested in using our services
+                    {{__('how__wework__desc')}}
                 </div>
 
                 <div class="how__work__wrapper">
@@ -181,13 +176,10 @@
 
                         <div class="how__work__element__desc">
                             <div class="how__work__element__desc__name">
-                                Name of Stage of Work
+                                {{__('services1__name')}}
                             </div>
                             <div class="how__work__element__desc__text ">
-                                <p>Our experience of 25 years of
-                                    building and making
-                                    achievements in the world
-                                    of development</p>
+                                <p>{{__('services1__desc')}}</p>
                             </div>
                         </div>
                     </div>
@@ -202,13 +194,12 @@
 
                         <div class="how__work__element__desc">
                             <div class="how__work__element__desc__name">
-                                Name of Stage of Work
+                                {{__('services2__name')}}
                             </div>
                             <div class="how__work__element__desc__text ">
-                                <p>Our experience of 25 years of
-                                    building and making
-                                    achievements in the world
-                                    of development</p>
+                                <p>
+                                    {{__('services2__desc')}}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -224,13 +215,12 @@
 
                         <div class="how__work__element__desc">
                             <div class="how__work__element__desc__name">
-                                Name of Stage of Work
+                                {{__('services3__name')}}
                             </div>
                             <div class="how__work__element__desc__text">
-                                <p>Our experience of 25 years of
-                                    building and making
-                                    achievements in the world
-                                    of development</p>
+                                <p>
+                                    {{__('services3__desc')}}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -258,14 +248,12 @@
                     <div class="different__name">
                         <div class="different__line"></div>
                         <div class="different__name__text">
-                            <p>What makes us Different ?</p>
+                            <p>{{__('different__name__text')}}</p>
                         </div>
                     </div>
                     <!---Different desc-->
                     <div class="different__desc">
-                        Check out our best service you can possibly orders in building
-                        your company and don't forget to ask via our email or our
-                        customer service if you are interested in using our services
+                        {{__('different__desc')}}
                     </div>
                 </div>
 
@@ -289,14 +277,10 @@
                                 </div>
                             </div>
                             <div class="different__element__name">
-                                <p>Competitive Price</p>
+                                <p>{{__('different1__name')}}</p>
                             </div>
                             <div class="different__element__desc">
-                                The prices we offer you are
-                                very competitive without
-                                reducing the quality of the
-                                company's work in the
-                                slightest
+                                {{__('different1__desc')}}
                             </div>
                         </div>
                     </div>
@@ -317,14 +301,10 @@
                                 </div>
                             </div>
                             <div class="different__element__name">
-                                <p>Competitive Price</p>
+                                <p>{{__('differrent2__name')}}</p>
                             </div>
                             <div class="different__element__desc">
-                                The prices we offer you are
-                                very competitive without
-                                reducing the quality of the
-                                company's work in the
-                                slightest
+                                {{__('differrent2__desc')}}
                             </div>
                         </div>
                     </div>
@@ -345,14 +325,10 @@
                                 </div>
                             </div>
                             <div class="different__element__name">
-                                <p>Competitive Price</p>
+                                <p>{{__('different3__name')}}</p>
                             </div>
                             <div class="different__element__desc">
-                                The prices we offer you are
-                                very competitive without
-                                reducing the quality of the
-                                company's work in the
-                                slightest
+                                {{__('different3__desc')}}
                             </div>
                         </div>
                     </div>
@@ -373,14 +349,10 @@
                                 </div>
                             </div>
                             <div class="different__element__name">
-                                <p>Competitive Price</p>
+                                <p>{{__('differrent4__name')}}</p>
                             </div>
                             <div class="different__element__desc">
-                                The prices we offer you are
-                                very competitive without
-                                reducing the quality of the
-                                company's work in the
-                                slightest
+                                {{__('differrent4__desc')}}
                             </div>
                         </div>
                     </div>
@@ -401,21 +373,16 @@
                 <!----- STORY DESC--->
                 <div class="story__desc">
                     <div class="story__desc__name">
-                        Our Story &
-                        Who we are
+                        {{__('story__desc__name')}}
                     </div>
                     <div class="story__desc__text">
-                        <p>Established in 1992, PT. Wahana Cipta operates as a General
-                            Contracting company with a footprint that we have planted
-                            throughout Indonesia. Initially, we focused on construction in
-                            the field of residential housing development in Jakarta.
-                            As the company grows, now we are present as a reliable...</p>
+                        <p>{{__('story__desc__text')}}</p>
                     </div>
 
 
 
                     <div class="story__desc__button">
-                        <button id="openStoryPopup">See More</button>
+                        <button id="openStoryPopup">{{__('story__desc__button')}}</button>
                     </div>
                 </div>
                 <!-----STORY IMAGE------>
