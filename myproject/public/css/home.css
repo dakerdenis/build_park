@@ -880,6 +880,9 @@
     height: 265px;
     border-radius: 20px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .story-popup__image img {
