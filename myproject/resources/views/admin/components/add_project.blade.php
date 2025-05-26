@@ -1,4 +1,7 @@
-                    <div class="admin__content__block">
+@extends('admin.layouts.app')
+
+@section('content')
+<div class="admin__content__block">
                         <div class="admin__content__line">
                             <p>Back to all Projects</p>
                             <a href="{{ route('admin.projects') }}">
@@ -222,3 +225,5 @@
                             cursor: pointer;
                         }
                     </style>
+
+                    @endsection

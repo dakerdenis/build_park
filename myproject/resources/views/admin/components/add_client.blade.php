@@ -1,4 +1,8 @@
-                    <div class="admin__content__block admin__content__block-clients">
+
+@extends('admin.layouts.app')
+
+@section('content')
+<div class="admin__content__block admin__content__block-clients">
                         <div class="admin__content__line">
                             <p>Add Client</p>
                             <a href="{{ route('admin.clients') }}">
@@ -84,3 +88,5 @@
                             }
                         });
                     </script>
+
+                    @endsection

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Client;
 use Illuminate\Support\Facades\Storage;
 
-class ClientController extends Controller
+class AdminClientController extends Controller
 {
     public function store(Request $request)
     {
@@ -31,8 +31,8 @@ class ClientController extends Controller
             $client->save();
     
             // Redirect to the clients section
-            return redirect()->route('admin.dashboard', ['section' => 'clients'])
-                ->with('success', 'Client image uploaded successfully!');
+return redirect()->route('admin.clients')->with('success', 'Client image uploaded successfully!');
+
         }
     
         // If image upload fails, redirect back with an error message
@@ -54,6 +54,6 @@ class ClientController extends Controller
         $client->delete();
 
         // Redirect back to the clients section with a success message
-        return redirect()->route('admin.dashboard', ['section' => 'clients'])->with('success', 'Client deleted successfully!');
+        return redirect()->route('admin.clients')->with('success', 'Client deleted successfully!');
     }  
 }
