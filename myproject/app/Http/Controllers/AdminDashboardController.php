@@ -9,12 +9,31 @@ use App\Models\Category;
 
 class AdminDashboardController extends Controller
 {
-    public function index($section = null)
+    public function home()
+    {
+        return view('admin.dashboard.home');
+    }
+
+    public function clients()
     {
         $clients = Client::all();
-        $projects = ($section === 'projects') ? Project::with('category')->get() : collect();
-        $categories = Category::all(); // Fetch categories for the dropdown
+        return view('admin.dashboard.clients', compact('clients'));
+    }
 
-        return view('admin.dashboard', compact('section', 'clients', 'projects', 'categories'));
+    public function addClient()
+    {
+        return view('admin.dashboard.add_client');
+    }
+
+    public function projects()
+    {
+        $projects = Project::with('category')->get();
+        return view('admin.dashboard.projects', compact('projects'));
+    }
+
+    public function addProject()
+    {
+        $categories = Category::all();
+        return view('admin.dashboard.add_project', compact('categories'));
     }
 }
