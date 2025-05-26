@@ -573,13 +573,7 @@
                         View all projects
                     </a>
                 </div>
-                <!----projects map--->
-                <div class="projects__map">
-                    <div class="projects__map__container">
-                        <img class="" src="{{ asset('images\projects\map.png') }}"
-                            alt="Story Our main photo">
-                    </div>
-                </div>
+
             </div>
 
             <div class="projects__svg projects__svg1">

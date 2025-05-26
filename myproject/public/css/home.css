@@ -739,6 +739,7 @@
     background-color: var(--basic-background-grey);
     position: relative;
     overflow: hidden;
+    padding-top: 40px;
 }
 
 .story__container {
@@ -978,6 +979,7 @@ body.no-scroll {
     background: var(--background-gradient-dark);
     position: relative;
     z-index: 300;
+    padding-bottom: 60px;
 }
 
 .projects__svg {
@@ -1006,7 +1008,7 @@ body.no-scroll {
     height: 724px;
     display: flex;
     justify-content: space-between;
-
+ 
 }
 
 .projects__slider__navigation {}
