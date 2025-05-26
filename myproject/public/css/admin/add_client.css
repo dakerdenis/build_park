@@ -1,0 +1,97 @@
+.add-client-page .upload-area {
+    border: 2px dashed #cbd5e0;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    color: #718096;
+    background-color: #f7fafc;
+    transition: border-color 0.3s, background-color 0.3s;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.add-client-page .upload-area.dragover {
+    border-color: #3182ce;
+    background-color: #ebf8ff;
+    color: #2c5282;
+}
+
+.add-client-page .preview-area {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.add-client-page .preview-area img {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.add-client-page .preview-area:hover img {
+    transform: scale(1.02);
+}
+
+.add-client-page .remove-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    width: 109px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s;
+}
+
+.add-client-page .remove-button:hover {
+    background-color: #c53030;
+}
+
+.add-client-page textarea {
+    width: 300px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e0;
+    margin-top: 20px;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 100px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s;
+}
+
+.add-client-page textarea:focus {
+    border-color: #3182ce;
+    outline: none;
+}
+
+.add-client-page button[type="submit"] {
+    margin-top: 20px;
+    background: var(--background-gradient-red-button);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-client-page button[type="submit"]:hover {
+    background: var(--background-gradient-red-button);
+}

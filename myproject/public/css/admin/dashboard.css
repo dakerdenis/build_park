@@ -120,10 +120,10 @@
     margin-top: 150px;
 }
 .admin__navigation__logout button{
-    width: 113px;
-    height: 31px;
+    width: 133px;
+    height: 40px;
     background: var(--background-gradient-red-button);
-    border-radius: 20px;
+    border-radius: 8px;
     color: #fff;
 }
 .admin__panel__content__container {
@@ -265,43 +265,7 @@ color: #000;
 .admin__content-client:hover{
     box-shadow: #df06143a 0px 2px 8px 0px;
 }
-.upload-area {
-    border: 2px dashed #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
-    color: #aaa;
-}
 
-.upload-area.dragover {
-    border-color: #333;
-    color: #333;
-}
-
-.preview-area {
-    margin-top: 20px;
-    position: relative;
-}
-
-.preview-area img {
-    max-width: 100%;
-    max-height: 200px;
-    border-radius: 5px;
-}
-
-.remove-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 5px 8px;
-    cursor: pointer;
-    font-size: 12px;
-}
 
 
 /* Popup Overlay */
@@ -333,3 +297,6 @@ color: #000;
     font-weight: bold;
     color: black;
 }
+
+
+/*******ADD CLIENT**********/

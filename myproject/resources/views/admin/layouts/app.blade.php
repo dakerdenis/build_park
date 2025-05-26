@@ -6,6 +6,9 @@
     <title>Buildpark Admin Panel</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/dashboard.css') }}">
+        {{-- Страница может вставить свои стили --}}
+    @yield('styles')
+
 </head>
 <body>
     <div class="admin__panel__container">
