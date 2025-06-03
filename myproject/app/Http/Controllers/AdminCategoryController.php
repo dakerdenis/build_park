@@ -15,13 +15,22 @@ class AdminCategoryController extends Controller
 
     public function create()
     {
-        // return view with form to add new category
+        return view('admin.dashboard.create_category');
     }
 
-    public function store(Request $request)
-    {
-        // handle creation logic
-    }
+public function store(Request $request)
+{
+    $validated = $request->validate([
+        'name_en' => 'required|string|max:255',
+        'name_ru' => 'required|string|max:255',
+        'name_az' => 'required|string|max:255',
+    ]);
+
+    Category::create($validated);
+
+    return redirect()->route('admin.categories.index')->with('success', 'Category created successfully!');
+}
+
 
     public function edit($id)
     {

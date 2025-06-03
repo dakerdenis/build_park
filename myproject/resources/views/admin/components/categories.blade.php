@@ -10,6 +10,12 @@
         </div>
 
         <div class="admin__content__content">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+
             {{-- Сюда позже выведем список категорий --}}
             <p>Category list will be here.</p>
         </div>

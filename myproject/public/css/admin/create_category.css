@@ -1,0 +1,40 @@
+/* Только для страницы создания категории */
+.create_category{
+    max-width: 500px;
+    margin-top: 30px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #2d3748;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f7fafc;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #3182ce;
+    outline: none;
+    background-color: #fff;
+}
+
+.craete_category-btn {
+    width: 133px;
+    height: 40px;
+    background: var(--background-gradient-red-button);
+    border-radius: 8px;
+    color: #fff;
+}
+
