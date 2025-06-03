@@ -20,6 +20,7 @@
             <div class="admin__navigation__block">
                 <a href="{{ route('admin.dashboard.home') }}">Home</a>
                 <a href="{{ route('admin.clients') }}">Our clients</a>
+                <a href="{{ route('admin.categories.index') }}">Categories</a>
                 <a href="{{ route('admin.projects') }}">Projects</a>
             </div>
             <div class="admin__navigation__logout">
