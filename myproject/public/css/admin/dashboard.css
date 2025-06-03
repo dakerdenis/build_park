@@ -298,5 +298,11 @@ color: #000;
     color: black;
 }
 
-
+.created_category-success{
+    color: #0b490b;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
 /*******ADD CLIENT**********/

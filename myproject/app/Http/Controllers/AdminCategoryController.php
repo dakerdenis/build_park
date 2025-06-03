@@ -9,8 +9,11 @@ class AdminCategoryController extends Controller
 {
     public function index()
     {
-        return view('admin.dashboard.categories');
+        $categories = Category::withCount('projects')->get();
+
+        return view('admin.dashboard.categories', compact('categories'));
     }
+
 
 
     public function create()
@@ -18,7 +21,28 @@ class AdminCategoryController extends Controller
         return view('admin.dashboard.create_category');
     }
 
-public function store(Request $request)
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'name_en' => 'required|string|max:255',
+            'name_ru' => 'required|string|max:255',
+            'name_az' => 'required|string|max:255',
+        ]);
+
+        Category::create($validated);
+
+        return redirect()->route('admin.categories.index')->with('success', 'Category created successfully!');
+    }
+
+
+    public function edit($id)
+    {
+        $category = Category::findOrFail($id);
+        return view('admin.dashboard.edit_category', compact('category'));
+    }
+
+
+public function update(Request $request, $id)
 {
     $validated = $request->validate([
         'name_en' => 'required|string|max:255',
@@ -26,21 +50,12 @@ public function store(Request $request)
         'name_az' => 'required|string|max:255',
     ]);
 
-    Category::create($validated);
+    $category = Category::findOrFail($id);
+    $category->update($validated);
 
-    return redirect()->route('admin.categories.index')->with('success', 'Category created successfully!');
+    return redirect()->route('admin.categories.index')->with('success', 'Category updated successfully!');
 }
 
-
-    public function edit($id)
-    {
-        // return view to edit category
-    }
-
-    public function update(Request $request, $id)
-    {
-        // handle update logic
-    }
 
     public function destroy($id)
     {
