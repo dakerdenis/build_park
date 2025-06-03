@@ -42,25 +42,29 @@ class AdminCategoryController extends Controller
     }
 
 
-public function update(Request $request, $id)
-{
-    $validated = $request->validate([
-        'name_en' => 'required|string|max:255',
-        'name_ru' => 'required|string|max:255',
-        'name_az' => 'required|string|max:255',
-    ]);
+    public function update(Request $request, $id)
+    {
+        $validated = $request->validate([
+            'name_en' => 'required|string|max:255',
+            'name_ru' => 'required|string|max:255',
+            'name_az' => 'required|string|max:255',
+        ]);
 
-    $category = Category::findOrFail($id);
-    $category->update($validated);
+        $category = Category::findOrFail($id);
+        $category->update($validated);
 
-    return redirect()->route('admin.categories.index')->with('success', 'Category updated successfully!');
-}
+        return redirect()->route('admin.categories.index')->with('success', 'Category updated successfully!');
+    }
 
 
     public function destroy($id)
     {
-        // delete category
+        $category = Category::findOrFail($id);
+        $category->delete();
+
+        return redirect()->route('admin.categories.index')->with('success', 'Category deleted successfully!');
     }
+
 
     public function reorder(Request $request)
     {

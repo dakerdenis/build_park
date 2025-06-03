@@ -41,8 +41,19 @@
                                 <td>{{ $category->projects_count }}</td>
                                 <td>
                                     <a href="{{ route('admin.categories.edit', $category->id) }}" class="edit-link">Edit</a> |
-                                    <a href="#" class="delete-link">Delete</a>
+
+                                    <button type="button" class="delete-link"
+                                        onclick="openModal({{ $category->id }})">Delete</button>
+
+                                    <form id="delete-form-{{ $category->id }}"
+                                        action="{{ route('admin.categories.delete', $category->id) }}" method="POST"
+                                        style="display: none;">
+                                        @csrf
+                                        @method('DELETE')
+                                    </form>
                                 </td>
+
+
 
                             </tr>
                         @endforeach
@@ -52,4 +63,37 @@
 
         </div>
     </div>
+
+    <div id="deleteModal" class="modal-overlay">
+        <div class="modal-box">
+            <p>Are you sure you want to delete this category?</p>
+            <div class="modal-actions">
+                <button onclick="closeModal()" class="cancel-btn">Cancel</button>
+                <button id="confirmDeleteBtn" class="confirm-btn">Yes, Delete</button>
+            </div>
+        </div>
+    </div>
+<script>
+    let selectedCategoryId = null;
+
+    function openModal(id) {
+        selectedCategoryId = id;
+        document.getElementById('deleteModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+        selectedCategoryId = null;
+        document.getElementById('deleteModal').style.display = 'none';
+    }
+
+    document.getElementById('confirmDeleteBtn').addEventListener('click', () => {
+        if (selectedCategoryId) {
+            const form = document.getElementById(`delete-form-${selectedCategoryId}`);
+            if (form) {
+                form.submit();
+            }
+        }
+    });
+</script>
+
 @endsection
