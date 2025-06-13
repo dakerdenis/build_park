@@ -872,5 +872,6 @@
 @endpush
 
 @push('styles')
-    @vite(['resources/css/home.css']) <!-- Adding styles specific to the homepage -->
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}"> <!-- Adding styles specific to the homepage -->
 @endpush
+

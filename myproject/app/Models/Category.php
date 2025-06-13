@@ -9,7 +9,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name_en', 'name_ru', 'name_az'];
+    protected $fillable = ['name_en', 'name_ru', 'name_az', 'order'];
 
     // Define the one-to-many relationship with Project
     public function projects()

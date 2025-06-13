@@ -49,13 +49,14 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     // Categories (views + actions)
     Route::get('/categories', [AdminCategoryController::class, 'index'])->name('categories.index');
     Route::get('/categories/create', [AdminCategoryController::class, 'create'])->name('categories.create');
+    Route::post('/categories/reorder', [AdminCategoryController::class, 'reorder'])->name('categories.reorder');
+
     Route::post('/categories', [AdminCategoryController::class, 'store'])->name('categories.store');
     Route::get('/categories/{id}/edit', [AdminCategoryController::class, 'edit'])->name('categories.edit');
     Route::put('/categories/{id}', [AdminCategoryController::class, 'update'])->name('categories.update');
     Route::delete('/categories/{id}', [AdminCategoryController::class, 'destroy'])->name('categories.delete');
 
-    // Optional: reorder
-    Route::post('/categories/reorder', [AdminCategoryController::class, 'reorder'])->name('categories.reorder');
+
 });
 
 

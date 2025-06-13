@@ -96,3 +96,7 @@
     color: #fff;
     padding: 5px 15px;
 }
+.category-table tr {
+    cursor: move;
+}
+

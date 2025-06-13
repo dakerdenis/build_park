@@ -31,20 +31,19 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="category-table-body">
                         @foreach ($categories as $index => $category)
-                            <tr>
+                            <tr data-id="{{ $category->id }}" draggable="true">
                                 <td>{{ $index + 1 }}</td>
                                 <td>{{ $category->name_en }}</td>
                                 <td>{{ $category->name_ru }}</td>
                                 <td>{{ $category->name_az }}</td>
                                 <td>{{ $category->projects_count }}</td>
                                 <td>
-                                    <a href="{{ route('admin.categories.edit', $category->id) }}" class="edit-link">Edit</a> |
-
+                                    <a href="{{ route('admin.categories.edit', $category->id) }}" class="edit-link">Edit</a>
+                                    |
                                     <button type="button" class="delete-link"
                                         onclick="openModal({{ $category->id }})">Delete</button>
-
                                     <form id="delete-form-{{ $category->id }}"
                                         action="{{ route('admin.categories.delete', $category->id) }}" method="POST"
                                         style="display: none;">
@@ -52,12 +51,10 @@
                                         @method('DELETE')
                                     </form>
                                 </td>
-
-
-
                             </tr>
                         @endforeach
                     </tbody>
+
                 </table>
             @endif
 
@@ -73,27 +70,102 @@
             </div>
         </div>
     </div>
-<script>
-    let selectedCategoryId = null;
+    <script>
+        let selectedCategoryId = null;
 
-    function openModal(id) {
-        selectedCategoryId = id;
-        document.getElementById('deleteModal').style.display = 'flex';
-    }
-
-    function closeModal() {
-        selectedCategoryId = null;
-        document.getElementById('deleteModal').style.display = 'none';
-    }
-
-    document.getElementById('confirmDeleteBtn').addEventListener('click', () => {
-        if (selectedCategoryId) {
-            const form = document.getElementById(`delete-form-${selectedCategoryId}`);
-            if (form) {
-                form.submit();
-            }
+        function openModal(id) {
+            selectedCategoryId = id;
+            document.getElementById('deleteModal').style.display = 'flex';
         }
-    });
-</script>
+
+        function closeModal() {
+            selectedCategoryId = null;
+            document.getElementById('deleteModal').style.display = 'none';
+        }
+
+        document.getElementById('confirmDeleteBtn').addEventListener('click', () => {
+            if (selectedCategoryId) {
+                const form = document.getElementById(`delete-form-${selectedCategoryId}`);
+                if (form) {
+                    form.submit();
+                }
+            }
+        });
+    </script>
+    <script>
+        const tbody = document.getElementById('category-table-body');
+
+        let dragSrcEl = null;
+
+        function handleDragStart(e) {
+            dragSrcEl = this;
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/html', this.outerHTML);
+            this.classList.add('dragElem');
+        }
+
+        function handleDragOver(e) {
+            if (e.preventDefault) e.preventDefault();
+            this.classList.add('over');
+            e.dataTransfer.dropEffect = 'move';
+            return false;
+        }
+
+        function handleDragLeave() {
+            this.classList.remove('over');
+        }
+
+        function handleDrop(e) {
+            if (e.stopPropagation) e.stopPropagation();
+
+            if (dragSrcEl !== this) {
+
+                let dropHTML = e.dataTransfer.getData('text/html');
+                const draggedRow = dragSrcEl.cloneNode(true);
+                addDnDHandlers(draggedRow);
+                this.parentNode.insertBefore(draggedRow, this);
+                dragSrcEl.remove();
+
+            }
+
+            updateOrder();
+            return false;
+        }
+
+        function handleDragEnd() {
+            this.classList.remove('over');
+        }
+
+        function addDnDHandlers(row) {
+            row.addEventListener('dragstart', handleDragStart);
+            row.addEventListener('dragover', handleDragOver);
+            row.addEventListener('dragleave', handleDragLeave);
+            row.addEventListener('drop', handleDrop);
+            row.addEventListener('dragend', handleDragEnd);
+        }
+
+        document.querySelectorAll('#category-table-body tr').forEach(addDnDHandlers);
+
+        function updateOrder() {
+            const ids = Array.from(tbody.querySelectorAll('tr')).map(tr => tr.dataset.id);
+
+            fetch("{{ route('admin.categories.reorder') }}", {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        order: ids
+                    })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        console.log('Order updated!');
+                    }
+                });
+        }
+    </script>
 
 @endsection

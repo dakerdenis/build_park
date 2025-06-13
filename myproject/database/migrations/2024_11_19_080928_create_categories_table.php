@@ -13,6 +13,7 @@ class CreateCategoriesTable extends Migration
             $table->string('name_en'); // Name in English
             $table->string('name_ru'); // Name in Russian
             $table->string('name_az'); // Name in Azerbaijani
+            $table->integer('order')->default(0); // <-- NEW
             $table->timestamps();
         });
     }

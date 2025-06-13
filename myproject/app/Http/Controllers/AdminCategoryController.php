@@ -9,7 +9,8 @@ class AdminCategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::withCount('projects')->get();
+        $categories = Category::withCount('projects')->orderBy('order')->get();
+
 
         return view('admin.dashboard.categories', compact('categories'));
     }
@@ -28,12 +29,15 @@ class AdminCategoryController extends Controller
             'name_ru' => 'required|string|max:255',
             'name_az' => 'required|string|max:255',
         ]);
-
+    
+        $maxOrder = Category::max('order') ?? 0;
+        $validated['order'] = $maxOrder + 1;
+    
         Category::create($validated);
-
+    
         return redirect()->route('admin.categories.index')->with('success', 'Category created successfully!');
     }
-
+    
 
     public function edit($id)
     {
@@ -68,6 +72,13 @@ class AdminCategoryController extends Controller
 
     public function reorder(Request $request)
     {
-        // handle manual ordering (e.g., via drag-and-drop)
+        $order = $request->input('order'); // array of IDs
+    
+        foreach ($order as $index => $id) {
+            Category::where('id', $id)->update(['order' => $index]);
+        }
+    
+        return response()->json(['success' => true]);
     }
+    
 }
