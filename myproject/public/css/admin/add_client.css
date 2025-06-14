@@ -1,21 +1,62 @@
+body {
+    background: var(--basic-background-white);
+    color: var(--text-grey);
+}
+
+.admin__content__block {
+    background: var(--projects-background-white);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    margin-top: 30px;
+}
+
+.admin__content__line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--basic-red);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.admin__content__line p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.admin__content__line a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--background-gradient-red-button);
+    padding: 8px 18px;
+    border-radius: var(--button-radius);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
 .add-client-page .upload-area {
-    border: 2px dashed #cbd5e0;
+    border: 2px dashed #ccc;
     border-radius: 12px;
     padding: 40px 20px;
     text-align: center;
     cursor: pointer;
-    color: #718096;
-    background-color: #f7fafc;
+    color: #666;
+    background-color: #ffffff;
     transition: border-color 0.3s, background-color 0.3s;
     font-size: 16px;
     font-weight: 500;
     margin-top: 25px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.03);
 }
 
 .add-client-page .upload-area.dragover {
-    border-color: #3182ce;
-    background-color: #ebf8ff;
-    color: #2c5282;
+    border-color: var(--basic-red);
+    background-color: #fff3f3;
+    color: #8b0000;
 }
 
 .add-client-page .preview-area {
@@ -47,11 +88,11 @@
     background-color: #e53e3e;
     color: white;
     border: none;
-    border-radius: 9px;
-    width: 109px;
-    height: 28px;
+    border-radius: 8px;
+    width: 100px;
+    height: 30px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s;
@@ -62,20 +103,22 @@
 }
 
 .add-client-page textarea {
-    width: 300px;
+    width: 100%;
     padding: 12px 15px;
     border-radius: 8px;
-    border: 1px solid #cbd5e0;
+    border: 1px solid #ccc;
     margin-top: 20px;
     font-size: 14px;
     resize: vertical;
     min-height: 100px;
+    background: #fff;
+    color: var(--text-grey);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
     transition: border-color 0.3s;
 }
 
 .add-client-page textarea:focus {
-    border-color: #3182ce;
+    border-color: var(--basic-red);
     outline: none;
 }
 
@@ -89,9 +132,9 @@
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .add-client-page button[type="submit"]:hover {
-    background: var(--background-gradient-red-button);
+    filter: brightness(1.05);
 }
