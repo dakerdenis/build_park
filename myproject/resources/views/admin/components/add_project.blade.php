@@ -5,7 +5,7 @@
         <div class="admin__content__line">
             <p>Back to all Projects</p>
             <a href="{{ route('admin.projects') }}">
-                <p>Add Project</p>
+                <p>Back</p>
             </a>
         </div>
 
@@ -89,7 +89,7 @@
 
                     </div>
 
-                    <button type="submit" id="submitButton" disabled>Submit</button>
+                    <button type="submit" id="submitButton">Submit</button>
                 </form>
             </div>
         </div>
@@ -107,9 +107,8 @@
 
             let uploadedImages = [];
 
-            const updateSubmitButtonState = () => {
-                submitButton.disabled = uploadedImages.length === 0;
-            };
+
+
 
             const handleFiles = (files) => {
                 for (let file of files) {
@@ -137,7 +136,7 @@
                             previewArea.removeChild(previewDiv);
                             uploadedImages = uploadedImages.filter((uploadedFile) => uploadedFile !==
                                 file);
-                            updateSubmitButtonState();
+
                         };
 
                         previewDiv.appendChild(img);
@@ -145,10 +144,11 @@
                         previewArea.appendChild(previewDiv);
 
                         uploadedImages.push(file);
-                        updateSubmitButtonState();
+
                     };
                     reader.readAsDataURL(file);
                 }
+
             };
 
             uploadArea.addEventListener('click', () => {
@@ -223,12 +223,14 @@
                     mainPreviewArea.style.display = 'flex';
                 };
                 reader.readAsDataURL(file);
+
             });
 
             removeMainImageButton.addEventListener('click', function() {
                 mainImageInput.value = "";
                 mainPreviewArea.style.display = 'none';
                 mainPreviewImage.src = "";
+
             });
 
         });
