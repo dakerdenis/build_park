@@ -175,31 +175,17 @@
             });
 
             document.getElementById('projectImageUploadForm').addEventListener('submit', function(e) {
-                if (uploadedImages.length === 0) {
+                const fileInput = document.getElementById('projectImageInput');
+                const files = fileInput.files;
+
+                if (files.length === 0) {
                     e.preventDefault();
                     alert('Please upload at least one image.');
-                } else {
-                    const formData = new FormData();
-                    uploadedImages.forEach((file) => formData.append('images[]', file));
-                    fetch(this.action, {
-                            method: 'POST',
-                            body: formData,
-                            headers: {
-                                'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
-                            },
-                        })
-                        .then((response) => response.json())
-                        .then((data) => {
-                            alert('Project images uploaded successfully!');
-                            console.log(data);
-                            // Redirect or update UI if needed
-                        })
-                        .catch((error) => {
-                            console.error('Error:', error);
-                        });
-                    e.preventDefault(); // Prevent default form submission
                 }
+                // Иначе — форма продолжит отправку как обычно
             });
+
+
 
 
             const mainImageInput = document.querySelector('input[name="main_image"]');

@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 
 class AdminProjectController extends Controller
 {
-    public function store(Request $request)
+ public function store(Request $request)
     {
         $request->validate([
             'project__name__en' => 'required|string|max:255',
