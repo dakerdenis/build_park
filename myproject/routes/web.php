@@ -15,9 +15,17 @@ use App\Http\Controllers\ProjectsController;
 Route::get('/', function () {
     return redirect('/en');
 });
+// Group for language-prefixed routes
+// Group for language-prefixed routes
+Route::group(['prefix' => '{lang}', 'middleware' => LanguageMiddleware::class], function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Route for the Projects page
-Route::get('/projects', [AllProjectsController::class, 'index'])->name('projects');
+    // Localized Projects page
+    Route::get('/projects', [AllProjectsController::class, 'index'])->name('projects');
+    Route::get('/projects/{id}', [AllProjectsController::class, 'show'])->name('projects.show');
+
+})->where('lang', 'en|ru|az');
+
 
 Route::get('/login', fn() => redirect()->route('admin.login'))->name('login');
 Route::get('/admin', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
@@ -60,7 +68,3 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
 });
 
 
-// Group for language-prefixed routes
-Route::group(['prefix' => '{lang}', 'middleware' => LanguageMiddleware::class], function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home');
-})->where('lang', 'en|ru|az'); // Allow only 'en', 'ru', and 'az' as valid language prefixes

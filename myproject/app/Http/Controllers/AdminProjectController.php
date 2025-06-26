@@ -61,7 +61,7 @@ class AdminProjectController extends Controller
                 'address'        => $request->input('address'),
 
                 'main_image'     => $mainImageName,
-                'images'         => json_encode($imageNames), // вот тут было важно
+                'images'         => $imageNames, // вот тут было важно
             ]);
 
             Log::info('Проект успешно добавлен в базу.', ['project_id' => $project->id]);
@@ -72,4 +72,33 @@ class AdminProjectController extends Controller
             return back()->withErrors(['general' => 'Something went wrong, please try again later.']);
         }
     }
+
+
+    public function destroy($id)
+{
+    try {
+        $project = Project::findOrFail($id);
+
+        // Удаление главной картинки
+        $mainImagePath = public_path('uploads/project_images/' . $project->main_image);
+        if (file_exists($mainImagePath)) {
+            unlink($mainImagePath);
+        }
+
+        // Удаление дополнительных картинок
+        foreach ($project->images as $image) {
+            $imagePath = public_path('uploads/project_images/' . $image);
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
+
+        $project->delete();
+
+        return response()->json(['success' => true]);
+    } catch (\Exception $e) {
+        return response()->json(['success' => false, 'message' => 'Error deleting project.']);
+    }
+}
+
 }

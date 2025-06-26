@@ -1,79 +1,73 @@
 @extends('layouts.app')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/projects.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/single_projects.css') }}">
 @endpush
 
 @section('content')
     <div class="main__wrapper">
         <!-- Include the header component -->
         @include('layouts.partials.header')
-
-
-        <section class="projects__main__section">
-            <div class="projects__portfolio__paceholder"></div>
-            <div class="projects__portfolio__navigation">
-                <div class="projects__portfolio__name">
-                    Portfolio
-                </div>
-
-                <div class="projects__portfolio__nav">
-                    <!-- All Projects Link -->
-                    <a href="{{ route('projects', ['lang' => app()->getLocale()]) }}"
-                        class="projects__portfolio__nav-element {{ request('category') ? '' : 'active' }}">
-                        All
+        <section class="single__project" id="single__project">
+            <div class="single__project__container">
+        
+                <div class="single__project__back-button">
+                    <a href="{{ route('projects', ['lang' => app()->getLocale()]) }}">
+                        ← {{ app()->getLocale() == 'en' ? 'Back to Projects' : (app()->getLocale() == 'ru' ? 'Назад к проектам' : 'Layihələrə qayıt') }}
                     </a>
-                
-                    <!-- Category Links -->
-                    @foreach ($categories as $category)
-                        <a href="{{ route('projects', ['lang' => app()->getLocale(), 'category' => $category->id]) }}"
-                            class="projects__portfolio__nav-element {{ request('category') == $category->id ? 'active' : '' }}">
-                            {{ app()->getLocale() == 'en' ? $category->name_en : (app()->getLocale() == 'ru' ? $category->name_ru : $category->name_az) }}
-                        </a>
-                    @endforeach
                 </div>
-                
-
-            </div>
-
-            <div class="projects__portfolio__wrapper">
-                @foreach ($projects as $project)
-                    <div class="projects__element">
-                        <div class="projects__element__image">
-                            <img src="{{ asset('uploads/project_images/' . $project->main_image) }}" alt="Project Image">
+        
+                <div class="single__project__main-image">
+                    <a href="{{ asset('uploads/project_images/' . $project->main_image) }}" data-fancybox="gallery">
+                        <img src="{{ asset('uploads/project_images/' . $project->main_image) }}" alt="Main Image">
+                    </a>
+                </div>
+        
+                <div class="single__project__details">
+                    <h1 class="single__project__title">
+                        @if (app()->getLocale() == 'en')
+                            {{ $project->name_en }}
+                        @elseif (app()->getLocale() == 'ru')
+                            {{ $project->name_ru }}
+                        @else
+                            {{ $project->name_az }}
+                        @endif
+                    </h1>
+        
+                    <p class="single__project__address">
+                        {{ $project->address }}
+                    </p>
+        
+                    <p class="single__project__description">
+                        @if (app()->getLocale() == 'en')
+                            {{ $project->description_en }}
+                        @elseif (app()->getLocale() == 'ru')
+                            {{ $project->description_ru }}
+                        @else
+                            {{ $project->description_az }}
+                        @endif
+                    </p>
+        
+                    @if ($project->youtube_url)
+                        <div class="single__project__youtube">
+                            <a href="{{ $project->youtube_url }}" target="_blank">
+                                {{ app()->getLocale() == 'en' ? 'Watch on YouTube' : (app()->getLocale() == 'ru' ? 'Смотреть на YouTube' : 'YouTube-da izləyin') }}
+                            </a>
                         </div>
-                        <div class="projects__element__container">
-                            <div class="projects__element__desc">
-                                <div class="projects__element__desc-name">
-                                    @if (app()->getLocale() == 'en')
-                                        {{ $project->name_en }}
-                                    @elseif (app()->getLocale() == 'ru')
-                                        {{ $project->name_ru }}
-                                    @else
-                                        {{ $project->name_az }}
-                                    @endif
-                                </div>
-                                <div class="projects__element__desc-more">
-                                    <a href="{{ route('projects.show', ['lang' => app()->getLocale(), 'id' => $project->id]) }}" class="see-more-link">
-                                        @if (app()->getLocale() == 'en')
-                                            See More
-                                        @elseif (app()->getLocale() == 'ru')
-                                            Подробнее
-                                        @else
-                                            Ətraflı
-                                        @endif
-                                    </a>
-                                    
-                                </div>
-                            </div>
-                        </div>
+                    @endif
+        
+                    <div class="single__project__images">
+                        @foreach ($project->images as $image)
+                            <a href="{{ asset('uploads/project_images/' . $image) }}" data-fancybox="gallery">
+                                <img src="{{ asset('uploads/project_images/' . $image) }}" alt="Project Image">
+                            </a>
+                        @endforeach
                     </div>
-                @endforeach
+                </div>
             </div>
-            
-
-            <div class="projects__portfolio__bottom-placeholder"></div>
         </section>
+        
+
 
 
         <!---COntact with us --->
@@ -215,4 +209,7 @@
         <!-- Optional footer -->
         @include('layouts.partials.footer')
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+
 @endsection

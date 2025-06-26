@@ -25,11 +25,22 @@ class AdminDashboardController extends Controller
         return view('admin.dashboard.add_client');
     }
 
-    public function projects()
+    public function projects(Request $request)
     {
-        $projects = Project::with('category')->get();
-        return view('admin.dashboard.projects', compact('projects'));
+        $categories = Category::all();
+        $selectedCategory = $request->input('category_id');
+    
+        $projectsQuery = Project::with('category');
+    
+        if ($selectedCategory) {
+            $projectsQuery->where('category_id', $selectedCategory);
+        }
+    
+        $projects = $projectsQuery->get();
+    
+        return view('admin.dashboard.projects', compact('projects', 'categories', 'selectedCategory'));
     }
+    
 
     public function addProject()
     {

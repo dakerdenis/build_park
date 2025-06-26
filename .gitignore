@@ -1,3 +1,6 @@
 
 myproject/resources/css/
 /myproject/public/uploads/client_images
+*.jpeg
+*.webp
+*.jpg

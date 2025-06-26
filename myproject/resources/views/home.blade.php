@@ -441,7 +441,7 @@
 
                         <!-------->
                         <div class="projects__all-projects">
-                            <a href="{{ route('projects') }}">
+                            <a href="{{ route('projects', ['lang' => app()->getLocale()]) }}">
                                 {{ __('projects__all_button') }}
                             </a>
                         </div>
@@ -546,8 +546,8 @@
                 </div>
 
                 <div class="mobile__all_projects">
-                    <a href="{{ route('projects') }}">
-                        View all projects
+                    <a href="{{ route('projects', ['lang' => app()->getLocale()]) }}">
+                        {{ __('projects__all_button') }}
                     </a>
                 </div>
 
