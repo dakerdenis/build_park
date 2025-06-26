@@ -6,25 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Dynamic Page Title -->
-    <title>@yield('title', config('app.name', 'Build Park'))</title>
+    <title>@yield('title', 'Build Park - Construction, Renovation & Design')</title>
 
-    <!-- Meta Descriptions and Keywords (Dynamic) -->
-    <meta name="description" content="@yield('meta_description', 'Default meta description for Build Park')">
-    <meta name="keywords" content="@yield('meta_keywords', 'construction, renovation, design, build park')">
-    <meta name="author" content="Build Park Company">
-
+    <meta name="description" content="@yield('meta_description', 'Build Park offers top-tier construction, renovation, and design services for residential and commercial spaces.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'Build Park, construction, renovation, interior design, architecture, Baku, building company')">
+    <meta name="author" content="Build Park">
+    <meta name="robots" content="index, follow">
+    
     <!-- Open Graph / Facebook Meta Tags -->
-    <meta property="og:title" content="@yield('og_title', config('app.name', 'Build Park'))">
-    <meta property="og:description" content="@yield('og_description', 'Default description for Build Park on social media')">
-    <meta property="og:image" content="{{ asset('images/logo.png') }}">
+    <meta property="og:title" content="@yield('og_title', 'Build Park - Construction, Renovation & Design')">
+    <meta property="og:description" content="@yield('og_description', 'We provide professional construction, renovation, and design solutions.')">
+    <meta property="og:image" content="@yield('og_image', asset('images/logo.png'))">
     <meta property="og:url" content="{{ request()->url() }}">
     <meta property="og:type" content="website">
-
+    
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="@yield('twitter_title', config('app.name', 'Build Park'))">
-    <meta name="twitter:description" content="@yield('twitter_description', 'Default Twitter description for Build Park')">
-    <meta name="twitter:image" content="{{ asset('images/logo.png') }}">
+    <meta name="twitter:title" content="@yield('twitter_title', 'Build Park - Construction, Renovation & Design')">
+    <meta name="twitter:description" content="@yield('twitter_description', 'We build, renovate, and design spaces to perfection.')">
+    <meta name="twitter:image" content="@yield('twitter_image', asset('images/logo.png'))">
+    
 
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
