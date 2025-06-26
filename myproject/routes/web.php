@@ -20,11 +20,16 @@ Route::get('/', function () {
 Route::group(['prefix' => '{lang}', 'middleware' => LanguageMiddleware::class], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
-    // Localized Projects page
-    Route::get('/projects', [AllProjectsController::class, 'index'])->name('projects');
-    Route::get('/projects/{id}', [AllProjectsController::class, 'show'])->name('projects.show');
-
+    // Изменяем этот маршрут:
+    Route::get('/our-projects', [AllProjectsController::class, 'index'])->name('projects');
+    Route::get('/our-projects/{id}', [AllProjectsController::class, 'show'])->name('projects.show');
 })->where('lang', 'en|ru|az');
+
+
+
+Route::prefix('api')->group(function () {
+    Route::get('/projects-by-category', [AllProjectsController::class, 'getProjectsByCategory']);
+});
 
 
 Route::get('/login', fn() => redirect()->route('admin.login'))->name('login');

@@ -58,10 +58,11 @@
                         @endif
 
                         <div class="project__action__buttons">
-                            <button>View</button>
-                            <button>Edit</button>
+                            <a href="{{ url(app()->getLocale() . '/our-projects/' . $project->id) }}" target="_blank" class="view-button">View</a>
+                            <a href="{{ route('admin.projects.edit', ['id' => $project->id]) }}" class="edit-button">Edit</a>
                             <button class="delete-button" data-id="{{ $project->id }}">Delete</button>
                         </div>
+                        
                     </div>
                 @endforeach
 

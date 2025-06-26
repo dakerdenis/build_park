@@ -67,6 +67,24 @@
     gap: 8px;
     margin-top: auto;
 }
+.project__action__buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background: var(--background-gradient-red-button);
+    color: white;
+    border: none;
+    border-radius: var(--button-radius);
+    padding: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.project__action__buttons a:hover {
+    background: #c53030;
+}
 
 .project__action__buttons button {
     flex: 1;

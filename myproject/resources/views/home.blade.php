@@ -428,7 +428,7 @@
                         </div>
                         <div class="projects__slider__navigation__elements">
                             @foreach($categories as $category)
-                                <button>
+                                <button class="category-button" data-category="{{ $category->id }}">
                                     @php
                                         $locale = app()->getLocale();
                                         $name = $category->{'name_' . $locale};
@@ -437,6 +437,7 @@
                                 </button>
                             @endforeach
                         </div>
+                        
                         
 
                         <!-------->
@@ -450,99 +451,10 @@
 
 
                     <!----slider content--->
-                    <div class="project__slider__content">
-                        <!----TAB 1--->
-                        <div class="project__slider__wrapper">
-                            <div class="swiper__projects__container">
-                                <!---PROJECT 1---->
-                                <div class="swiper__projects__element">
-                                    <!---swiper element iamge--->
-                                    <div class="swiper__projects__element__image">
-                                        <img class="" src="{{ asset('images\projects\placeholder.jpeg') }}">
-
-                                    </div>
-
-                                    <!-----swiper element desc-->
-                                    <div class="swiper__projects__element__desc">
-                                        <div class="swiper__projects__element__name">
-                                            Wildstone Infra Hotel
-                                        </div>
-                                        <div class="swiper__projects__element__adress">
-                                            Address
-                                        </div>
-                                        <div class="swiper__projects__element__more">
-                                            <button>See more...</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!---PROJECT 2---->
-                                <div class="swiper__projects__element">
-                                    <!---swiper element iamge--->
-                                    <div class="swiper__projects__element__image">
-                                        <img class="" src="{{ asset('images\projects\placeholder.jpeg') }}">
-
-                                    </div>
-
-                                    <!-----swiper element desc-->
-                                    <div class="swiper__projects__element__desc">
-                                        <div class="swiper__projects__element__name">
-                                            Wildstone Infra Hotel
-                                        </div>
-                                        <div class="swiper__projects__element__adress">
-                                            Address
-                                        </div>
-                                        <div class="swiper__projects__element__more">
-                                            <button>See more...</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!---PROJECT 3---->
-                                <div class="swiper__projects__element">
-                                    <!---swiper element iamge--->
-                                    <div class="swiper__projects__element__image">
-                                        <img class="" src="{{ asset('images\projects\placeholder.jpeg') }}">
-
-                                    </div>
-
-                                    <!-----swiper element desc-->
-                                    <div class="swiper__projects__element__desc">
-                                        <div class="swiper__projects__element__name">
-                                            Wildstone Infra Hotel
-                                        </div>
-                                        <div class="swiper__projects__element__adress">
-                                            Address
-                                        </div>
-                                        <div class="swiper__projects__element__more">
-                                            <button>See more...</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!---PROJECT 4---->
-                                <div class="swiper__projects__element">
-                                    <!---swiper element iamge--->
-                                    <div class="swiper__projects__element__image">
-                                        <img class="" src="{{ asset('images\projects\placeholder.jpeg') }}">
-
-                                    </div>
-
-                                    <!-----swiper element desc-->
-                                    <div class="swiper__projects__element__desc">
-                                        <div class="swiper__projects__element__name">
-                                            Wildstone Infra Hotel
-                                        </div>
-                                        <div class="swiper__projects__element__adress">
-                                            Address
-                                        </div>
-                                        <div class="swiper__projects__element__more">
-                                            <button>See more...</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!---TAB 2 ------>
-                        <!----туту будет другой контейнер с проектами swiper__projects__container----->
+                    <div class="project__slider__content" id="projects-container">
+                        <!-- ТУТ БУДЕМ ГЕНЕРИРОВАТЬ СОДЕРЖИМОЕ ЧЕРЕЗ JS -->
                     </div>
+                    
                 </div>
 
                 <div class="mobile__all_projects">
@@ -810,41 +722,10 @@
 
 
 @push('scripts')
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const currentLocale = '{{ app()->getLocale() }}';
+</script>
 
-    <!-- Initialize first Swiper -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            new Swiper(".mySwiper", {
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                loop: true,
-            });
-
-            // Initialize second Swiper for clients section with breakpoints
-            new Swiper(".clientsSwiper", {
-                slidesPerView: 3,
-                loop: true,
-                autoplay: {
-                    delay: 1900, // Adjust delay as needed for auto sliding
-                    disableOnInteraction: false,
-                },
-                breakpoints: {
-                    // When window width is <= 768px (tablet/mobile)
-                    768: {
-                        slidesPerView: 4
-                    },
-                    // When window width is <= 480px (smaller mobile devices)
-                    480: {
-                        slidesPerView: 3
-                    }
-                }
-            });
-        });
-    </script>
 @endpush
 
 @push('styles')

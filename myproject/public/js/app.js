@@ -170,3 +170,77 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => handleBurgerMenuClick(button));
     });
 });
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.category-button');
+    const projectsContainer = document.getElementById('projects-container');
+
+    if (buttons.length > 0) {
+        // Автоматически загрузить первую категорию
+        const firstButton = buttons[0];
+        firstButton.classList.add('active'); // Добавляем активный класс
+        loadProjects(firstButton.getAttribute('data-category'));
+    }
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Убираем активный класс у всех кнопок
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Добавляем активный класс текущей кнопке
+            this.classList.add('active');
+
+            const categoryId = this.getAttribute('data-category');
+            loadProjects(categoryId);
+        });
+    });
+
+    function loadProjects(categoryId) {
+        fetch(`/api/projects-by-category?category_id=${categoryId}`)
+            .then(response => response.json())
+            .then(data => {
+                let html = `
+                    <div class="project__slider__wrapper">
+                        <div class="swiper__projects__container">
+                `;
+
+                if (data.length === 0) {
+                    html += `<p>No projects found for this category.</p>`;
+                } else {
+                    data.forEach(project => {
+                        html += `
+                            <div class="swiper__projects__element">
+                                <div class="swiper__projects__element__image">
+                                    <img src="/uploads/project_images/${project.main_image}" alt="Project Image">
+                                </div>
+                                <div class="swiper__projects__element__desc">
+                                    <div class="swiper__projects__element__name">
+                                        ${project.name_en} <!-- Можно динамически подставить язык -->
+                                    </div>
+                                    <div class="swiper__projects__element__adress">
+                                        ${project.address ?? ''}
+                                    </div>
+                                    <div class="swiper__projects__element__more">
+                                        <a target="_blank" href="/${currentLocale}/our-projects/${project.id}">See more...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+
+                html += `
+                        </div>
+                    </div>
+                `;
+
+                projectsContainer.innerHTML = html;
+            })
+            .catch(error => console.error('Error loading projects:', error));
+    }
+});

@@ -30,5 +30,16 @@ class AllProjectsController extends Controller
 
     return view('single_project', compact('project', 'categories'));
 }
+public function getProjectsByCategory(Request $request)
+{
+    $categoryId = $request->query('category_id');
+
+    $projects = \App\Models\Project::where('category_id', $categoryId)
+                ->take(4)
+                ->get();
+
+    return response()->json($projects);
+}
+
 
 }
