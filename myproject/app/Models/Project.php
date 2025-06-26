@@ -12,8 +12,10 @@ class Project extends Model
     protected $fillable = [
         'name_en', 'name_ru', 'name_az',
         'description_en', 'description_ru', 'description_az',
-        'images', 'youtube_url', 'category_id'
+        'main_image', // ← этого не хватало
+        'images', 'youtube_url', 'category_id', 'address'
     ];
+    
 
     protected $casts = [
         'images' => 'array', // Cast images JSON to an array
