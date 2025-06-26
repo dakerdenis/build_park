@@ -100,5 +100,73 @@ class AdminProjectController extends Controller
         return response()->json(['success' => false, 'message' => 'Error deleting project.']);
     }
 }
+public function edit($id)
+{
+    $project = Project::findOrFail($id);
+    $categories = \App\Models\Category::all();
+
+    return view('admin.dashboard.edit_project', compact('project', 'categories'));
+}
+public function update(Request $request, $id)
+{
+    try {
+        $project = Project::findOrFail($id);
+
+        $request->validate([
+            'project__name__en' => 'required|string|max:255',
+            'project__name__ru' => 'required|string|max:255',
+            'project__name__az' => 'required|string|max:255',
+            'project__desc__en' => 'required|string',
+            'project__desc__ru' => 'required|string',
+            'project__desc__az' => 'required|string',
+            'category_id'       => 'required|exists:categories,id',
+            'project__video'    => 'nullable|url',
+            'main_image'        => 'nullable|image|max:2048',
+            'images.*'          => 'image|max:2048'
+        ]);
+
+        // Если загружено новое главное изображение
+        if ($request->hasFile('main_image')) {
+            $mainImage = $request->file('main_image');
+            $mainImageName = time() . '_main_' . Str::random(10) . '.' . $mainImage->getClientOriginalExtension();
+            $mainImage->move(public_path('uploads/project_images'), $mainImageName);
+
+            // Удаляем старое изображение
+            if (file_exists(public_path('uploads/project_images/' . $project->main_image))) {
+                unlink(public_path('uploads/project_images/' . $project->main_image));
+            }
+
+            $project->main_image = $mainImageName;
+        }
+
+        // Если загружены новые дополнительные изображения
+        if ($request->hasFile('images')) {
+            $imageNames = [];
+            foreach ($request->file('images') as $img) {
+                $imgName = time() . '_' . Str::random(10) . '.' . $img->getClientOriginalExtension();
+                $img->move(public_path('uploads/project_images'), $imgName);
+                $imageNames[] = $imgName;
+            }
+            $project->images = $imageNames;
+        }
+
+        $project->update([
+            'name_en' => $request->input('project__name__en'),
+            'name_ru' => $request->input('project__name__ru'),
+            'name_az' => $request->input('project__name__az'),
+            'description_en' => $request->input('project__desc__en'),
+            'description_ru' => $request->input('project__desc__ru'),
+            'description_az' => $request->input('project__desc__az'),
+            'category_id' => $request->input('category_id'),
+            'youtube_url' => $request->input('project__video'),
+            'address' => $request->input('address'),
+        ]);
+
+        return redirect()->route('admin.projects')->with('success', 'Project updated successfully.');
+
+    } catch (\Exception $e) {
+        return back()->withErrors(['general' => 'Something went wrong, please try again.']);
+    }
+}
 
 }
