@@ -21,32 +21,30 @@
                         </div>
 
                         <!-- Popup Modal for Delete Confirmation -->
-                        <div class="delete-popup" id="deletePopup-{{ $client->id }}" style="display: none;">
-                            <div class="delete-popup-content">
-                                <h3>Are you sure you want to delete this client?</h3>
-                                <p>This action cannot be undone.</p>
+                        <div class="client__delete__popup" id="deletePopup-{{ $client->id }}" style="display: none;">
+                            <div class="client__delete__popup__content">
+                                <span class="client__delete__popup__close"
+                                    onclick="closeDeletePopup({{ $client->id }})">&times;</span>
+                                <h3 class="client__delete__popup__title">Are you sure you want to delete this client?</h3>
+                                <p class="client__delete__popup__text">This action cannot be undone.</p>
 
                                 <!-- Delete Form -->
-                                <form action="{{ route('admin.clients.delete', $client->id) }}" method="POST">
-
+                                <form action="{{ route('admin.clients.delete', $client->id) }}" method="POST"
+                                    class="client__delete__popup__form">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit"
-                                        style="background-color: red; color: white; border: none; padding: 5px 10px; cursor: pointer;">
+                                    <button type="submit" class="client__delete__popup__delete__button">
                                         Yes, Delete
                                     </button>
                                 </form>
 
                                 <button onclick="closeDeletePopup({{ $client->id }})"
-                                    style="background-color: grey; color: white; border: none; padding: 5px 10px; cursor: pointer; margin-top: 10px;">
+                                    class="client__delete__popup__cancel__button">
                                     No, Cancel
                                 </button>
-
-                                <!-- Close Icon -->
-                                <span class="close-popup" onclick="closeDeletePopup({{ $client->id }})"
-                                    style="cursor: pointer; font-size: 20px; position: absolute; top: 10px; right: 10px;">&times;</span>
                             </div>
                         </div>
+
                     </div>
                 @endforeach
 
