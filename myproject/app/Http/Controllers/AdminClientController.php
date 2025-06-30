@@ -19,8 +19,18 @@ class AdminClientController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . '_' . Str::slug(pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME)) . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('uploads/client_images'), $imageName);
+
+            // ВНИМАНИЕ! Нужен именно base_path, а не public_path
+            $destinationPath = base_path('../uploads/client_images');
+
+            // Создаём папку если её нет
+            if (!file_exists($destinationPath)) {
+                mkdir($destinationPath, 0755, true);
+            }
+
+            $image->move($destinationPath, $imageName);
         }
+
 
         Client::create([
             'image_name' => $imageName,
@@ -34,7 +44,8 @@ class AdminClientController extends Controller
     {
         $client = Client::findOrFail($id);
 
-        $imagePath = public_path('uploads/client_images/' . $client->image_name);
+        $imagePath = base_path('../uploads/client_images/' . $client->image_name);
+
         if (file_exists($imagePath)) {
             unlink($imagePath);
         }
