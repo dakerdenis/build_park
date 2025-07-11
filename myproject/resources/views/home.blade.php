@@ -413,9 +413,6 @@
         </div>
 
 
-
-
-
         <!---Our projects --->
         <section class="projects" id="projects">
             <div class="projects__container">
@@ -572,7 +569,12 @@
                 </div>
             </div>
         </section>
-
+        <section class="sertificates" id="sertificates">
+            <p>{{ __(key: 'header_sertificate') }}</p>
+            <div class="sertificates__wrapper">
+                
+            </div>
+        </section>
         <!---COntact with us --->
         <section class="contact" id="contact">
             <div class="contact__container">

@@ -5,7 +5,11 @@
     "header_our__team": "Find a Team",
     "header_projects": "Projects",
     "header_offers": "Offers",
+    "header_sertificate": "Sertificates",
     "header_contact": "Contact us",
+
+    
+
     "hero_contact": "Contact for Consultation",
     "hero_title": "From renovation to design",
     "hero_subtitle": "- everything in one place:",
@@ -57,9 +61,9 @@
     "story__desc__text" : " Founded with a vision to craft inspiring spaces, Build Park specializes in the design, architecture, and construction of homes, villas, hotels, and resorts. From concept to creation, we bring bold ideas to life — blending innovation, elegance, and functionality.",
     "story__desc__button": "See More",
     "story__popup__name" : "Our Story & Who We Are",
-    "popup__content__text1" : "Build Park is where visionary design meets expert craftsmanship. We specialize in creating unique residential and commercial spaces — from luxurious villas and private homes to high-end hotels and boutique resorts. Every project starts with a dream, and we turn that dream into a lasting landmark.",
-    "popup__content__text2" : "With a multidisciplinary team of architects, designers, and construction professionals, we manage each phase with precision — from concept and planning to full execution. Our approach blends modern aesthetics with functional beauty, always tailored to the client’s vision and the character of the environment.",
-    "popup__content__text3": " At Build Park, we don’t just build structures — we build experiences. Whether it's a serene retreat or a bold urban statement, we craft spaces that inspire, endure, and elevate everyday living.",
+    "popup__content__text1" :"Build Park is where visionary design meets expert craftsmanship. We specialize in creating unique residential and commercial spaces — from luxurious villas and private homes to high-end hotels and boutique resorts. Every project starts with a dream, and we turn that dream into a lasting landmark.",
+    "popup__content__text2" :"With a multidisciplinary team of architects, designers, and construction professionals, we manage each phase with precision — from concept and planning to full execution. Our approach blends modern aesthetics with functional beauty, always tailored to the client’s vision and the character of the environment.",
+    "popup__content__text3":"At Build Park, we don’t just build structures — we build experiences. Whether it's a serene retreat or a bold urban statement, we craft spaces that inspire, endure, and elevate everyday living.",
     
 
 

@@ -33,7 +33,7 @@ class AdminProjectController extends Controller
             // Сохранение главного изображения
             $mainImage = $request->file('main_image');
             $mainImageName = time() . '_main_' . Str::random(10) . '.' . $mainImage->getClientOriginalExtension();
-            $mainImage->move(public_path('uploads/project_images'), $mainImageName);
+            $mainImage->move(base_path('../uploads/project_images/'), $mainImageName);
 
             Log::info('Главное изображение сохранено.', ['main_image' => $mainImageName]);
 
@@ -41,7 +41,7 @@ class AdminProjectController extends Controller
             $imageNames = [];
             foreach ($request->file('images') as $img) {
                 $imgName = time() . '_' . Str::random(10) . '.' . $img->getClientOriginalExtension();
-                $img->move(public_path('uploads/project_images'), $imgName);
+                $img->move(base_path('../uploads/project_images/'), $imgName);
                 $imageNames[] = $imgName;
             }
 
@@ -80,14 +80,14 @@ class AdminProjectController extends Controller
         $project = Project::findOrFail($id);
 
         // Удаление главной картинки
-        $mainImagePath = public_path('uploads/project_images/' . $project->main_image);
+        $mainImagePath = base_path('../uploads/project_images/' . $project->main_image);
         if (file_exists($mainImagePath)) {
             unlink($mainImagePath);
         }
 
         // Удаление дополнительных картинок
         foreach ($project->images as $image) {
-            $imagePath = public_path('uploads/project_images/' . $image);
+            $imagePath = base_path('../uploads/project_images/' . $image);
             if (file_exists($imagePath)) {
                 unlink($imagePath);
             }
@@ -129,11 +129,11 @@ public function update(Request $request, $id)
         if ($request->hasFile('main_image')) {
             $mainImage = $request->file('main_image');
             $mainImageName = time() . '_main_' . Str::random(10) . '.' . $mainImage->getClientOriginalExtension();
-            $mainImage->move(public_path('uploads/project_images'), $mainImageName);
+            $mainImage->move(base_path('../uploads/project_images/'), $mainImageName);
 
             // Удаляем старое изображение
-            if (file_exists(public_path('uploads/project_images/' . $project->main_image))) {
-                unlink(public_path('uploads/project_images/' . $project->main_image));
+            if (file_exists(base_path('../uploads/project_images/' . $project->main_image))) {
+                unlink(base_path('../uploads/project_images/' . $project->main_image));
             }
 
             $project->main_image = $mainImageName;
@@ -144,7 +144,7 @@ public function update(Request $request, $id)
             $imageNames = [];
             foreach ($request->file('images') as $img) {
                 $imgName = time() . '_' . Str::random(10) . '.' . $img->getClientOriginalExtension();
-                $img->move(public_path('uploads/project_images'), $imgName);
+                $img->move(base_path('../uploads/project_images/'), $imgName);
                 $imageNames[] = $imgName;
             }
             $project->images = $imageNames;
