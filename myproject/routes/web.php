@@ -12,7 +12,7 @@ use App\Http\Controllers\AdminCategoryController;
 
 // Сначала админка, чтобы Laravel знал эти маршруты вне языковой группы
 Route::get('/login', [AdminLoginController::class, 'showLoginForm'])->name('login');
-Route::get('/admin', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
+Route::get('/admin2357RTght', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin', [AdminLoginController::class, 'login'])->name('admin.login.submit');
 
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {

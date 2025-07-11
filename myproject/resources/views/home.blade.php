@@ -139,7 +139,7 @@
                     </div>
                     <div class="services__element">
                         <div class="services__image">
-                            <img src="{{ asset('images/services/services2.jpg') }}" alt="Build">
+                            <img src="{{ asset('images/services/services3.jpg') }}" alt="Build">
                         </div>
                         <div class="services__name">
                             <p>{{ __('services_excellent3_name') }}</p>

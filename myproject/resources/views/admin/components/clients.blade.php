@@ -20,6 +20,7 @@
                             Delete
                         </div>
 
+
                         <!-- Popup Modal for Delete Confirmation -->
                         <div class="client__delete__popup" id="deletePopup-{{ $client->id }}" style="display: none;">
                             <div class="client__delete__popup__content">

@@ -14,7 +14,7 @@
     "hero_statistics1": "Layihələr",
     "hero_statistics2": "Müştərilərimiz",
     "hero_statistics3": "İllər",
-    "hero_logo__desc": "25 ildir fəaliyyət göstərən etibarlı bir layihə olaraq, biz həmişə müştərilərimizin məmnuniyyətini təmin etməyə çalışırıq.",
+    "hero_logo__desc": "20 ildir fəaliyyət göstərən etibarlı bir layihə olaraq, biz həmişə müştərilərimizin məmnuniyyətini təmin etməyə çalışırıq.",
     "services__name": "Bizim əla xidmətlərimiz",
     "services__desc": "Şirkətinizin tikintisi üçün ən yaxşı xidmətlərimizlə tanış olun və xidmətlərimizdən istifadə etmək istəyirsinizsə, bizim e-poçt və ya müştəri xidmətimiz vasitəsilə əlaqə saxlamağı unutmayın.",
     "services_excellent1_name": "Otaqların təmiri",
@@ -38,7 +38,7 @@
     "different__desc": "Şirkətinizin tikintisi üçün ən yaxşı xidmətlərimizlə tanış olun və xidmətlərimizdən istifadə etmək istəyirsinizsə, bizim e-poçt və ya müştəri xidmətimiz vasitəsilə əlaqə saxlamağı unutmayın.",
 
     "different1__name": "Təcrübəli",
-    "different1__desc": "Tikinti və inkişaf sahəsində 25 illik təcrübəmiz var.",
+    "different1__desc": "Tikinti və inkişaf sahəsində 20 illik təcrübəmiz var.",
     "differrent2__name": "Rəqabətqabiliyyətli qiymətlər",
     "differrent2__desc": "Bizim təklif etdiyimiz qiymətlər çox rəqabətlidir və şirkətin iş keyfiyyətindən heç bir halda güzəştə getmir.",
     "different3__name": "Vaxtında",
@@ -47,12 +47,15 @@
     "differrent4__desc": "Material binanı müəyyən edir, buna görə biz sizə öz sinfində ən yaxşı və keyfiyyətli materiallardan istifadə etməyi tövsiyə edirik.",
 
     "story__desc__name": "Bizim Hekayəmiz və Biz Kimik",
-    "story__desc__text": "1992-ci ildə yaradılmış PT. Wahana Cipta ümumi podratçı şirkət kimi fəaliyyət göstərir və İndoneziyanın müxtəlif yerlərində iz qoymuşdur. Əvvəlcə Cakartada yaşayış yerlərinin tikintisi sahəsində fəaliyyət göstərmişik. Şirkət böyüdükcə, biz etibarlı bir şirkət kimi tanındıq...",
+    "story__desc__text": "İlham verici məkanlar yaratmaq arzusu ilə qurulan Build Park evlərin, villaların, otellərin və kurortların layihələndirilməsi, memarlığı və inşası üzrə ixtisaslaşıb. Fikirdən gerçəyə qədər – biz cəsarətli ideyaları həyata keçiririk, innovasiyanı, zərifliyi və funksionallığı bir araya gətiririk.",
     "story__desc__button": "Daha Çox Gör",
     "story__popup__name": "Bizim Hekayəmiz və Biz Kimik",
-    "popup__content__text1" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis accumsan justo in luctus. Fusce ut rutrum ligula, quis dictum augue. Vestibulum pulvinar nunc ut iaculis imperdiet. Donec at feugiat lacus. Aliquam erat volutpat. Aenean ut massa vitae sem facilisis commodo. Vestibulum a accumsan quam. ",
-    "popup__content__text2" : "Vivamus placerat cursus lacus, et egestas nunc elementum et. Praesent id sollicitudin odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis imperdiet erat id orci sollicitudin, id convallis turpis dignissim. Donec efficitur consequat augue nec laoreet.",
-    "popup__content__text3": "Sed vulputate erat eget justo commodo congue. Nunc nisl arcu, sodales et dolor convallis, eleifend pellentesque nibh.",           
+    "popup__content__text1": "Build Park – yaradıcı dizaynın və peşəkar ustalığın qovuşduğu yerdir. Biz unikal yaşayış və kommersiya məkanlarının yaradılmasında ixtisaslaşmışıq — dəbdəbəli villalardan və şəxsi evlərdən tutmuş premium otellər və butik kurortlara qədər. Hər bir layihə bir arzudan başlayır, biz isə o arzunu qalıcı bir izə çeviririk.",
+
+    "popup__content__text2": "Memar, dizayner və inşaat mütəxəssislərindən ibarət çoxşaxəli komandamızla biz hər mərhələni dəqiqliklə idarə edirik — konsepsiyadan planlaşdırmaya və tam icraya qədər. Yanaşmamız müasir estetik anlayışı funksional gözəlliklə birləşdirir, hər zaman müştərinin baxış bucağına və mühitin xarakterinə uyğunlaşdırılır.",
+
+    "popup__content__text3": " Build Park olaraq biz sadəcə binalar deyil — unudulmaz təəssüratlar yaradırıq. İstər sakit bir istirahət məkanı, istərsə də cəsarətli şəhər layihəsi olsun — biz gündəlik həyatı yüksəldən, davamlı və ilhamverici məkanlar qururuq.",
+
 
 
     "projects__name": "Layihələr",

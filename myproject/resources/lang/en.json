@@ -14,7 +14,7 @@
     "hero_statistics1": "Projects",
     "hero_statistics2": "Customers",
     "hero_statistics3": "Years",
-    "hero_logo__desc": "As a trusted general project that has been operating for 25 years, our commitment is always to prioritize our client satisfaction",
+    "hero_logo__desc": "As a trusted general project that has been operating for 20 years, our commitment is always to prioritize our client satisfaction",
 
     "services__name": "Our Excellent Services",
     "services__desc": "Check out our best service you can possibly orders in building your company and don't forget to ask via our email or our customer service if you are interested in using our services",
@@ -39,7 +39,7 @@
     "different__desc": "Check out our best service you can possibly orders in building your company and don't forget to ask via our email or our customer service if you are interested in using our services",
 
     "different1__name" : "Experienced",
-    "different1__desc" : "Our experience of 25 years of building and making achievements in the world of development",
+    "different1__desc" : "Our experience of 20 years of building and making achievements in the world of development",
     "differrent2__name" : "Competitive Price",
     "differrent2__desc" : "The prices we offer you are very competitive without reducing the quality of the company's work in the slightest",
     "different3__name" : "On Time",
@@ -47,14 +47,26 @@
     "differrent4__name": "Best Materials",
     "differrent4__desc" : "The material determines the building itself so we recommend that you use the best & quality materials in its class.",
 
+
+
+
+
+
+
     "story__desc__name": "Our Story &  Who we are",
-    "story__desc__text" : "Established in 1992, PT. Wahana Cipta operates as a General Contracting company with a footprint that we have planted throughout Indonesia. Initially, we focused on construction in the field of residential housing development in Jakarta. As the company grows, now we are present as a reliable...",
+    "story__desc__text" : " Founded with a vision to craft inspiring spaces, Build Park specializes in the design, architecture, and construction of homes, villas, hotels, and resorts. From concept to creation, we bring bold ideas to life — blending innovation, elegance, and functionality.",
     "story__desc__button": "See More",
     "story__popup__name" : "Our Story & Who We Are",
-    "popup__content__text1" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis accumsan justo in luctus. Fusce ut rutrum ligula, quis dictum augue. Vestibulum pulvinar nunc ut iaculis imperdiet. Donec at feugiat lacus. Aliquam erat volutpat. Aenean ut massa vitae sem facilisis commodo. Vestibulum a accumsan quam. ",
-    "popup__content__text2" : "Vivamus placerat cursus lacus, et egestas nunc elementum et. Praesent id sollicitudin odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis imperdiet erat id orci sollicitudin, id convallis turpis dignissim. Donec efficitur consequat augue nec laoreet.",
-    "popup__content__text3": "Sed vulputate erat eget justo commodo congue. Nunc nisl arcu, sodales et dolor convallis, eleifend pellentesque nibh.",
+    "popup__content__text1" : "Build Park is where visionary design meets expert craftsmanship. We specialize in creating unique residential and commercial spaces — from luxurious villas and private homes to high-end hotels and boutique resorts. Every project starts with a dream, and we turn that dream into a lasting landmark.",
+    "popup__content__text2" : "With a multidisciplinary team of architects, designers, and construction professionals, we manage each phase with precision — from concept and planning to full execution. Our approach blends modern aesthetics with functional beauty, always tailored to the client’s vision and the character of the environment.",
+    "popup__content__text3": " At Build Park, we don’t just build structures — we build experiences. Whether it's a serene retreat or a bold urban statement, we craft spaces that inspire, endure, and elevate everyday living.",
     
+
+
+
+
+
+
     "projects__name": "Projects",
     "projects__all_button": "View all projects",
 
