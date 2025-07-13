@@ -424,7 +424,7 @@
                             <p>{{ __('projects__name') }}</p>
                         </div>
                         <div class="projects__slider__navigation__elements">
-                            @foreach($categories as $category)
+                            @foreach ($categories as $category)
                                 <button class="category-button" data-category="{{ $category->id }}">
                                     @php
                                         $locale = app()->getLocale();
@@ -434,8 +434,8 @@
                                 </button>
                             @endforeach
                         </div>
-                        
-                        
+
+
 
                         <!-------->
                         <div class="projects__all-projects">
@@ -451,7 +451,7 @@
                     <div class="project__slider__content" id="projects-container">
                         <!-- ТУТ БУДЕМ ГЕНЕРИРОВАТЬ СОДЕРЖИМОЕ ЧЕРЕЗ JS -->
                     </div>
-                    
+
                 </div>
 
                 <div class="mobile__all_projects">
@@ -569,10 +569,72 @@
                 </div>
             </div>
         </section>
+        <!---SErtificates--->
         <section class="sertificates" id="sertificates">
-            <p>{{ __(key: 'header_sertificate') }}</p>
+           <div class="sertificates__name">
+                <p>{{ __(key: 'header_sertificate') }}</p>
+           </div>
             <div class="sertificates__wrapper">
-                
+                <!----1--->
+                <div class="sertificates__element">
+                    <a target="_blank" href="https://buildpark.az/uploads/sertificates/Sertifikat%201.pdf">
+                        <p>AZS - ISO 14001:2021 </p>
+                    </a>
+                </div>
+                <!----1--->
+                <div class="sertificates__element">
+                    <a target="_blank" href="https://buildpark.az/uploads/sertificates/Sertifikat%202.pdf">
+                        <p>ISO 9001:2015</p>
+                    </a>
+                </div>
+                <!----1--->
+                <div class="sertificates__element">
+                    <a target="_blank" href="https://buildpark.az/uploads/sertificates/Sertifikat%203.pdf">
+                        <p>ISO 45001:2018</p>
+                    </a>
+                </div>
+                <!----1--->
+                <div class="sertificates__element">
+                    <a target="_blank" href="https://buildpark.az/uploads/sertificates/Sertifikat%204.pdf">
+                        <p>ISO 45001:2021 4</p>
+                    </a>
+                </div>
+                <!----1--->
+                <div class="sertificates__element">
+                    <a target="_blank" href="https://buildpark.az/uploads/sertificates/Sertifikat%205.pdf">
+                        <p>AZS ISO 14001:2021</p>
+                    </a>
+                </div>
+                <!----1--->
+                <div class="sertificates__element">
+                    <a target="_blank" href="https://buildpark.az/uploads/sertificates/Sertifikat%206.pdf">
+                        <p>AZS ISO 14001:2021 - 014.001/36</p>
+                    </a>
+                </div>
+                <!----1--->
+                <div class="sertificates__element">
+                    <a target="_blank" href="https://buildpark.az/uploads/sertificates/Sertifikat%207.pdf">
+                        <p>AZS ISO 9001:2020</p>
+                    </a>
+                </div>
+                <!----1--->
+                <div class="sertificates__element">
+                    <a target="_blank" href="https://buildpark.az/uploads/sertificates/Sertifikat%208.pdf">
+                        <p>ISO 9001:2015 - 090.001/063</p>
+                    </a>
+                </div>
+                <!----1--->
+                <div class="sertificates__element">
+                    <a target="_blank" href="https://buildpark.az/uploads/sertificates/Sertifikat%209.pdf">
+                        <p>ISO 14001:2015</p>
+                    </a>
+                </div>
+                <!----1--->
+                <div class="sertificates__element">
+                    <a target="_blank" href="https://buildpark.az/uploads/sertificates/Sertifikat%2010.pdf">
+                        <p>AZS ISO 45001:2021</p>
+                    </a>
+                </div>
             </div>
         </section>
         <!---COntact with us --->
@@ -724,10 +786,9 @@
 
 
 @push('scripts')
-<script>
-    const currentLocale = '{{ app()->getLocale() }}';
-</script>
-
+    <script>
+        const currentLocale = '{{ app()->getLocale() }}';
+    </script>
 @endpush
 
 @push('styles')

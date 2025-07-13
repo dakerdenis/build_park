@@ -29,9 +29,9 @@
             <div class="header__navigation__element">
                 <button data-section="offers">{{ __('header_offers') }}</button>
             </div>
-            <div class="header__navigation__element">
+            <!--div class="header__navigation__element">
                 <button data-section="sertificates">{{ __('header_sertificate') }}</button>
-            </div>
+            </div-->
             <div class="header__navigation__element">
                 <button data-section="contact">{{ __('header_contact') }}</button>
             </div>
