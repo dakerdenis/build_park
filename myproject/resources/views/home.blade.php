@@ -635,6 +635,12 @@
                         <p>AZS ISO 45001:2021</p>
                     </a>
                 </div>
+                                <!----1--->
+                <div class="sertificates__element">
+                    <a target="_blank" href="https://buildpark.az/uploads/sertificates/Sertifikat%2011.pdf">
+                        <p>EL-468/2025</p>
+                    </a>
+                </div>
             </div>
         </section>
         <!---COntact with us --->
