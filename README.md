@@ -72,6 +72,6 @@ Admin interface for adding, editing, and removing portfolio items.
 
 ---
 
-### 👥 Our Clients — Admin Panel
+### 👥 Projects' categories — Admin Panel
 Easily manage and update projects' categories.
 ![Admin Catefories](assets/screenshots/admin-categories.png)
